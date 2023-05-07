@@ -7,22 +7,22 @@ public class MenuController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Menu.InitMenu(); // ¸Ş´º ¼³Á¤
-        RandomMenu.InitMenu(); // ·£´ı¸Ş´º ¼³Á¤
+        BasicMenu.InitMenu(); // ê¸°ë³¸ë©”ë‰´ ì„¤ì •
+        RandomMenu.InitMenu(); // ëœë¤ë©”ë‰´ ì„¤ì •
 
-        // ¸Ş´º
+        // ë©”ë‰´
 
-        // ±âº»¹ö°Å ; Menu.BasicBurger 
-        // ´õºíÄ¡Áî¹ö°Å : Menu.DoubleCheeseBurger
-        // Ä¡Áî¹ö°Å : Menu.CheeseBurger
-        // ´õºíÆĞÆ¼¹ö°Å : Menu.DoublePattyBurger
-        // º£Áö¹ö°Å : Menu.VeggieBurger
+        // ê¸°ë³¸ë²„ê±° ; BasicMenu.BasicBurger 
+        // ë”ë¸”ì¹˜ì¦ˆë²„ê±° : BasicMenu.DoubleCheeseBurger
+        // ì¹˜ì¦ˆë²„ê±° : BasicMenu.CheeseBurger
+        // ë”ë¸”íŒ¨í‹°ë²„ê±° : BasicMenu.DoublePattyBurger
+        // ë² ì§€ë²„ê±° : BasicMenu.VeggieBurger
 
-        // ·£´ı ¸Ş´º
+        // ëœë¤ ë©”ë‰´
 
-        // Áø»ó¹ö°Å : RandomMenu.BlackBurger
-        // ÆĞÆ¼¸¸ : RandomMenu.JustPatty
-        // »§¸¸ : RandomMenu.JustBread
+        // ì§„ìƒë²„ê±° : RandomMenu.BlackBurger
+        // íŒ¨í‹°ë§Œ : RandomMenu.JustPatty
+        // ë¹µë§Œ : RandomMenu.JustBread
 
     }
 
