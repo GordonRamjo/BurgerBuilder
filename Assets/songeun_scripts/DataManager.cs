@@ -55,13 +55,13 @@ public class DataManager : MonoBehaviour
         // 이미 저장된 파일이 있다면 덮어쓰고, 없다면 새로 만들어서 저장
         File.WriteAllText(filePath, ToJsonData);
 
-        /*
+        
         // 올바르게 저장됐는지 확인하는 출력 코드
         print("저장 완료");
         for (int i = 0; i < data.isUnlock.Length; i++)
         {
             print($" Stage {i} 잠금 해제 여부 : " + data.isUnlock[i]);
         }
-        */
+        
     }
 }
