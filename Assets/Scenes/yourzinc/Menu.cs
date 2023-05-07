@@ -6,98 +6,97 @@ using UnityEngine;
 
 public class Menu
 {
+
+}
+
+public class BasicMenu : Menu 
+{
     public static Stack<int> BasicBurger = new Stack<int>();
     public static Stack<int> DoubleCheeseBurger = new Stack<int>();
     public static Stack<int> CheeseBurger = new Stack<int>();
     public static Stack<int> DoublePattyBurger = new Stack<int>();
     public static Stack<int> VeggieBurger = new Stack<int>();
 
-    /**
-     * TODO : EmptyObject¿¡ StartManager Script ¸¸µé¾î¼­ start() ¿¡¼­ Menu.InitMenu() È£Ãâ
-     */
 
     public static void InitMenu()
     {
-        // ±âº»¹ö°Å
-        BasicBurger.Push((int)Hamburger.Ingredient.BottomBread); // »§¾Æ·¡
-        BasicBurger.Push((int)Hamburger.Ingredient.Patty); // ÆĞÆ¼
-        BasicBurger.Push((int)Hamburger.Ingredient.Tomato); // Åä¸¶Åä
-        BasicBurger.Push((int)Hamburger.Ingredient.Lettuce); // ¾ç»óÃß
-        BasicBurger.Push((int)Hamburger.Ingredient.UpperBread); // »§À§
+        // ê¸°ë³¸ë²„ê±°
+        BasicBurger.Push((int)Hamburger.Ingredient.BottomBread); // ë¹µì•„ë˜
+        BasicBurger.Push((int)Hamburger.Ingredient.Patty); // íŒ¨í‹°
+        BasicBurger.Push((int)Hamburger.Ingredient.Tomato); // í† ë§ˆí† 
+        BasicBurger.Push((int)Hamburger.Ingredient.Lettuce); // ì–‘ìƒì¶”
+        BasicBurger.Push((int)Hamburger.Ingredient.UpperBread); // ë¹µìœ„
 
-        // ´õºíÄ¡Áî¹ö°Å
-        DoubleCheeseBurger.Push((int)Hamburger.Ingredient.BottomBread); // »§¾Æ·¡
-        DoubleCheeseBurger.Push((int)Hamburger.Ingredient.Patty); // ÆĞÆ¼
-        DoubleCheeseBurger.Push((int)Hamburger.Ingredient.Cheese); // Ä¡Áî
-        DoubleCheeseBurger.Push((int)Hamburger.Ingredient.Onion); // ¾çÆÄ 
-        DoubleCheeseBurger.Push((int)Hamburger.Ingredient.Tomato); // Åä¸¶Åä
-        DoubleCheeseBurger.Push((int)Hamburger.Ingredient.Lettuce); // »óÃß
-        DoubleCheeseBurger.Push((int)Hamburger.Ingredient.Cheese); // Ä¡Áî
-        DoubleCheeseBurger.Push((int)Hamburger.Ingredient.Lettuce); // ¾ç»óÃß
-        DoubleCheeseBurger.Push((int)Hamburger.Ingredient.UpperBread); // »§À§
+        // ë”ë¸”ì¹˜ì¦ˆë²„ê±°
+        DoubleCheeseBurger.Push((int)Hamburger.Ingredient.BottomBread); // ë¹µì•„ë˜
+        DoubleCheeseBurger.Push((int)Hamburger.Ingredient.Patty); // íŒ¨í‹°
+        DoubleCheeseBurger.Push((int)Hamburger.Ingredient.Cheese); // ì¹˜ì¦ˆ
+        DoubleCheeseBurger.Push((int)Hamburger.Ingredient.Onion); // ì–‘íŒŒ 
+        DoubleCheeseBurger.Push((int)Hamburger.Ingredient.Tomato); // í† ë§ˆí† 
+        DoubleCheeseBurger.Push((int)Hamburger.Ingredient.Lettuce); // ìƒì¶”
+        DoubleCheeseBurger.Push((int)Hamburger.Ingredient.Cheese); // ì¹˜ì¦ˆ
+        DoubleCheeseBurger.Push((int)Hamburger.Ingredient.Lettuce); // ì–‘ìƒì¶”
+        DoubleCheeseBurger.Push((int)Hamburger.Ingredient.UpperBread); // ë¹µìœ„
 
-        // Ä¡Áî¹ö°Å
-        CheeseBurger.Push((int)Hamburger.Ingredient.BottomBread); // »§¾Æ·¡
-        CheeseBurger.Push((int)Hamburger.Ingredient.Patty); // ÆĞÆ¼
-        CheeseBurger.Push((int)Hamburger.Ingredient.Cheese); // Ä¡Áî
-        CheeseBurger.Push((int)Hamburger.Ingredient.UpperBread); // »§À§
+        // ì¹˜ì¦ˆë²„ê±°
+        CheeseBurger.Push((int)Hamburger.Ingredient.BottomBread); // ë¹µì•„ë˜
+        CheeseBurger.Push((int)Hamburger.Ingredient.Patty); // íŒ¨í‹°
+        CheeseBurger.Push((int)Hamburger.Ingredient.Cheese); // ì¹˜ì¦ˆ
+        CheeseBurger.Push((int)Hamburger.Ingredient.UpperBread); // ë¹µìœ„
 
-        // ´õºíÆĞÆ¼¹ö°Å
-        DoublePattyBurger.Push((int)Hamburger.Ingredient.BottomBread); // »§¾Æ·¡
-        DoublePattyBurger.Push((int)Hamburger.Ingredient.Patty); // ÆĞÆ¼
-        DoublePattyBurger.Push((int)Hamburger.Ingredient.Cheese); // Ä¡Áî
-        DoublePattyBurger.Push((int)Hamburger.Ingredient.Patty); // ÆĞÆ¼
-        DoublePattyBurger.Push((int)Hamburger.Ingredient.Cheese); // Ä¡Áî
-        DoublePattyBurger.Push((int)Hamburger.Ingredient.Tomato); // Åä¸¶Åä
-        DoublePattyBurger.Push((int)Hamburger.Ingredient.Lettuce); // »óÃß
-        DoublePattyBurger.Push((int)Hamburger.Ingredient.Pickle); // ÇÇÅ¬
-        DoublePattyBurger.Push((int)Hamburger.Ingredient.Onion); // ¾çÆÄ
-        DoublePattyBurger.Push((int)Hamburger.Ingredient.UpperBread); // »§À§ 
+        // ë”ë¸”íŒ¨í‹°ë²„ê±°
+        DoublePattyBurger.Push((int)Hamburger.Ingredient.BottomBread); // ë¹µì•„ë˜
+        DoublePattyBurger.Push((int)Hamburger.Ingredient.Patty); // íŒ¨í‹°
+        DoublePattyBurger.Push((int)Hamburger.Ingredient.Cheese); // ì¹˜ì¦ˆ
+        DoublePattyBurger.Push((int)Hamburger.Ingredient.Patty); // íŒ¨í‹°
+        DoublePattyBurger.Push((int)Hamburger.Ingredient.Cheese); // ì¹˜ì¦ˆ
+        DoublePattyBurger.Push((int)Hamburger.Ingredient.Tomato); // í† ë§ˆí† 
+        DoublePattyBurger.Push((int)Hamburger.Ingredient.Lettuce); // ìƒì¶”
+        DoublePattyBurger.Push((int)Hamburger.Ingredient.Pickle); // í”¼í´
+        DoublePattyBurger.Push((int)Hamburger.Ingredient.Onion); // ì–‘íŒŒ
+        DoublePattyBurger.Push((int)Hamburger.Ingredient.UpperBread); // ë¹µìœ„ 
 
-        // º£Áö¹ö°Å
-        VeggieBurger.Push((int)Hamburger.Ingredient.BottomBread); // »§¾Æ·¡
-        VeggieBurger.Push((int)Hamburger.Ingredient.Lettuce); // »óÃß
-        VeggieBurger.Push((int)Hamburger.Ingredient.Tomato); // Åä¸¶Åä
-        VeggieBurger.Push((int)Hamburger.Ingredient.Onion); // ¾çÆÄ
-        VeggieBurger.Push((int)Hamburger.Ingredient.Tomato); // Åä¸¶Åä
-        VeggieBurger.Push((int)Hamburger.Ingredient.Lettuce); // »óÃß
-        VeggieBurger.Push((int)Hamburger.Ingredient.UpperBread); // »§À§
+        // ë² ì§€ë²„ê±°
+        VeggieBurger.Push((int)Hamburger.Ingredient.BottomBread); // ë¹µì•„ë˜
+        VeggieBurger.Push((int)Hamburger.Ingredient.Lettuce); // ìƒì¶”
+        VeggieBurger.Push((int)Hamburger.Ingredient.Tomato); // í† ë§ˆí† 
+        VeggieBurger.Push((int)Hamburger.Ingredient.Onion); // ì–‘íŒŒ
+        VeggieBurger.Push((int)Hamburger.Ingredient.Tomato); // í† ë§ˆí† 
+        VeggieBurger.Push((int)Hamburger.Ingredient.Lettuce); // ìƒì¶”
+        VeggieBurger.Push((int)Hamburger.Ingredient.UpperBread); // ë¹µìœ„
     }
 }
 
-public class RandomMenu
+public class RandomMenu : Menu
 {
     public static Stack<int> BlackBurger = new Stack<int>();
     public static Stack<int> JustPatty = new Stack<int>();
     public static Stack<int> JustBread = new Stack<int>();
 
-    /**
-    * TODO : EmptyObject¿¡ StartManager Script ¸¸µé¾î¼­ start() ¿¡¼­ RandomMenu.InitMenu() È£Ãâ
-    */
 
     public static void InitMenu()
     {
-        // Áø»ó¹ö°Å
-        BlackBurger.Push((int)Hamburger.Ingredient.BottomBread); // »§ ¾Æ·§¸é
-        BlackBurger.Push((int)Hamburger.Ingredient.Patty); // ÆĞÆ¼
-        BlackBurger.Push((int)Hamburger.Ingredient.Cheese); // Ä¡Áî
-        BlackBurger.Push((int)Hamburger.Ingredient.Patty); // ÆĞÆ¼
-        BlackBurger.Push((int)Hamburger.Ingredient.Cheese); // Ä¡Áî
-        BlackBurger.Push((int)Hamburger.Ingredient.Onion); // ¾çÆÄ
-        BlackBurger.Push((int)Hamburger.Ingredient.Tomato); // Åä¸¶Åä
-        BlackBurger.Push((int)Hamburger.Ingredient.Lettuce); // ¾ç»óÃß
-        BlackBurger.Push((int)Hamburger.Ingredient.Patty); // ÆĞÆ¼
-        BlackBurger.Push((int)Hamburger.Ingredient.Cheese); // Ä¡Áî
-        BlackBurger.Push((int)Hamburger.Ingredient.Onion); // ¾çÆÄ
-        BlackBurger.Push((int)Hamburger.Ingredient.Tomato); // Åä¸¶Åä
-        BlackBurger.Push((int)Hamburger.Ingredient.Lettuce); // ¾ç»óÃß
-        BlackBurger.Push((int)Hamburger.Ingredient.UpperBread); // »§ À­¸é
+        // ì§„ìƒë²„ê±°
+        BlackBurger.Push((int)Hamburger.Ingredient.BottomBread); // ë¹µ ì•„ë«ë©´
+        BlackBurger.Push((int)Hamburger.Ingredient.Patty); // íŒ¨í‹°
+        BlackBurger.Push((int)Hamburger.Ingredient.Cheese); // ì¹˜ì¦ˆ
+        BlackBurger.Push((int)Hamburger.Ingredient.Patty); // íŒ¨í‹°
+        BlackBurger.Push((int)Hamburger.Ingredient.Cheese); // ì¹˜ì¦ˆ
+        BlackBurger.Push((int)Hamburger.Ingredient.Onion); // ì–‘íŒŒ
+        BlackBurger.Push((int)Hamburger.Ingredient.Tomato); // í† ë§ˆí† 
+        BlackBurger.Push((int)Hamburger.Ingredient.Lettuce); // ì–‘ìƒì¶”
+        BlackBurger.Push((int)Hamburger.Ingredient.Patty); // íŒ¨í‹°
+        BlackBurger.Push((int)Hamburger.Ingredient.Cheese); // ì¹˜ì¦ˆ
+        BlackBurger.Push((int)Hamburger.Ingredient.Onion); // ì–‘íŒŒ
+        BlackBurger.Push((int)Hamburger.Ingredient.Tomato); // í† ë§ˆí† 
+        BlackBurger.Push((int)Hamburger.Ingredient.Lettuce); // ì–‘ìƒì¶”
+        BlackBurger.Push((int)Hamburger.Ingredient.UpperBread); // ë¹µ ìœ—ë©´
 
-        // ÆĞÆ¼¸¸ ÁÖ¼¼¿ä
-        JustPatty.Push((int)Hamburger.Ingredient.Patty); // ÆĞÆ¼
+        // íŒ¨í‹°ë§Œ ì£¼ì„¸ìš”
+        JustPatty.Push((int)Hamburger.Ingredient.Patty); // íŒ¨í‹°
 
-        // »§¸¸ ÁÖ¼¼¿ä
-        JustBread.Push((int)Hamburger.Ingredient.BottomBread); // »§ ¾Æ·§¸é
-        JustBread.Push((int)Hamburger.Ingredient.UpperBread); // »§ À­¸é
+        // ë¹µë§Œ ì£¼ì„¸ìš”
+        JustBread.Push((int)Hamburger.Ingredient.BottomBread); // ë¹µ ì•„ë«ë©´
+        JustBread.Push((int)Hamburger.Ingredient.UpperBread); // ë¹µ ìœ—ë©´
     }
 }
