@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class StageManager : MonoBehaviour
 {
+    public int stageNumber; //현재 스테이지 수
     public int totalCustomerCnt; //스테이지 총 손님 수
     private int remainCustomerCnt; //남아있는 손님 수
     public bool isNextCustomer; //다음 손님이 주문 시작 가능 여부
@@ -11,6 +12,8 @@ public class StageManager : MonoBehaviour
     public GameObject currentCustomer; //현재 응대 중인 손님을 가르키는 변수
     public GameObject customer; //반복 생성할 손님 오브젝트
     Queue<GameObject> customerList = new Queue<GameObject>(); //손님 리스트 큐 생성
+    public int availBasicMenuCnt;
+    public int availRandomMenuCnt;
 
     void Awake()
     {

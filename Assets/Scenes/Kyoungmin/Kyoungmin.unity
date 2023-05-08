@@ -365,12 +365,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0551a09f84244184b8524ae58798965e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stageNumber: 1
   totalCustomerCnt: 5
   isNextCustomer: 0
   isStageClear: 0
   currentCustomer: {fileID: 0}
   customer: {fileID: 8645467329039328881, guid: 2b95665aa9c14904087734e6a7b3fa8d,
     type: 3}
+  availBasicMenuCnt: 3
+  availRandomMenuCnt: 3
 --- !u!4 &541001739
 Transform:
   m_ObjectHideFlags: 0
