@@ -12,11 +12,14 @@ public class IntroDialogManager : MonoBehaviour
     private string spaceDialog = "[Space] 키를 눌러 주세요";
     private int introDialogNum = 0;
     private Canvas introUICanvas;
+    private GameObject guide;
 
     // Start is called before the first frame update
     void Start()
     {
         introUICanvas = GameObject.Find("IntroUICanvas").GetComponent<Canvas>();
+        guide = GameObject.Find("Guide");
+        guide.SetActive(false);
         StartCoroutine(_typing());
     }
 
@@ -33,6 +36,7 @@ public class IntroDialogManager : MonoBehaviour
             } else if (introDialogNum == introDialog.Length)
             {
                 introUICanvas.enabled = false;
+                guide.SetActive(true);
             }
         }
     }
