@@ -10,7 +10,13 @@ public class Order : MonoBehaviour
     //아래의 두 변수는 스테이지에 따라 달라짐
     int availBasicMenuCnt; //가능한 기본 메뉴 수
     int availRandomMenuCnt; //가능한 랜덤 메뉴 수
-    public GameObject stageManager; //스테이지 매니저 오브젝트
+    public StageManager stageManager; //스테이지 매니저 오브젝트
+    private string hamburgerName; //햄버거 이름
+    private Sprite menuImg; //메뉴 스프라이트
+    private string orderMsg; //주문 메세지
+    private Sprite[] basicMenuImgs;
+    private Sprite[] randomMenuImgs;
+    private SpeechBubbleController SBC;
 
     //기본 메뉴들 중 선택
     Stack<int> ChooseBasicMenu(int r)
@@ -18,16 +24,28 @@ public class Order : MonoBehaviour
         switch (r)
         {
             case 1:
+                hamburgerName = "BasicBurger";
+                menuImg = basicMenuImgs[0];
                 return BasicMenu.BasicBurger;
             case 2:
+                hamburgerName = "DoubleCheeseBurger";
+                menuImg = basicMenuImgs[1];
                 return BasicMenu.DoubleCheeseBurger;
             case 3:
+                hamburgerName = "CheeseBurger";
+                menuImg = basicMenuImgs[2];
                 return BasicMenu.CheeseBurger;
             case 4:
+                hamburgerName = "DoublePattyBurger";
+                menuImg = basicMenuImgs[3];
                 return BasicMenu.DoublePattyBurger;
             case 5:
+                hamburgerName = "VeggieBurger";
+                menuImg = basicMenuImgs[4];
                 return BasicMenu.VeggieBurger;
             default:
+                hamburgerName = "Basicburger";
+                menuImg = basicMenuImgs[0];
                 return BasicMenu.BasicBurger; ;
         }
     }
@@ -37,12 +55,20 @@ public class Order : MonoBehaviour
         switch (r)
         {
             case 1:
+                hamburgerName = "BlackBurger";
+                menuImg = randomMenuImgs[0];
                 return RandomMenu.BlackBurger;
             case 2:
+                hamburgerName = "JustPatty";
+                menuImg = randomMenuImgs[1];
                 return RandomMenu.JustPatty;
             case 3:
+                hamburgerName = "JustBread";
+                menuImg = randomMenuImgs[2];
                 return RandomMenu.JustBread;
             default:
+                hamburgerName = "BlackBurger";
+                menuImg = randomMenuImgs[3];
                 return RandomMenu.BlackBurger;
         }
     }
@@ -52,22 +78,23 @@ public class Order : MonoBehaviour
         isRandomMenu = gameObject.GetComponent<Customer>().isRandomMenu;
         BasicMenu.InitMenu(); // 기본메뉴 설정
         RandomMenu.InitMenu(); // 랜덤메뉴 설정
-        stageManager = GameObject.Find("StageManager"); //스테이지 매니저 가르키기
-        availBasicMenuCnt = stageManager.GetComponent<StageManager>().availBasicMenuCnt; //사용 가능 기본 메뉴 수 가져오기
-        availRandomMenuCnt = stageManager.GetComponent<StageManager>().availRandomMenuCnt; //사용 가능 랜덤 메뉴 수 가져오기
-
+        stageManager = GameObject.Find("StageManager").GetComponent<StageManager>();
+        availBasicMenuCnt = stageManager.availBasicMenuCnt; //사용 가능 기본 메뉴 수 가져오기
+        availRandomMenuCnt = stageManager.availRandomMenuCnt; //사용 가능 랜덤 메뉴 수 가져오기
+        basicMenuImgs = stageManager.basicMenuImgs;
+        randomMenuImgs = stageManager.randomMenuImgs;
         //랜덤 여부에 따라, 햄버거 메뉴를 기본 메뉴 중 선택 or 랜덤 메뉴 중 선택
         if (isRandomMenu)
         {
             hamburger = ChooseRandomMenu((int)Random.Range(1,availRandomMenuCnt+1));
-            Debug.Log("랜덤햄버거");
+            //Debug.Log("랜덤햄버거");
         }
         else
         {
             hamburger = ChooseBasicMenu((int)Random.Range(1, availBasicMenuCnt+1));
-            Debug.Log("기본햄버거");
+            //Debug.Log("기본햄버거");
         }
-        Debug.Log(hamburger);
+        //Debug.Log(hamburger);
     }
     // Start is called before the first frame update
     void Start()
@@ -76,11 +103,17 @@ public class Order : MonoBehaviour
         {
             Debug.Log("콜라와 감자튀김도 주세요.");
         }
+        SBC = GameObject.Find("SpeechBubble(Clone)").GetComponent<SpeechBubbleController>(); //말풍선 생성하기
+
+        SBC.ChangeMenuImg(menuImg);
+        /*
+        SBC.ChangeText();
+        */
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

@@ -9,7 +9,9 @@ public class Customer : MonoBehaviour
     public bool isSuccess;
     public GameObject destination;
     public Animator customerAnimator;
-    public GameObject stageManager;
+    public StageManager stageManager;
+    public GameObject speechBubble; //말풍선 오브젝트
+    private GameObject speechBubbleInstance;
 
     Customer()
     {
@@ -38,15 +40,17 @@ public class Customer : MonoBehaviour
     {
         //해당 손님 오브젝트에 Order 컴포넌트 추가
         gameObject.AddComponent<Order>();
+        speechBubbleInstance = Instantiate(speechBubble); //말풍선 생성하기
+   
     }
     void Awake()
     {
         //세트,랜덤 메뉴인지 결정.
         isSetMenu = IsSetMenu();
         isRandomMenu = IsRandomMenu();
-        //도착지점과,스테이지 매니저 찾아서 할당.
         destination = GameObject.Find("DestinationPoint");
-        stageManager = GameObject.Find("StageManager");
+        stageManager = GameObject.Find("StageManager").GetComponent<StageManager>();
+        speechBubble = stageManager.speechBubble; //말풍선 접근하기
     }
     void evaluate() //손님이 음식 평가하는 함수
     {
@@ -71,8 +75,9 @@ public class Customer : MonoBehaviour
         //StageManager에게 다음 손님을 맞이해도 된다는 신호주기.
         if (isSuccess)
         {
-            gameObject.SetActive(false);
-            stageManager.GetComponent<StageManager>().isNextCustomer = true;
+            Destroy(gameObject); //손님 오브젝트 삭제
+            Destroy(speechBubbleInstance); //손님의 말풍선 삭제
+            stageManager.isNextCustomer = true;
             Debug.Log("isSuccess");
         }
             

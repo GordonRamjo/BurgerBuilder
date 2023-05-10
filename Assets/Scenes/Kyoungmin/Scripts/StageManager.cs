@@ -11,10 +11,12 @@ public class StageManager : MonoBehaviour
     public bool isStageClear; //스테이지 클리어(모든 손님 응대 완료) 여부
     public GameObject currentCustomer; //현재 응대 중인 손님을 가르키는 변수
     public GameObject customer; //반복 생성할 손님 오브젝트
+    public GameObject speechBubble; //주문 말풍선 오브젝트
     Queue<GameObject> customerList = new Queue<GameObject>(); //손님 리스트 큐 생성
-    public int availBasicMenuCnt;
-    public int availRandomMenuCnt;
-
+    public int availBasicMenuCnt; //스테이지에서 이용 가능한 기본 메뉴 수
+    public int availRandomMenuCnt; //스테이지에서 이용 가능한 랜덤 메뉴 수
+    public Sprite[] basicMenuImgs; //기본메뉴 스프라이트 배열
+    public Sprite[] randomMenuImgs; //랜덤메뉴 스프라이트 배열
     void Awake()
     {
         //필요 변수 초기화
@@ -22,7 +24,7 @@ public class StageManager : MonoBehaviour
         isNextCustomer = false;
         isStageClear = false;
         //스테이지 총 손님 수만큼 손님 생성 함수 호출
-        for(int i=0; i<totalCustomerCnt; i++)
+        for (int i=0; i<totalCustomerCnt; i++)
         {
             GenerateCustomer();
         }
