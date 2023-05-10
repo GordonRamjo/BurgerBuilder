@@ -101,14 +101,18 @@ public class Order : MonoBehaviour
     {
         if (isSetMenu)
         {
-            Debug.Log("콜라와 감자튀김도 주세요.");
+            orderMsg = hamburgerName + " Please.\n" + "Also, Coke and French Fries too.";
+        }
+        else
+        {
+            orderMsg = hamburgerName + " Please.";
         }
         SBC = GameObject.Find("SpeechBubble(Clone)").GetComponent<SpeechBubbleController>(); //말풍선 생성하기
 
         SBC.ChangeMenuImg(menuImg);
-        /*
-        SBC.ChangeText();
-        */
+        
+        SBC.ChangeText(orderMsg);
+        
     }
 
     // Update is called once per frame

@@ -12,12 +12,12 @@ public class SpeechBubbleController : MonoBehaviour
     {
         menuImg.sprite = s;
     }
-    /*
+    
     public void ChangeText(string msg)
     {
         tmpText.text = msg;
     }
-    */
+    
     private void Awake()
     {
         menuImg = GameObject.Find("MenuImg").GetComponent<SpriteRenderer>();
