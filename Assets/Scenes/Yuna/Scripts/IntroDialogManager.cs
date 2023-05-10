@@ -7,7 +7,9 @@ using TMPro;
 public class IntroDialogManager : MonoBehaviour
 {
     public TextMeshProUGUI tx;
-    private string[] introDialog = new string[] { "반갑다!\n최고의 버거 빌더가\n되고 싶다고?", "그럼 미션을 주겠다!\n미션을 다 통과하면,\n최고의 버거빌더로\n임명하겠다 !!!" };
+    public TextMeshProUGUI spacetx;
+    private string[] introDialog = new string[] { "반갑다 !\n최고의 버거 빌더가\n되고 싶다고 ?", "내가 주는\n미션을 통과하면,\n다시 생각해보겠다 !", "지금부터 딱 한 번만\n설명할테니 빠짐없이\n새겨 듣도록." };
+    private string spaceDialog = "[Space] 키를 눌러 주세요";
     private int introDialogNum = 0;
 
     // Start is called before the first frame update
@@ -33,6 +35,7 @@ public class IntroDialogManager : MonoBehaviour
     IEnumerator _typing()
     {
         tx.text = "";
+        spacetx.text = "";
 
         yield return new WaitForSeconds(1f);
 
@@ -42,5 +45,9 @@ public class IntroDialogManager : MonoBehaviour
 
             yield return new WaitForSeconds(0.1f);
         }
+
+        yield return new WaitForSeconds(1f);
+
+        spacetx.text = spaceDialog;
     }
 }
