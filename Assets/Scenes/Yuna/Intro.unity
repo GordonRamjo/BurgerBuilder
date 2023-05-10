@@ -735,7 +735,7 @@ GameObject:
   - component: {fileID: 75509588}
   - component: {fileID: 75509587}
   m_Layer: 5
-  m_Name: RawImage
+  m_Name: ChefImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -879,7 +879,7 @@ GameObject:
   - component: {fileID: 96133791}
   - component: {fileID: 96133790}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: IntroText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -902,7 +902,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 318, y: -32}
+  m_AnchoredPosition: {x: 308, y: -24}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &96133790
@@ -5695,7 +5695,7 @@ GameObject:
   - component: {fileID: 543832364}
   - component: {fileID: 543832363}
   m_Layer: 5
-  m_Name: PushSpace
+  m_Name: PushSpaceText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5816,7 +5816,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 92, y: -105}
+  m_AnchoredPosition: {x: 82, y: -102}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &561343234
@@ -9192,7 +9192,7 @@ GameObject:
   - component: {fileID: 905195599}
   - component: {fileID: 905195598}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: IntroUICanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19642,7 +19642,7 @@ GameObject:
   - component: {fileID: 2144048176}
   - component: {fileID: 2144048175}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: BackgroundPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
