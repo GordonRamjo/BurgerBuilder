@@ -8,12 +8,12 @@ public class Hamburger
 
     public Stack<int> hamburger = new();
 
-    void Add(Ingredient ingredient)
+    public void Add(Ingredient ingredient)
     {
         hamburger.Push((int)ingredient);
     }
 
-    void DeleteAll()
+    public void DeleteAll()
     {
         hamburger.Clear();
     }
