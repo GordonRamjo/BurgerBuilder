@@ -10,7 +10,7 @@ public class StageManager : MonoBehaviour
     public bool isNextCustomer; //다음 손님이 주문 시작 가능 여부
     public bool isStageClear; //스테이지 클리어(모든 손님 응대 완료) 여부
     public GameObject currentCustomer; //현재 응대 중인 손님을 가르키는 변수
-    public GameObject customer; //반복 생성할 손님 오브젝트
+    public GameObject[] customers = new GameObject[5]; //반복 생성할 손님 오브젝트
     public GameObject speechBubble; //주문 말풍선 오브젝트
     Queue<GameObject> customerList = new Queue<GameObject>(); //손님 리스트 큐 생성
     public int availBasicMenuCnt; //스테이지에서 이용 가능한 기본 메뉴 수
@@ -26,7 +26,7 @@ public class StageManager : MonoBehaviour
         //스테이지 총 손님 수만큼 손님 생성 함수 호출
         for (int i=0; i<totalCustomerCnt; i++)
         {
-            GenerateCustomer();
+            GenerateCustomer(i);
         }
         
     }
@@ -50,9 +50,30 @@ public class StageManager : MonoBehaviour
             isStageClear = true; //스테이지 클리어 여부를 참으로 설정
         }
     }
-    void GenerateCustomer() //손님을 생성하는 함수
+    void GenerateCustomer(int i) //손님을 생성하는 함수
     {
-        GameObject instance = Instantiate(customer);
+        GameObject instance;
+        switch (i % 5)
+        {
+            case 0:
+                instance = Instantiate(customers[0]);
+                break;
+            case 1:
+                instance = Instantiate(customers[1]);
+                break;
+            case 2:
+                instance = Instantiate(customers[2]);
+                break;
+            case 3:
+                instance = Instantiate(customers[3]);
+                break;
+            case 4:
+                instance = Instantiate(customers[4]);
+                break;
+            default:
+                instance = Instantiate(customers[0]);
+                break;
+        }
         //생성한 손님을 손님 대기줄 큐에 추가함.
         customerList.Enqueue(instance);
         //생성한 손님을 비활성화
