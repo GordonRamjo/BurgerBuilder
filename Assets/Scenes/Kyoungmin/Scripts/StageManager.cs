@@ -17,6 +17,8 @@ public class StageManager : MonoBehaviour
     public int availRandomMenuCnt; //스테이지에서 이용 가능한 랜덤 메뉴 수
     public Sprite[] basicMenuImgs = new Sprite[5]; //기본메뉴 스프라이트 배열
     public Sprite[] randomMenuImgs = new Sprite[3]; //랜덤메뉴 스프라이트 배열
+    public Sprite[] basicSetMenuImgs = new Sprite[5]; //기본세트메뉴 스프라이트 배열
+    public Sprite[] randomSetMenuImgs = new Sprite[3]; //랜덤세트메뉴 스프라이트 배열
     void Awake()
     {
         //필요 변수 초기화
