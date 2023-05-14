@@ -15,8 +15,8 @@ public class StageManager : MonoBehaviour
     Queue<GameObject> customerList = new Queue<GameObject>(); //손님 리스트 큐 생성
     public int availBasicMenuCnt; //스테이지에서 이용 가능한 기본 메뉴 수
     public int availRandomMenuCnt; //스테이지에서 이용 가능한 랜덤 메뉴 수
-    public Sprite[] basicMenuImgs; //기본메뉴 스프라이트 배열
-    public Sprite[] randomMenuImgs; //랜덤메뉴 스프라이트 배열
+    public Sprite[] basicMenuImgs = new Sprite[5]; //기본메뉴 스프라이트 배열
+    public Sprite[] randomMenuImgs = new Sprite[3]; //랜덤메뉴 스프라이트 배열
     void Awake()
     {
         //필요 변수 초기화
