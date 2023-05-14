@@ -370,8 +370,12 @@ MonoBehaviour:
   isNextCustomer: 0
   isStageClear: 0
   currentCustomer: {fileID: 0}
-  customer: {fileID: 8645467329039328881, guid: 2b95665aa9c14904087734e6a7b3fa8d,
-    type: 3}
+  customers:
+  - {fileID: 8645467329039328881, guid: 2b95665aa9c14904087734e6a7b3fa8d, type: 3}
+  - {fileID: 7478225697116208144, guid: c252273403617b04fa934af196a7ad8b, type: 3}
+  - {fileID: 7447163605589988728, guid: 23f02674a60f92043b3dd682b0146644, type: 3}
+  - {fileID: 8619338778009079851, guid: fd10f84b25d227b498b67c3be666a01c, type: 3}
+  - {fileID: 856601670117699726, guid: 002f696fe154cbe4cb759aa501945a9c, type: 3}
   speechBubble: {fileID: 16030668154136046, guid: 645d187cf5d350a49b1fe26627e14af0,
     type: 3}
   availBasicMenuCnt: 3

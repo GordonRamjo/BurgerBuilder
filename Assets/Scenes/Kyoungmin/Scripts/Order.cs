@@ -14,8 +14,10 @@ public class Order : MonoBehaviour
     private string hamburgerName; //햄버거 이름
     private Sprite menuImg; //메뉴 스프라이트
     private string orderMsg; //주문 메세지
-    private Sprite[] basicMenuImgs;
-    private Sprite[] randomMenuImgs;
+    private Sprite[] basicMenuImgs; //기본 메뉴 스프라이트 배열
+    private Sprite[] randomMenuImgs; //랜덤 메뉴 스프라이트 배열
+    private Sprite[] basicSetMenuImgs; //기본 세트 메뉴 스프라이트 배열
+    private Sprite[] randomSetMenuImgs; //랜덤 세트 메뉴 스프라이트 배열
     private SpeechBubbleController SBC;
 
     //기본 메뉴들 중 선택
@@ -25,27 +27,45 @@ public class Order : MonoBehaviour
         {
             case 1:
                 hamburgerName = "BasicBurger";
-                menuImg = basicMenuImgs[0];
+                if (isSetMenu)
+                    menuImg = basicSetMenuImgs[0];
+                else
+                    menuImg = basicMenuImgs[0];
                 return BasicMenu.BasicBurger;
             case 2:
                 hamburgerName = "DoubleCheeseBurger";
-                menuImg = basicMenuImgs[1];
+                if (isSetMenu)
+                    menuImg = basicSetMenuImgs[1];
+                else
+                    menuImg = basicMenuImgs[1];
                 return BasicMenu.DoubleCheeseBurger;
             case 3:
                 hamburgerName = "CheeseBurger";
-                menuImg = basicMenuImgs[2];
+                if (isSetMenu)
+                    menuImg = basicSetMenuImgs[2];
+                else
+                    menuImg = basicMenuImgs[2];
                 return BasicMenu.CheeseBurger;
             case 4:
                 hamburgerName = "DoublePattyBurger";
-                menuImg = basicMenuImgs[3];
+                if (isSetMenu)
+                    menuImg = basicSetMenuImgs[3];
+                else
+                    menuImg = basicMenuImgs[3];
                 return BasicMenu.DoublePattyBurger;
             case 5:
                 hamburgerName = "VeggieBurger";
-                menuImg = basicMenuImgs[4];
+                if (isSetMenu)
+                    menuImg = basicSetMenuImgs[4];
+                else
+                    menuImg = basicMenuImgs[4];
                 return BasicMenu.VeggieBurger;
             default:
                 hamburgerName = "Basicburger";
-                menuImg = basicMenuImgs[0];
+                if (isSetMenu)
+                    menuImg = basicSetMenuImgs[0];
+                else
+                    menuImg = basicMenuImgs[0];
                 return BasicMenu.BasicBurger; ;
         }
     }
@@ -56,19 +76,31 @@ public class Order : MonoBehaviour
         {
             case 1:
                 hamburgerName = "BlackBurger";
-                menuImg = randomMenuImgs[0];
+                if (isSetMenu)
+                    menuImg = randomSetMenuImgs[0];
+                else
+                    menuImg = randomMenuImgs[0];
                 return RandomMenu.BlackBurger;
             case 2:
                 hamburgerName = "JustPatty";
-                menuImg = randomMenuImgs[1];
+                if (isSetMenu)
+                    menuImg = randomSetMenuImgs[1];
+                else
+                    menuImg = randomMenuImgs[1];
                 return RandomMenu.JustPatty;
             case 3:
                 hamburgerName = "JustBread";
-                menuImg = randomMenuImgs[2];
+                if (isSetMenu)
+                    menuImg = randomSetMenuImgs[2];
+                else
+                    menuImg = randomMenuImgs[2];
                 return RandomMenu.JustBread;
             default:
                 hamburgerName = "BlackBurger";
-                menuImg = randomMenuImgs[3];
+                if (isSetMenu)
+                    menuImg = randomSetMenuImgs[0];
+                else
+                    menuImg = randomMenuImgs[0];
                 return RandomMenu.BlackBurger;
         }
     }
@@ -83,6 +115,8 @@ public class Order : MonoBehaviour
         availRandomMenuCnt = stageManager.availRandomMenuCnt; //사용 가능 랜덤 메뉴 수 가져오기
         basicMenuImgs = stageManager.basicMenuImgs;
         randomMenuImgs = stageManager.randomMenuImgs;
+        basicSetMenuImgs = stageManager.basicSetMenuImgs;
+        randomSetMenuImgs = stageManager.randomSetMenuImgs;
         //랜덤 여부에 따라, 햄버거 메뉴를 기본 메뉴 중 선택 or 랜덤 메뉴 중 선택
         if (isRandomMenu)
         {
