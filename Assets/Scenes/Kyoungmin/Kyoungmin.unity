@@ -365,12 +365,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0551a09f84244184b8524ae58798965e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stageNumber: 1
   totalCustomerCnt: 5
   isNextCustomer: 0
   isStageClear: 0
   currentCustomer: {fileID: 0}
   customer: {fileID: 8645467329039328881, guid: 2b95665aa9c14904087734e6a7b3fa8d,
     type: 3}
+  speechBubble: {fileID: 16030668154136046, guid: 645d187cf5d350a49b1fe26627e14af0,
+    type: 3}
+  availBasicMenuCnt: 3
+  availRandomMenuCnt: 3
+  basicMenuImgs:
+  - {fileID: 21300000, guid: ab1f4a3b8533d9f4591280aecff4f8ca, type: 3}
+  - {fileID: 21300000, guid: e4910634803b7f44fb914e293ad2001c, type: 3}
+  - {fileID: 21300000, guid: 4d7bf2adfcae4ec4ca81f1238b4e7f02, type: 3}
+  - {fileID: 21300000, guid: 2e190e75daca9104ea4e3a708b9916c5, type: 3}
+  - {fileID: 21300000, guid: 150de050961acdd4d96d595e6e732900, type: 3}
+  randomMenuImgs:
+  - {fileID: 21300000, guid: 20cd2c55e24df574b9d3e9418a9a702a, type: 3}
+  - {fileID: 21300000, guid: 31fb3e34cfb95a84cb709b5a7c35286e, type: 3}
+  - {fileID: 21300000, guid: 4d7bf2adfcae4ec4ca81f1238b4e7f02, type: 3}
 --- !u!4 &541001739
 Transform:
   m_ObjectHideFlags: 0
