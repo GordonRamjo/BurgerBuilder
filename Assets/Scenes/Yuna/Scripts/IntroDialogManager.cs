@@ -13,13 +13,16 @@ public class IntroDialogManager : MonoBehaviour
     private int introDialogNum = 0;
     private Canvas introUICanvas;
     private GameObject guide;
+    private GameObject gordon;
 
     // Start is called before the first frame update
     void Start()
     {
         introUICanvas = GameObject.Find("IntroUICanvas").GetComponent<Canvas>();
         guide = GameObject.Find("Guide");
+        gordon = GameObject.Find("Gordon");
         guide.SetActive(false);
+        gordon.SetActive(false);
         StartCoroutine(_typing());
     }
 
@@ -37,6 +40,7 @@ public class IntroDialogManager : MonoBehaviour
             {
                 introUICanvas.enabled = false;
                 guide.SetActive(true);
+                gordon.SetActive(true);
             }
         }
     }
