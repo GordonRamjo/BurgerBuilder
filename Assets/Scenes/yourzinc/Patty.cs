@@ -8,21 +8,23 @@ public class Patty
 
     public State state; // 상태
 
+    public bool StartBake = false; // 조리 시작 
+
     // 생성자
     public Patty()
     {
         state = State.Rare;
     }
 
-    // 4초 뒤
-    public void After4Second()
+    // 익음
+    public void Medium()
     {
-        this.state = State.Medium; // 익음
+        this.state = State.Medium; 
     }
 
-    // 7초 뒤
-    public void After7Second()
+    // 탐
+    public void Burned()
     {
-        this.state = State.Burned; // 탐
+        this.state = State.Burned; 
     }
 }

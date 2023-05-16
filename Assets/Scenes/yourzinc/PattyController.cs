@@ -4,46 +4,49 @@ using UnityEngine;
 
 public class PattyController : MonoBehaviour
 {
-    bool flag = false;
     public Patty patty;
+
+    // Patty Material
+    public Material[] RareMaterial;
+    public Material[] MediumMaterial;
+    public Material[] BurnMaterial;
+
 
     // Start is called before the first frame update
     void Start()
     {
         patty = new Patty();
-        // Debug.Log("Start");
-        // Debug.Log((Patty.State)patty.state);
+        gameObject.GetComponent<MeshRenderer>().materials = RareMaterial;
     }
 
     // Update is called once per frame
     void Update()
     {
-        // Debug.Log((Patty.State)patty.state);
-
-        if (!flag)
+        if (patty.StartBake)
         {
-            flag = true;
-            // 4초 뒤
-            StartCoroutine("After4Second");
+            patty.StartBake = false;
+            // 5초 뒤
+            StartCoroutine("After5Second");
             
-            // 7초 뒤
-            StartCoroutine("After7Second");
+            // 10초 뒤
+            StartCoroutine("After10Second");
         }
     }
 
-    IEnumerator After4Second()
+    IEnumerator After5Second()
     {
-        yield return new WaitForSecondsRealtime(4.0f);
-        // Debug.Log("After4Second");
-        patty.After4Second();
-        // Debug.Log((Patty.State)patty.state);
+        yield return new WaitForSecondsRealtime(5.0f);
+        // Debug.Log("After5Second");
+        patty.Medium();
+        gameObject.GetComponent<MeshRenderer>().materials = MediumMaterial;
+
     }
 
-    IEnumerator After7Second()
+    IEnumerator After10Second()
     {
-        yield return new WaitForSecondsRealtime(7.0f);
-        // Debug.Log("After7Second");
-        patty.After7Second();
-        // Debug.Log((Patty.State)patty.state);
+        yield return new WaitForSecondsRealtime(10.0f);
+        // Debug.Log("After10Second");
+        patty.Burned();
+        gameObject.GetComponent<MeshRenderer>().materials = BurnMaterial;
     }
 }
