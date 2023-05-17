@@ -7,14 +7,12 @@ public class Customer : MonoBehaviour
     public bool isSetMenu;
     public bool isRandomMenu;
     public bool isSuccess; //응대가 성공적인지 여부
-    public bool isEvaluationStart; //평가 시작 여부
+    public bool isEvaluationEnd; //평가 끝 여부
     public GameObject destination;
     public Animator customerAnimator;
     public StageManager stageManager;
     public GameObject speechBubble; //말풍선 오브젝트
     private GameObject speechBubbleInstance;
-    public ParticleSystem successParticleSys;
-    public ParticleSystem failParticleSys;
 
     Customer()
     {
@@ -22,7 +20,7 @@ public class Customer : MonoBehaviour
         isSetMenu = false;
         isRandomMenu = false;
         isSuccess = false;
-        isEvaluationStart = false;
+        isEvaluationEnd = false;
     }
     bool IsSetMenu() //세트메뉴 확률(33%)
     {
@@ -58,12 +56,21 @@ public class Customer : MonoBehaviour
     }
     void evaluate() //손님이 음식 평가하는 함수
     {
-        isEvaluationStart = true;
         //평가에 대한 코드..
         //평가가 성공적인 경우, 해당 손님의 isSuccess 변수를 true로 변경
         isSuccess = true;
+        stageManager.successParticleSys.Play();
         //성공했을 때의 파티클 반응과 같은 추가적인 코드..
-        
+        isEvaluationEnd = true;
+    }
+    void disappear()
+    {
+        Destroy(gameObject); //손님 오브젝트 삭제
+        Destroy(speechBubbleInstance); //손님의 말풍선 삭제
+        //StageManager에게 다음 손님을 맞이해도 된다는 신호주기.
+        stageManager.isNextCustomer = true;
+        Debug.Log("isSuccess");
+        stageManager.successParticleSys.Stop();
     }
     void Update()
     {
@@ -76,21 +83,22 @@ public class Customer : MonoBehaviour
             //주문하기
             makeOrder();
         }
-        //손님에게 올바른 음식이 전달되었을 경우(isSuccess = true)
-        //StageManager에게 다음 손님을 맞이해도 된다는 신호주기.
-        if (isEvaluationStart)
+        
+        
+        if (isEvaluationEnd)
         {
+            //손님에게 올바른 음식이 전달되었을 경우(isSuccess = true)
             if (isSuccess)
             {
-                successParticleSys.Play();
-                Destroy(gameObject); //손님 오브젝트 삭제
-                Destroy(speechBubbleInstance); //손님의 말풍선 삭제
-                stageManager.isNextCustomer = true;
-                Debug.Log("isSuccess");
+                stageManager.successParticleSys.Play();
+                isEvaluationEnd = false; //반복적으로 반응하지 않도록 false로 변경
+                Invoke("disappear", 2f);
+
             }
             else //올바르지 않은 음식이 전달 된 경우
             {
-                failParticleSys.Play();
+                stageManager.failParticleSys.Play();
+                isEvaluationEnd = false; //반복적으로 반응하지 않도록 false로 변경
                 Debug.Log("음식이 이상해");
             }
         }
