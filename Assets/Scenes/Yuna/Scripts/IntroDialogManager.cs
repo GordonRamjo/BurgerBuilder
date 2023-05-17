@@ -8,21 +8,18 @@ public class IntroDialogManager : MonoBehaviour
 {
     public TextMeshProUGUI tx;
     public TextMeshProUGUI spacetx;
-    private string[] introDialog = new string[] { "So you wanna be\nthe best burger builder?", "If you pass the mission,\nI'll reconsider!", "From now on,\nI'll explain it only once,\nso listen carefully." };
+    private string[] introDialog = new string[] { "So you wanna be\nthe best burger builder?", "If you pass the mission,\nI'll reconsider!", "From now on,\nI'll explain once,\nso listen carefully." };
     private string spaceDialog = "Press [Space] to continue";
     private int introDialogNum = 0;
     private Canvas introUICanvas;
     private GameObject guide;
-    private GameObject chef;
 
     // Start is called before the first frame update
     void Start()
     {
         introUICanvas = GameObject.Find("IntroUICanvas").GetComponent<Canvas>();
         guide = GameObject.Find("GuideCanvas");
-        chef = GameObject.Find("Chef");
         guide.SetActive(false);
-        chef.SetActive(false);
         StartCoroutine(_typing());
     }
 
@@ -40,7 +37,6 @@ public class IntroDialogManager : MonoBehaviour
             {
                 introUICanvas.enabled = false;
                 guide.SetActive(true);
-                chef.SetActive(true);
             }
         }
     }

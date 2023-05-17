@@ -8,7 +8,7 @@ public class GuideDialogManager : MonoBehaviour
 {
     public TextMeshProUGUI guide;
     public RawImage image;
-    private string[] guideDialog = new string[] { "First, make a basic burger", "Pick up a bottom bread from the container\nthen place it on tray", "Grill a patty for 5 seconds", "It's burnt! Throw it in the trash", "Bake a patty for 3 seconds and place on bread", "Good job. Now put a tomato on top", "Next, put lettuce on top", "Last but not least, put the bread on top" };
+    private string[] guideDialog = new string[] {"Pick up a bottom bread\nthen place it on tray", "Grill a patty for 5 seconds", "It's burnt! Throw it in the trash", "Bake a patty for 3 seconds\nand place on bread", "Good job. Now put a tomato on top", "Next, put lettuce on top", "Last but not least,\nput the bread on top" };
     public Texture2D[] images;
     private int guideDialogNum = 0;
     private Canvas guideUICanvas;
@@ -24,7 +24,6 @@ public class GuideDialogManager : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            guideDialogNum++;
 
             if (guideDialogNum < guideDialog.Length)
             {
@@ -35,6 +34,8 @@ public class GuideDialogManager : MonoBehaviour
             {
                 guideUICanvas.enabled = false;
             }
+
+            guideDialogNum++;
         }
     }
 }
