@@ -19,6 +19,8 @@ public class StageManager : MonoBehaviour
     public Sprite[] randomMenuImgs = new Sprite[3]; //랜덤메뉴 스프라이트 배열
     public Sprite[] basicSetMenuImgs = new Sprite[5]; //기본세트메뉴 스프라이트 배열
     public Sprite[] randomSetMenuImgs = new Sprite[3]; //랜덤세트메뉴 스프라이트 배열
+    public ParticleSystem successParticleSys;
+    public ParticleSystem failParticleSys;
     void Awake()
     {
         //필요 변수 초기화
@@ -30,7 +32,10 @@ public class StageManager : MonoBehaviour
         {
             GenerateCustomer(i);
         }
-        
+        //파티클 시스템 정지
+        successParticleSys.Stop();
+        failParticleSys.Stop();
+        Debug.Log("파티클 정지");
     }
     void Start()
     {
