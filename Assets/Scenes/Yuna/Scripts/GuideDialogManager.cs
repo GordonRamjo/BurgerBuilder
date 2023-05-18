@@ -11,12 +11,14 @@ public class GuideDialogManager : MonoBehaviour
     private string[] guideDialog = new string[] {"Pick up a bottom bread\nthen place it on tray", "Grill a patty for 5 seconds", "It's burnt! Throw it in the trash", "Bake a patty for 3 seconds\nand place on bread", "Good job. Now put a tomato on top", "Next, put lettuce on top", "Last but not least,\nput the bread on top" };
     public Texture2D[] images;
     private int guideDialogNum = 0;
+    //public GameObject GuideCanvas;
     private Canvas guideUICanvas;
 
     // Start is called before the first frame update
     void Start()
     {
-        guideUICanvas = GameObject.Find("GuideCanvas").GetComponent<Canvas>();
+        //Debug.Log(GameObject.Find("GuideCanvas"));
+        //guideUICanvas = GameObject.Find("GuideCanvas").GetComponent<Canvas>();
     }
 
     // Update is called once per frame
@@ -32,6 +34,7 @@ public class GuideDialogManager : MonoBehaviour
             }
             else if (guideDialogNum == guideDialog.Length)
             {
+                guideUICanvas = GameObject.Find("GuideCanvas").GetComponent<Canvas>();
                 guideUICanvas.enabled = false;
             }
 
