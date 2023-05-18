@@ -35,6 +35,7 @@ public class StageManager : MonoBehaviour
         //파티클 시스템 정지
         successParticleSys.Stop();
         failParticleSys.Stop();
+        Debug.Log("파티클 정지");
     }
     void Start()
     {
