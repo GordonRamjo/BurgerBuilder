@@ -97,7 +97,8 @@ public class Customer : MonoBehaviour
             }
             else //올바르지 않은 음식이 전달 된 경우
             {
-                stageManager.failParticleSys.Play();
+                stageManager.failParticleSys1.Play();
+                stageManager.failParticleSys2.Play();
                 isEvaluationEnd = false; //반복적으로 반응하지 않도록 false로 변경
                 Debug.Log("음식이 이상해");
             }
