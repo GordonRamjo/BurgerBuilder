@@ -7934,6 +7934,7 @@ GameObject:
   m_Component:
   - component: {fileID: 809845258}
   - component: {fileID: 809845257}
+  - component: {fileID: 809845259}
   m_Layer: 0
   m_Name: StageManager
   m_TagString: Untagged
@@ -7957,6 +7958,7 @@ MonoBehaviour:
   totalCustomerCnt: 5
   isNextCustomer: 0
   isStageClear: 0
+  isTimeOver: 0
   currentCustomer: {fileID: 0}
   customers:
   - {fileID: 8645467329039328881, guid: 2b95665aa9c14904087734e6a7b3fa8d, type: 3}
@@ -8006,6 +8008,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &809845259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 809845256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f968cac34d2fb14db35853159487c25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  limitTime: 50
 --- !u!1001 &815370158
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25789,7 +25804,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1172159234}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.92011803, y: 3.1794415, z: 12.072125}
+  m_LocalPosition: {x: 0.92011803, y: 2.853, z: 12.072125}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

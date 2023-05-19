@@ -9,6 +9,7 @@ public class StageManager : MonoBehaviour
     private int remainCustomerCnt; //남아있는 손님 수
     public bool isNextCustomer; //다음 손님이 주문 시작 가능 여부
     public bool isStageClear; //스테이지 클리어(모든 손님 응대 완료) 여부
+    public bool isTimeOver; //시간 오버 여부
     public GameObject currentCustomer; //현재 응대 중인 손님을 가르키는 변수
     public GameObject[] customers = new GameObject[5]; //반복 생성할 손님 오브젝트
     public GameObject speechBubble; //주문 말풍선 오브젝트
@@ -42,17 +43,20 @@ public class StageManager : MonoBehaviour
     }
     void Update()
     {
-        //다음 손님 응대가 가능하고 남아있는 손님 수가 0명 이상인 경우
-        if (isNextCustomer && remainCustomerCnt >= 0)
+        if (!isTimeOver)
         {
-            DequeueCustomer(); //큐에서 손님 빼기
-            isNextCustomer = false; //지금 막 손님 응대를 시작했으니, 다음 손님 응대는 불가능함.
-        }
-        //남아있는 손님 수가 0명 미만이고, 아직 스테이지 클리어가 되지 않았다면
-        if(remainCustomerCnt < 0 && !isStageClear)
-        {
-            Debug.Log("STAGE CLEAR");
-            isStageClear = true; //스테이지 클리어 여부를 참으로 설정
+            //다음 손님 응대가 가능하고 남아있는 손님 수가 0명 이상인 경우
+            if (isNextCustomer && remainCustomerCnt >= 0)
+            {
+                DequeueCustomer(); //큐에서 손님 빼기
+                isNextCustomer = false; //지금 막 손님 응대를 시작했으니, 다음 손님 응대는 불가능함.
+            }
+            //남아있는 손님 수가 0명 미만이고, 아직 스테이지 클리어가 되지 않았다면
+            if (remainCustomerCnt < 0 && !isStageClear)
+            {
+                Debug.Log("STAGE CLEAR");
+                isStageClear = true; //스테이지 클리어 여부를 참으로 설정
+            }
         }
     }
     void GenerateCustomer(int i) //손님을 생성하는 함수
