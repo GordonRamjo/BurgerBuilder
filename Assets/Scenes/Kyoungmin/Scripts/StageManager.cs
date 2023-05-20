@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class StageManager : MonoBehaviour
 {
     public int stageNumber; //현재 스테이지 수
     public int totalCustomerCnt; //스테이지 총 손님 수
     private int remainCustomerCnt; //남아있는 손님 수
+    public int completeCustomerCnt; //응대 완료한 손님 수
     public bool isNextCustomer; //다음 손님이 주문 시작 가능 여부
     public bool isStageClear; //스테이지 클리어(모든 손님 응대 완료) 여부
     public bool isTimeOver; //시간 오버 여부
@@ -23,6 +25,8 @@ public class StageManager : MonoBehaviour
     public ParticleSystem successParticleSys;
     public ParticleSystem failParticleSys1;
     public ParticleSystem failParticleSys2;
+    public TMP_Text totalCnt;
+    public TMP_Text curCnt;
     void Awake()
     {
         //필요 변수 초기화
@@ -34,6 +38,10 @@ public class StageManager : MonoBehaviour
         {
             GenerateCustomer(i);
         }
+        //UI 초기화
+        curCnt.text = string.Format("{0}", 0);
+        //응대해야하는 총 손님 수 초기화하기
+        totalCnt.text = string.Format("/ {0}", totalCustomerCnt);
       
     }
     void Start()
