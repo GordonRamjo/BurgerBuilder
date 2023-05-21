@@ -18,9 +18,30 @@ public class PlaceTutorial : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.layer == LayerMask.NameToLayer("Burger"))
+        if (other.gameObject.layer == LayerMask.NameToLayer("BottomBun"))
         {
             other.gameObject.GetComponent<BurgerIng>().set = true;
+            Debug.Log("BottomBun");
+        }
+        else if (other.gameObject.layer == LayerMask.NameToLayer("Patty"))
+        {
+            other.gameObject.GetComponent<BurgerIng>().set = true;
+            Debug.Log("Patty");
+        }
+        else if (other.gameObject.layer == LayerMask.NameToLayer("Tomato"))
+        {
+            other.gameObject.GetComponent<BurgerIng>().set = true;
+            Debug.Log("Tomato");
+        }
+        else if (other.gameObject.layer == LayerMask.NameToLayer("Lettuce"))
+        {
+            other.gameObject.GetComponent<BurgerIng>().set = true;
+            Debug.Log("Lettuce");
+        }
+        else if (other.gameObject.layer == LayerMask.NameToLayer("TopBun"))
+        {
+            other.gameObject.GetComponent<BurgerIng>().set = true;
+            Debug.Log("TopBun");
         }
         else if (other.gameObject.layer == LayerMask.NameToLayer("Coke"))
         {
@@ -34,9 +55,30 @@ public class PlaceTutorial : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.layer == LayerMask.NameToLayer("Burger"))
+        if (other.gameObject.layer == LayerMask.NameToLayer("BottomBun"))
         {
             other.gameObject.GetComponent<BurgerIng>().set = false;
+            Debug.Log("BottomBun");
+        }
+        else if (other.gameObject.layer == LayerMask.NameToLayer("Patty"))
+        {
+            other.gameObject.GetComponent<BurgerIng>().set = false;
+            Debug.Log("Patty");
+        }
+        else if (other.gameObject.layer == LayerMask.NameToLayer("Tomato"))
+        {
+            other.gameObject.GetComponent<BurgerIng>().set = false;
+            Debug.Log("Tomato");
+        }
+        else if (other.gameObject.layer == LayerMask.NameToLayer("Lettuce"))
+        {
+            other.gameObject.GetComponent<BurgerIng>().set = false;
+            Debug.Log("Lettuce");
+        }
+        else if (other.gameObject.layer == LayerMask.NameToLayer("TopBun"))
+        {
+            other.gameObject.GetComponent<BurgerIng>().set = false;
+            Debug.Log("TopBun");
         }
         else if (other.gameObject.layer == LayerMask.NameToLayer("Coke"))
         {
