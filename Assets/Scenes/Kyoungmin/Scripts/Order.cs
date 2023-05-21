@@ -104,6 +104,10 @@ public class Order : MonoBehaviour
                 return RandomMenu.BlackBurger;
         }
     }
+    public string getOrderMsg()
+    {
+        return orderMsg;
+    }
     void Awake()
     {
         isSetMenu = gameObject.GetComponent<Customer>().isSetMenu;
@@ -141,7 +145,7 @@ public class Order : MonoBehaviour
         {
             orderMsg = hamburgerName + " Please.";
         }
-        SBC = GameObject.Find("SpeechBubble(Clone)").GetComponent<SpeechBubbleController>(); //말풍선 생성하기
+        SBC = GameObject.Find("SpeechBubble(Clone)").GetComponent<SpeechBubbleController>(); //말풍선 가져오기
 
         SBC.ChangeMenuImg(menuImg);
         
