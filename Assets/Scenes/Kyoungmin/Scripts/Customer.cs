@@ -99,6 +99,7 @@ public class Customer : MonoBehaviour
             if (isSuccess)
             {
                 stageManager.successParticleSys.Play();
+                speechBubbleInstance.GetComponent<SpeechBubbleController>().ChangeText("I Love it :)");
                 isEvaluationEnd = false; //반복적으로 반응하지 않도록 false로 변경
                 Invoke("disappear", 2f);
                 //응대한 손님 수 추가
