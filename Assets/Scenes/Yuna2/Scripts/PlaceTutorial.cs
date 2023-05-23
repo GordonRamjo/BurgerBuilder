@@ -30,72 +30,39 @@ public class PlaceTutorial : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.layer == LayerMask.NameToLayer("BottomBun"))
+        if (other.gameObject.layer == LayerMask.NameToLayer("Coke"))
         {
-            other.gameObject.GetComponent<BurgeringTutorial>().set = true;
-        } 
-        else if (other.gameObject.layer == LayerMask.NameToLayer("Patty"))
-        {
-            other.gameObject.GetComponent<BurgeringTutorial>().set = true;
-        }
-        else if (other.gameObject.layer == LayerMask.NameToLayer("Tomato"))
-        {
-            other.gameObject.GetComponent<BurgeringTutorial>().set = true;
-        }
-        else if (other.gameObject.layer == LayerMask.NameToLayer("Lettuce"))
-        {
-            other.gameObject.GetComponent<BurgeringTutorial>().set = true;
-        }
-        else if (other.gameObject.layer == LayerMask.NameToLayer("TopBun"))
-        {
-            other.gameObject.GetComponent<BurgeringTutorial>().set = true;
-        }
-        else if (other.gameObject.layer == LayerMask.NameToLayer("Coke"))
-        {
-            other.gameObject.GetComponent<Coke>().set = true;
+            other.gameObject.GetComponent<CokeTutorial>().set = true;
         }
         else if (other.gameObject.layer == LayerMask.NameToLayer("Fries"))
         {
-            other.gameObject.GetComponent<Fries>().set = true;
+            other.gameObject.GetComponent<FriesTutorial>().set = true;
         }
-
-        if (other.gameObject.layer == defaultBurgerList[ingredientNum])
+        else
         {
-            other.GetComponent<XRGrabInteractable>().enabled = false;
-            ingredientNum++;
-            guideDialogManager.UpdateGuideDialog();
+            if (other.gameObject.layer == defaultBurgerList[ingredientNum])
+            {
+                other.gameObject.GetComponent<BurgeringTutorial>().set = true;
+                other.GetComponent<XRGrabInteractable>().enabled = false;
+                ingredientNum++;
+                guideDialogManager.UpdateGuideDialog();
+            }
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.layer == LayerMask.NameToLayer("BottomBun"))
+        if (other.gameObject.layer == LayerMask.NameToLayer("Coke"))
         {
-            other.gameObject.GetComponent<BurgeringTutorial>().set = false;
-        }
-        else if (other.gameObject.layer == LayerMask.NameToLayer("Patty"))
-        {
-            other.gameObject.GetComponent<BurgeringTutorial>().set = false;
-        }
-        else if (other.gameObject.layer == LayerMask.NameToLayer("Tomato"))
-        {
-            other.gameObject.GetComponent<BurgeringTutorial>().set = false;
-        }
-        else if (other.gameObject.layer == LayerMask.NameToLayer("Lettuce"))
-        {
-            other.gameObject.GetComponent<BurgeringTutorial>().set = false;
-        }
-        else if (other.gameObject.layer == LayerMask.NameToLayer("TopBun"))
-        {
-            other.gameObject.GetComponent<BurgeringTutorial>().set = false;
-        }
-        else if (other.gameObject.layer == LayerMask.NameToLayer("Coke"))
-        {
-            other.gameObject.GetComponent<Coke>().set = false;
+            other.gameObject.GetComponent<CokeTutorial>().set = false;
         }
         else if (other.gameObject.layer == LayerMask.NameToLayer("Fries"))
         {
-            other.gameObject.GetComponent<Fries>().set = false;
+            other.gameObject.GetComponent<FriesTutorial>().set = false;
+        }
+        else
+        {
+            other.gameObject.GetComponent<BurgeringTutorial>().set = false;
         }
     }
 }

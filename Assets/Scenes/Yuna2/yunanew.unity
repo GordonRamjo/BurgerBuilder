@@ -601,20 +601,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 871629527}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &37731305
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 37731303}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b52460dcd0349d45bf54c9a4af8a6bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  set: 0
-  cokeArea: {fileID: 434490539}
 --- !u!114 &37731306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -660,7 +646,7 @@ MonoBehaviour:
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 37731305}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Coke, Assembly-CSharp
         m_MethodName: CokeOnTray
         m_Mode: 1
@@ -758,6 +744,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &37731311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37731303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1639b7ec147502245b341697b1b909ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  set: 0
+  cokeArea: {fileID: 434490539}
 --- !u!1001 &39092508
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1165,20 +1165,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 84800721}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &84800724
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 84800723}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b823aba03f9b2134cb41b5557da0cc7b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  set: 0
-  friesArea: {fileID: 1036275868}
 --- !u!114 &84800725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1224,7 +1210,7 @@ MonoBehaviour:
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 84800724}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Fries, Assembly-CSharp
         m_MethodName: FriesOnTray
         m_Mode: 1
@@ -1335,6 +1321,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &84800730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 84800723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3be69d864b36d6b459aacc6c07f725ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  set: 0
+  friesArea: {fileID: 1036275868}
 --- !u!1001 &86932804
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2107,20 +2107,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 162708043}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &162708046
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 162708045}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b823aba03f9b2134cb41b5557da0cc7b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  set: 0
-  friesArea: {fileID: 1036275868}
 --- !u!114 &162708047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2166,7 +2152,7 @@ MonoBehaviour:
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 162708046}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Fries, Assembly-CSharp
         m_MethodName: FriesOnTray
         m_Mode: 1
@@ -2277,6 +2263,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &162708052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 162708045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3be69d864b36d6b459aacc6c07f725ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  set: 0
+  friesArea: {fileID: 1036275868}
 --- !u!1001 &167689340
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4232,20 +4232,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 385972048}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &385972051
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 385972050}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b823aba03f9b2134cb41b5557da0cc7b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  set: 0
-  friesArea: {fileID: 1036275868}
 --- !u!114 &385972052
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4291,7 +4277,7 @@ MonoBehaviour:
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 385972051}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Fries, Assembly-CSharp
         m_MethodName: FriesOnTray
         m_Mode: 1
@@ -4402,6 +4388,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &385972057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 385972050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3be69d864b36d6b459aacc6c07f725ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  set: 0
+  friesArea: {fileID: 1036275868}
 --- !u!1 &397690940
 GameObject:
   m_ObjectHideFlags: 0
@@ -5155,7 +5155,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   guideDialogManager: {fileID: 764575326}
-  burgeringTutorial: {fileID: 0}
 --- !u!1001 &459904391
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5620,20 +5619,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 355009165}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &484678738
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 484678736}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b52460dcd0349d45bf54c9a4af8a6bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  set: 0
-  cokeArea: {fileID: 434490539}
 --- !u!114 &484678739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5679,7 +5664,7 @@ MonoBehaviour:
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 484678738}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Coke, Assembly-CSharp
         m_MethodName: CokeOnTray
         m_Mode: 1
@@ -5777,6 +5762,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &484678744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 484678736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1639b7ec147502245b341697b1b909ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  set: 0
+  cokeArea: {fileID: 434490539}
 --- !u!1001 &487734968
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5955,20 +5954,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 473037453}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &496946237
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 496946235}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b52460dcd0349d45bf54c9a4af8a6bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  set: 0
-  cokeArea: {fileID: 434490539}
 --- !u!114 &496946238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6014,7 +5999,7 @@ MonoBehaviour:
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 496946237}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Coke, Assembly-CSharp
         m_MethodName: CokeOnTray
         m_Mode: 1
@@ -6112,6 +6097,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &496946243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 496946235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1639b7ec147502245b341697b1b909ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  set: 0
+  cokeArea: {fileID: 434490539}
 --- !u!1001 &499241489
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6248,7 +6247,7 @@ MonoBehaviour:
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 499241493}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Fries, Assembly-CSharp
         m_MethodName: FriesOnTray
         m_Mode: 1
@@ -6330,20 +6329,6 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
---- !u!114 &499241493
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 499241491}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b823aba03f9b2134cb41b5557da0cc7b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  set: 0
-  friesArea: {fileID: 1036275868}
 --- !u!65 &499241494
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6373,6 +6358,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &499241498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 499241491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3be69d864b36d6b459aacc6c07f725ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  set: 0
+  friesArea: {fileID: 1036275868}
 --- !u!1 &508388181
 GameObject:
   m_ObjectHideFlags: 0
@@ -7282,20 +7281,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1220048487}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &565222955
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 565222953}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b52460dcd0349d45bf54c9a4af8a6bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  set: 0
-  cokeArea: {fileID: 434490539}
 --- !u!114 &565222956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7341,7 +7326,7 @@ MonoBehaviour:
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 565222955}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Coke, Assembly-CSharp
         m_MethodName: CokeOnTray
         m_Mode: 1
@@ -7439,6 +7424,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &565222961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565222953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1639b7ec147502245b341697b1b909ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  set: 0
+  cokeArea: {fileID: 434490539}
 --- !u!1001 &567812968
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8253,20 +8252,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1799064987}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &624807929
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 624807927}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b52460dcd0349d45bf54c9a4af8a6bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  set: 0
-  cokeArea: {fileID: 434490539}
 --- !u!114 &624807930
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8312,7 +8297,7 @@ MonoBehaviour:
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 624807929}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Coke, Assembly-CSharp
         m_MethodName: CokeOnTray
         m_Mode: 1
@@ -8410,6 +8395,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &624807935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 624807927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1639b7ec147502245b341697b1b909ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  set: 0
+  cokeArea: {fileID: 434490539}
 --- !u!1001 &638858940
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8719,20 +8718,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 947142896}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &668678373
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 668678371}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b52460dcd0349d45bf54c9a4af8a6bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  set: 0
-  cokeArea: {fileID: 434490539}
 --- !u!114 &668678374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8778,7 +8763,7 @@ MonoBehaviour:
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 668678373}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Coke, Assembly-CSharp
         m_MethodName: CokeOnTray
         m_Mode: 1
@@ -8876,6 +8861,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &668678379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668678371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1639b7ec147502245b341697b1b909ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  set: 0
+  cokeArea: {fileID: 434490539}
 --- !u!1001 &670982036
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9191,20 +9190,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1094502564}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &690526996
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 690526994}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b52460dcd0349d45bf54c9a4af8a6bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  set: 0
-  cokeArea: {fileID: 434490539}
 --- !u!114 &690526997
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9250,7 +9235,7 @@ MonoBehaviour:
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 690526996}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Coke, Assembly-CSharp
         m_MethodName: CokeOnTray
         m_Mode: 1
@@ -9348,6 +9333,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &690527002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 690526994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1639b7ec147502245b341697b1b909ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  set: 0
+  cokeArea: {fileID: 434490539}
 --- !u!1 &690841895
 GameObject:
   m_ObjectHideFlags: 0
@@ -10031,20 +10030,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1948354947}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &725959982
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 725959980}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b52460dcd0349d45bf54c9a4af8a6bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  set: 0
-  cokeArea: {fileID: 434490539}
 --- !u!114 &725959983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10090,7 +10075,7 @@ MonoBehaviour:
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 725959982}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Coke, Assembly-CSharp
         m_MethodName: CokeOnTray
         m_Mode: 1
@@ -10188,6 +10173,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &725959988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 725959980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1639b7ec147502245b341697b1b909ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  set: 0
+  cokeArea: {fileID: 434490539}
 --- !u!1001 &732812322
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12317,20 +12316,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 917903742}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &917903745
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 917903744}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b823aba03f9b2134cb41b5557da0cc7b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  set: 0
-  friesArea: {fileID: 1036275868}
 --- !u!114 &917903746
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12376,7 +12361,7 @@ MonoBehaviour:
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 917903745}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Fries, Assembly-CSharp
         m_MethodName: FriesOnTray
         m_Mode: 1
@@ -12487,6 +12472,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &917903751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 917903744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3be69d864b36d6b459aacc6c07f725ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  set: 0
+  friesArea: {fileID: 1036275868}
 --- !u!1001 &921316929
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12716,20 +12715,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 935605191}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &935605194
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 935605193}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b823aba03f9b2134cb41b5557da0cc7b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  set: 0
-  friesArea: {fileID: 1036275868}
 --- !u!114 &935605195
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12775,7 +12760,7 @@ MonoBehaviour:
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 935605194}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Fries, Assembly-CSharp
         m_MethodName: FriesOnTray
         m_Mode: 1
@@ -12886,6 +12871,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &935605200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 935605193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3be69d864b36d6b459aacc6c07f725ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  set: 0
+  friesArea: {fileID: 1036275868}
 --- !u!1 &944089148 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1705129010167144, guid: bfa7e8189ab181843b9ac106678a628a,
@@ -12898,20 +12897,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 805811659}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &944089150
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 944089148}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b52460dcd0349d45bf54c9a4af8a6bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  set: 0
-  cokeArea: {fileID: 434490539}
 --- !u!114 &944089151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12957,7 +12942,7 @@ MonoBehaviour:
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 944089150}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Coke, Assembly-CSharp
         m_MethodName: CokeOnTray
         m_Mode: 1
@@ -13055,6 +13040,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &944089156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 944089148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1639b7ec147502245b341697b1b909ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  set: 0
+  cokeArea: {fileID: 434490539}
 --- !u!1 &946874442
 GameObject:
   m_ObjectHideFlags: 0
@@ -13210,20 +13209,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1217552345}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &967374399
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 967374397}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b52460dcd0349d45bf54c9a4af8a6bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  set: 0
-  cokeArea: {fileID: 434490539}
 --- !u!114 &967374400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13269,7 +13254,7 @@ MonoBehaviour:
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 967374399}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Coke, Assembly-CSharp
         m_MethodName: CokeOnTray
         m_Mode: 1
@@ -13367,6 +13352,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &967374405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 967374397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1639b7ec147502245b341697b1b909ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  set: 0
+  cokeArea: {fileID: 434490539}
 --- !u!1001 &977210856
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13766,20 +13765,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 826241456}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1014913936
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1014913934}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b52460dcd0349d45bf54c9a4af8a6bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  set: 0
-  cokeArea: {fileID: 434490539}
 --- !u!114 &1014913937
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13825,7 +13810,7 @@ MonoBehaviour:
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1014913936}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Coke, Assembly-CSharp
         m_MethodName: CokeOnTray
         m_Mode: 1
@@ -13923,6 +13908,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1014913942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1014913934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1639b7ec147502245b341697b1b909ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  set: 0
+  cokeArea: {fileID: 434490539}
 --- !u!1001 &1017886243
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14248,7 +14247,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   guideDialogManager: {fileID: 764575326}
-  burgeringTutorial: {fileID: 0}
 --- !u!1001 &1041861525
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14823,7 +14821,7 @@ MonoBehaviour:
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1106289072}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Coke, Assembly-CSharp
         m_MethodName: CokeOnTray
         m_Mode: 1
@@ -14905,20 +14903,6 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
---- !u!114 &1106289072
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1106289070}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b52460dcd0349d45bf54c9a4af8a6bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  set: 0
-  cokeArea: {fileID: 434490539}
 --- !u!54 &1106289073
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -14935,6 +14919,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1106289077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1106289070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1639b7ec147502245b341697b1b909ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  set: 0
+  cokeArea: {fileID: 434490539}
 --- !u!1001 &1121574230
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15026,20 +15024,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1121574230}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1121574233
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1121574232}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b823aba03f9b2134cb41b5557da0cc7b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  set: 0
-  friesArea: {fileID: 1036275868}
 --- !u!114 &1121574234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15085,7 +15069,7 @@ MonoBehaviour:
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1121574233}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Fries, Assembly-CSharp
         m_MethodName: FriesOnTray
         m_Mode: 1
@@ -15196,6 +15180,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1121574239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1121574232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3be69d864b36d6b459aacc6c07f725ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  set: 0
+  friesArea: {fileID: 1036275868}
 --- !u!1 &1133281053
 GameObject:
   m_ObjectHideFlags: 0
@@ -15667,20 +15665,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1151484314}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1151484317
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1151484316}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b823aba03f9b2134cb41b5557da0cc7b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  set: 0
-  friesArea: {fileID: 1036275868}
 --- !u!114 &1151484318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15726,7 +15710,7 @@ MonoBehaviour:
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1151484317}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Fries, Assembly-CSharp
         m_MethodName: FriesOnTray
         m_Mode: 1
@@ -15837,6 +15821,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1151484323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1151484316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3be69d864b36d6b459aacc6c07f725ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  set: 0
+  friesArea: {fileID: 1036275868}
 --- !u!1 &1157119728
 GameObject:
   m_ObjectHideFlags: 0
@@ -16086,20 +16084,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2045843303}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1206567619
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1206567617}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b52460dcd0349d45bf54c9a4af8a6bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  set: 0
-  cokeArea: {fileID: 434490539}
 --- !u!114 &1206567620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16145,7 +16129,7 @@ MonoBehaviour:
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1206567619}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Coke, Assembly-CSharp
         m_MethodName: CokeOnTray
         m_Mode: 1
@@ -16243,6 +16227,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1206567625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1206567617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1639b7ec147502245b341697b1b909ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  set: 0
+  cokeArea: {fileID: 434490539}
 --- !u!1001 &1206642076
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16487,20 +16485,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2046769830}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1224351568
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1224351566}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b52460dcd0349d45bf54c9a4af8a6bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  set: 0
-  cokeArea: {fileID: 434490539}
 --- !u!114 &1224351569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16546,7 +16530,7 @@ MonoBehaviour:
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1224351568}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Coke, Assembly-CSharp
         m_MethodName: CokeOnTray
         m_Mode: 1
@@ -16644,6 +16628,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1224351574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1224351566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1639b7ec147502245b341697b1b909ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  set: 0
+  cokeArea: {fileID: 434490539}
 --- !u!1 &1238047376
 GameObject:
   m_ObjectHideFlags: 0
@@ -17351,20 +17349,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1877405244}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1278042376
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1278042374}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b52460dcd0349d45bf54c9a4af8a6bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  set: 0
-  cokeArea: {fileID: 434490539}
 --- !u!114 &1278042377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17410,7 +17394,7 @@ MonoBehaviour:
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1278042376}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Coke, Assembly-CSharp
         m_MethodName: CokeOnTray
         m_Mode: 1
@@ -17508,6 +17492,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1278042382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1278042374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1639b7ec147502245b341697b1b909ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  set: 0
+  cokeArea: {fileID: 434490539}
 --- !u!1001 &1287124729
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18188,20 +18186,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1391335618}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1391335621
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1391335620}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b823aba03f9b2134cb41b5557da0cc7b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  set: 0
-  friesArea: {fileID: 1036275868}
 --- !u!114 &1391335622
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18247,7 +18231,7 @@ MonoBehaviour:
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1391335621}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Fries, Assembly-CSharp
         m_MethodName: FriesOnTray
         m_Mode: 1
@@ -18358,6 +18342,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1391335627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1391335620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3be69d864b36d6b459aacc6c07f725ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  set: 0
+  friesArea: {fileID: 1036275868}
 --- !u!1001 &1397748796
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19324,20 +19322,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1453339292}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1453339295
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1453339294}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b823aba03f9b2134cb41b5557da0cc7b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  set: 0
-  friesArea: {fileID: 1036275868}
 --- !u!114 &1453339296
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19383,7 +19367,7 @@ MonoBehaviour:
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1453339295}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Fries, Assembly-CSharp
         m_MethodName: FriesOnTray
         m_Mode: 1
@@ -19494,6 +19478,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1453339301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1453339294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3be69d864b36d6b459aacc6c07f725ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  set: 0
+  friesArea: {fileID: 1036275868}
 --- !u!1 &1466612300 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1705129010167144, guid: bfa7e8189ab181843b9ac106678a628a,
@@ -19506,20 +19504,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 575214310}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1466612302
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1466612300}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b52460dcd0349d45bf54c9a4af8a6bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  set: 0
-  cokeArea: {fileID: 434490539}
 --- !u!114 &1466612303
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19565,7 +19549,7 @@ MonoBehaviour:
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1466612302}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Coke, Assembly-CSharp
         m_MethodName: CokeOnTray
         m_Mode: 1
@@ -19663,6 +19647,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1466612308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1466612300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1639b7ec147502245b341697b1b909ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  set: 0
+  cokeArea: {fileID: 434490539}
 --- !u!1001 &1467989656
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20448,20 +20446,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1656924134}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1505502457
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1505502455}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b52460dcd0349d45bf54c9a4af8a6bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  set: 0
-  cokeArea: {fileID: 434490539}
 --- !u!114 &1505502458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20507,7 +20491,7 @@ MonoBehaviour:
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1505502457}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Coke, Assembly-CSharp
         m_MethodName: CokeOnTray
         m_Mode: 1
@@ -20605,6 +20589,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1505502463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1505502455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1639b7ec147502245b341697b1b909ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  set: 0
+  cokeArea: {fileID: 434490539}
 --- !u!1001 &1522628895
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21845,20 +21843,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1598719094}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1598719097
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1598719096}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b823aba03f9b2134cb41b5557da0cc7b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  set: 0
-  friesArea: {fileID: 1036275868}
 --- !u!114 &1598719098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21904,7 +21888,7 @@ MonoBehaviour:
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1598719097}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Fries, Assembly-CSharp
         m_MethodName: FriesOnTray
         m_Mode: 1
@@ -22015,6 +21999,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1598719103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1598719096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3be69d864b36d6b459aacc6c07f725ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  set: 0
+  friesArea: {fileID: 1036275868}
 --- !u!1 &1613356520
 GameObject:
   m_ObjectHideFlags: 0
@@ -22074,7 +22072,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   guideDialogManager: {fileID: 764575326}
-  burgeringTutorial: {fileID: 0}
 --- !u!1001 &1624741036
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23056,20 +23053,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 114838075}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1677521741
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1677521739}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b52460dcd0349d45bf54c9a4af8a6bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  set: 0
-  cokeArea: {fileID: 434490539}
 --- !u!114 &1677521742
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23115,7 +23098,7 @@ MonoBehaviour:
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1677521741}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Coke, Assembly-CSharp
         m_MethodName: CokeOnTray
         m_Mode: 1
@@ -23213,6 +23196,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1677521747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1677521739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1639b7ec147502245b341697b1b909ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  set: 0
+  cokeArea: {fileID: 434490539}
 --- !u!1001 &1677550189
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24890,7 +24887,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   guideDialogManager: {fileID: 764575326}
-  burgeringTutorial: {fileID: 0}
 --- !u!1001 &1830386423
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28099,20 +28095,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2101391189}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2101391192
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2101391191}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b823aba03f9b2134cb41b5557da0cc7b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  set: 0
-  friesArea: {fileID: 1036275868}
 --- !u!114 &2101391193
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28158,7 +28140,7 @@ MonoBehaviour:
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2101391192}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Fries, Assembly-CSharp
         m_MethodName: FriesOnTray
         m_Mode: 1
@@ -28269,6 +28251,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2101391198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2101391191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3be69d864b36d6b459aacc6c07f725ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  set: 0
+  friesArea: {fileID: 1036275868}
 --- !u!1001 &2107050310
 PrefabInstance:
   m_ObjectHideFlags: 0
