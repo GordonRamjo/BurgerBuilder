@@ -15,13 +15,15 @@ public class GuideDialogManager : MonoBehaviour
 
     void Start()
     {
+    }
 
+    public void initGuideDialog()
+    {
+        StartCoroutine(_wait());
     }
 
     public void UpdateGuideDialog()
     {
-        guideDialogNum++;
-
         if (guideDialogNum < guideDialog.Length)
         {
             Debug.Log("guideDialogNum" + guideDialogNum);
@@ -33,5 +35,15 @@ public class GuideDialogManager : MonoBehaviour
             guideUICanvas = GameObject.Find("GuideCanvas").GetComponent<Canvas>();
             guideUICanvas.enabled = false;
         }
+
+        guideDialogNum++;
+    }
+
+    IEnumerator _wait()
+    {
+        yield return new WaitForSeconds(4f);
+        image.texture = images[guideDialogNum];
+        guide.text = guideDialog[guideDialogNum];
+        guideDialogNum++;
     }
 }

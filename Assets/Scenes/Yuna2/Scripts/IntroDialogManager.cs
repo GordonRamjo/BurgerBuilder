@@ -13,6 +13,7 @@ public class IntroDialogManager : MonoBehaviour
     private int introDialogNum = 0;
     private Canvas introUICanvas;
     private GameObject guide;
+    public GuideDialogManager guideDialogManager;
 
     // Start is called before the first frame update
     void Start()
@@ -37,6 +38,7 @@ public class IntroDialogManager : MonoBehaviour
             {
                 introUICanvas.enabled = false;
                 guide.SetActive(true);
+                guideDialogManager.initGuideDialog();
             }
         }
     }
