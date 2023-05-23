@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 namespace Assets.Scripts
 {
@@ -11,6 +12,8 @@ namespace Assets.Scripts
         public GameObject StageMenu;  //현재 화면 
         public GameObject StartMenu;  //뒤로가기 버튼으로 접근
         public GameObject OptionMenu; //옵션(톱니바퀴) 버튼으로 접근
+        public GameObject stage1_btn;
+        public GameObject stage2_btn;
 
         int stageNum;
 
@@ -30,6 +33,7 @@ namespace Assets.Scripts
             {
                 stageNum = 1;
                 //버튼 활성화 시각 피드백 코드 추가 예정
+                //stage0_btn.GetComponent<RawImage>().color = Color.white;
             }
         }
         public void stage1_btn_selected()
@@ -112,6 +116,16 @@ namespace Assets.Scripts
         void Start()
         {
             DataManager.Instance.LoadGameData();
+
+            if (!DataManager.Instance.data.isUnlock[1])
+            stage1_btn.transform.GetChild(1).GetComponent<RawImage>().color = Color.gray;
+            stage1_btn.transform.GetChild(2).gameObject.SetActive(true);
+
+            if (!DataManager.Instance.data.isUnlock[2])
+            {
+                stage2_btn.transform.GetChild(1).GetComponent<RawImage>().color = Color.gray;
+                stage2_btn.transform.GetChild(2).gameObject.SetActive(true);
+            }
         }
 
         // Update is called once per frame
