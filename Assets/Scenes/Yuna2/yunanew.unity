@@ -2810,20 +2810,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   set: 0
   burgerArea: {fileID: 1816609545}
---- !u!114 &215690861
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 215690850}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19c013fdb357d2f4b8e30fe221a0f52b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  set: 0
-  burgerArea: {fileID: 0}
 --- !u!1 &221518460
 GameObject:
   m_ObjectHideFlags: 0
@@ -5047,20 +5033,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   set: 0
   burgerArea: {fileID: 1816609545}
---- !u!114 &425625140
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 425625129}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19c013fdb357d2f4b8e30fe221a0f52b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  set: 0
-  burgerArea: {fileID: 0}
 --- !u!1001 &427044850
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5183,6 +5155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   guideDialogManager: {fileID: 764575326}
+  burgeringTutorial: {fileID: 0}
 --- !u!1001 &459904391
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5596,20 +5569,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   set: 0
   burgerArea: {fileID: 1816609545}
---- !u!114 &473827714
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 473827703}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19c013fdb357d2f4b8e30fe221a0f52b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  set: 0
-  burgerArea: {fileID: 0}
 --- !u!1 &478870366
 GameObject:
   m_ObjectHideFlags: 0
@@ -11422,20 +11381,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 837384921}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &837384924
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 837384923}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19c013fdb357d2f4b8e30fe221a0f52b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  set: 0
-  burgerArea: {fileID: 1816609545}
 --- !u!114 &837384925
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11481,7 +11426,7 @@ MonoBehaviour:
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 837384924}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: BurgerIng, Assembly-CSharp
         m_MethodName: BurgerOnTray
         m_Mode: 1
@@ -14303,6 +14248,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   guideDialogManager: {fileID: 764575326}
+  burgeringTutorial: {fileID: 0}
 --- !u!1001 &1041861525
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16939,20 +16885,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1245399491}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1245399494
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1245399493}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19c013fdb357d2f4b8e30fe221a0f52b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  set: 0
-  burgerArea: {fileID: 1816609545}
 --- !u!114 &1245399495
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16998,7 +16930,7 @@ MonoBehaviour:
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1245399494}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: BurgerIng, Assembly-CSharp
         m_MethodName: BurgerOnTray
         m_Mode: 1
@@ -17738,20 +17670,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1314613461}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1314613464
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1314613463}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19c013fdb357d2f4b8e30fe221a0f52b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  set: 0
-  burgerArea: {fileID: 1816609545}
 --- !u!114 &1314613465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17797,7 +17715,7 @@ MonoBehaviour:
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1314613464}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: BurgerIng, Assembly-CSharp
         m_MethodName: BurgerOnTray
         m_Mode: 1
@@ -18852,7 +18770,7 @@ MonoBehaviour:
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1443780509}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: BurgerIng, Assembly-CSharp
         m_MethodName: BurgerOnTray
         m_Mode: 1
@@ -18934,20 +18852,6 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
---- !u!114 &1443780509
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1443780507}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19c013fdb357d2f4b8e30fe221a0f52b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  set: 0
-  burgerArea: {fileID: 1816609545}
 --- !u!65 &1443780510
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20327,20 +20231,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1499876489}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1499876492
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1499876491}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19c013fdb357d2f4b8e30fe221a0f52b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  set: 0
-  burgerArea: {fileID: 1816609545}
 --- !u!114 &1499876493
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20386,7 +20276,7 @@ MonoBehaviour:
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1499876492}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: BurgerIng, Assembly-CSharp
         m_MethodName: BurgerOnTray
         m_Mode: 1
@@ -22184,6 +22074,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   guideDialogManager: {fileID: 764575326}
+  burgeringTutorial: {fileID: 0}
 --- !u!1001 &1624741036
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24131,7 +24022,7 @@ MonoBehaviour:
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1746918373}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: BurgerIng, Assembly-CSharp
         m_MethodName: BurgerOnTray
         m_Mode: 1
@@ -24213,20 +24104,6 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
---- !u!114 &1746918373
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1746918371}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19c013fdb357d2f4b8e30fe221a0f52b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  set: 0
-  burgerArea: {fileID: 1816609545}
 --- !u!65 &1746918374
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24508,7 +24385,7 @@ MonoBehaviour:
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1770722143}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: BurgerIng, Assembly-CSharp
         m_MethodName: BurgerOnTray
         m_Mode: 1
@@ -24590,20 +24467,6 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
---- !u!114 &1770722143
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1770722141}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19c013fdb357d2f4b8e30fe221a0f52b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  set: 0
-  burgerArea: {fileID: 1816609545}
 --- !u!65 &1770722144
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25027,6 +24890,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   guideDialogManager: {fileID: 764575326}
+  burgeringTutorial: {fileID: 0}
 --- !u!1001 &1830386423
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25391,7 +25255,7 @@ MonoBehaviour:
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1848473860}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: BurgerIng, Assembly-CSharp
         m_MethodName: BurgerOnTray
         m_Mode: 1
@@ -25473,20 +25337,6 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
---- !u!114 &1848473860
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1848473858}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19c013fdb357d2f4b8e30fe221a0f52b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  set: 0
-  burgerArea: {fileID: 1816609545}
 --- !u!65 &1848473861
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27767,7 +27617,7 @@ MonoBehaviour:
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2077437590}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: BurgerIng, Assembly-CSharp
         m_MethodName: BurgerOnTray
         m_Mode: 1
@@ -27849,20 +27699,6 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
---- !u!114 &2077437590
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2077437588}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19c013fdb357d2f4b8e30fe221a0f52b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  set: 0
-  burgerArea: {fileID: 1816609545}
 --- !u!65 &2077437591
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28524,20 +28360,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2107050310}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2107050313
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2107050312}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19c013fdb357d2f4b8e30fe221a0f52b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  set: 0
-  burgerArea: {fileID: 1816609545}
 --- !u!114 &2107050314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28583,7 +28405,7 @@ MonoBehaviour:
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2107050313}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: BurgerIng, Assembly-CSharp
         m_MethodName: BurgerOnTray
         m_Mode: 1

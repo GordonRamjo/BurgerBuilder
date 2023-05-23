@@ -17,17 +17,16 @@ public class BurgeringTutorial : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-    }
-
-    public void IngredientOnTray()
-    {
-        Debug.Log("IngredientOnTray");
         if (set)
         {
-            Debug.Log("확인");
-            this.gameObject.transform.position = new Vector3(burgerArea.transform.position.x, burgerArea.transform.position.y, burgerArea.transform.position.z);
-            this.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ;
+            IngredientOnTray();
         }
+    }
+
+    private void IngredientOnTray()
+    {
+        Debug.Log("확인");
+        this.gameObject.transform.position = new Vector3(burgerArea.transform.position.x, burgerArea.transform.position.y, burgerArea.transform.position.z);
+        this.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ;
     }
 }
