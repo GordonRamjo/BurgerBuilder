@@ -5182,6 +5182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed4c735c26be3234d8c78e33324dbce3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  guideDialogManager: {fileID: 764575326}
 --- !u!1001 &459904391
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14300,6 +14301,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed4c735c26be3234d8c78e33324dbce3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  guideDialogManager: {fileID: 764575326}
 --- !u!1001 &1041861525
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22180,6 +22182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed4c735c26be3234d8c78e33324dbce3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  guideDialogManager: {fileID: 764575326}
 --- !u!1001 &1624741036
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25022,6 +25025,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed4c735c26be3234d8c78e33324dbce3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  guideDialogManager: {fileID: 764575326}
 --- !u!1001 &1830386423
 PrefabInstance:
   m_ObjectHideFlags: 0

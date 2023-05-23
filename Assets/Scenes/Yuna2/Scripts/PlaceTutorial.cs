@@ -5,6 +5,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class PlaceTutorial : MonoBehaviour
 {
+    public GuideDialogManager guideDialogManager;
     private LayerMask[] defaultBurgerList;
     private int ingredientNum = 0;
 
@@ -58,11 +59,11 @@ public class PlaceTutorial : MonoBehaviour
             other.gameObject.GetComponent<Fries>().set = true;
         }
 
-        if (defaultBurgerList[ingredientNum] == other.gameObject.layer)
+        if (other.gameObject.layer == defaultBurgerList[ingredientNum])
         {
             other.GetComponent<XRGrabInteractable>().enabled = false;
-            Debug.Log("ภ฿ตส");
             ingredientNum++;
+            guideDialogManager.UpdateGuideDialog();
         }
     }
 
