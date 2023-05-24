@@ -2827,7 +2827,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: First, make a basic burger
+  m_text: First, we'll serve a basic burger set
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -10542,6 +10542,7 @@ MonoBehaviour:
   - {fileID: 2800000, guid: f60cc2deedc37db41aa8de544acbbd56, type: 3}
   - {fileID: 2800000, guid: 8161ca105804bbb44a772e63528c63b5, type: 3}
   - {fileID: 2800000, guid: a5e9ff50826c97f4a8c35487940e7c61, type: 3}
+  - {fileID: 2800000, guid: 64b88e3132aa2384b9eddcf5c7231bbf, type: 3}
   - {fileID: 2800000, guid: 4bad2a2d40ef82d4998b7d2c67b0875f, type: 3}
 --- !u!114 &764575327
 MonoBehaviour:

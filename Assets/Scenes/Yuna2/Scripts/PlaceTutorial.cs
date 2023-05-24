@@ -20,7 +20,9 @@ public class PlaceTutorial : MonoBehaviour
             LayerMask.NameToLayer("Patty"),
             LayerMask.NameToLayer("Tomato"),
             LayerMask.NameToLayer("Lettuce"),
-            LayerMask.NameToLayer("TopBun")
+            LayerMask.NameToLayer("TopBun"),
+            LayerMask.NameToLayer("Coke"),
+            LayerMask.NameToLayer("Fries")
         };
     }
 
@@ -32,20 +34,22 @@ public class PlaceTutorial : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.layer == LayerMask.NameToLayer("Coke"))
+        if (other.gameObject.layer == LayerMask.NameToLayer("Coke") && other.gameObject.layer == defaultBurgerList[ingredientNum])
         {
             other.gameObject.GetComponent<CokeTutorial>().set = true;
+            ingredientNum++;
+            guideDialogManager.UpdateGuideDialog();
         }
-        else if (other.gameObject.layer == LayerMask.NameToLayer("Fries"))
+        else if (other.gameObject.layer == LayerMask.NameToLayer("Fries") && other.gameObject.layer == defaultBurgerList[ingredientNum])
         {
             other.gameObject.GetComponent<FriesTutorial>().set = true;
+            guideDialogManager.UpdateGuideDialog();
         }
         else if (other.gameObject.layer == LayerMask.NameToLayer("Patty"))
         {
             if (pattyState == PattyState.Medium && other.gameObject.layer == defaultBurgerList[ingredientNum])
             {
                 other.gameObject.GetComponent<BurgeringTutorial>().set = true;
-                other.GetComponent<XRGrabInteractable>().enabled = false;
                 ingredientNum++;
                 guideDialogManager.UpdateGuideDialog();
             } 
@@ -59,7 +63,6 @@ public class PlaceTutorial : MonoBehaviour
             if (other.gameObject.layer == defaultBurgerList[ingredientNum])
             {
                 other.gameObject.GetComponent<BurgeringTutorial>().set = true;
-                other.GetComponent<XRGrabInteractable>().enabled = false;
                 ingredientNum++;
                 guideDialogManager.UpdateGuideDialog();
             }

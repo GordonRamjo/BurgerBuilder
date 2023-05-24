@@ -27,5 +27,6 @@ public class BurgeringTutorial : MonoBehaviour
     {
         this.gameObject.transform.position = new Vector3(burgerArea.transform.position.x, burgerArea.transform.position.y, burgerArea.transform.position.z);
         this.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ;
+        this.GetComponent<XRGrabInteractable>().enabled = false;
     }
 }
