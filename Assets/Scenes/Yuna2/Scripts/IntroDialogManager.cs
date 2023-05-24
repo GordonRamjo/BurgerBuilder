@@ -7,13 +7,12 @@ using TMPro;
 public class IntroDialogManager : MonoBehaviour
 {
     public TextMeshProUGUI tx;
-    public TextMeshProUGUI spacetx;
     private string[] introDialog = new string[] { "So you wanna be\nthe best burger builder?", "If you pass the mission,\nI'll reconsider!", "From now on,\nI'll explain once,\nso listen carefully." };
-    private string spaceDialog = "Press [Space] to continue";
     private int introDialogNum = 0;
     private Canvas introUICanvas;
     private GameObject guide;
     public GuideDialogManager guideDialogManager;
+    private bool isFirstExecute = false;
 
     // Start is called before the first frame update
     void Start()
@@ -27,14 +26,14 @@ public class IntroDialogManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (isFirstExecute)
         {
-            introDialogNum++;
-
+            isFirstExecute = false;
             if (introDialogNum < introDialog.Length)
             {
                 StartCoroutine(_typing());
-            } else if (introDialogNum == introDialog.Length)
+            }
+            else if (introDialogNum == introDialog.Length)
             {
                 introUICanvas.enabled = false;
                 guide.SetActive(true);
@@ -46,7 +45,6 @@ public class IntroDialogManager : MonoBehaviour
     IEnumerator _typing()
     {
         tx.text = "";
-        spacetx.text = "";
 
         yield return new WaitForSeconds(1f);
 
@@ -57,8 +55,9 @@ public class IntroDialogManager : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
         }
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
 
-        spacetx.text = spaceDialog;
+        introDialogNum++;
+        isFirstExecute = true;
     }
 }
