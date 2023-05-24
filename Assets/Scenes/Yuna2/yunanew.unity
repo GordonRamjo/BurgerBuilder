@@ -11762,6 +11762,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   set: 0
   burgerArea: {fileID: 1816609545}
+--- !u!1 &853799041 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 154402, guid: 6e4ecddde9795734fad196ca9a65354b,
+    type: 3}
+  m_PrefabInstance: {fileID: 172194888}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &853799045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 853799041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02139bc46db857747bfebb1d6ccad77b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  guideDialogManager: {fileID: 764575326}
+--- !u!65 &853799046
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 853799041}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 11.625563, y: 11.674121, z: 24.493895}
+  m_Center: {x: 0, y: 0.000030517578, z: 12.246943}
 --- !u!1001 &854754445
 PrefabInstance:
   m_ObjectHideFlags: 0

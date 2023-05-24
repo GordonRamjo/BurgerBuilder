@@ -9,6 +9,7 @@ public class PlaceTutorial : MonoBehaviour
     private LayerMask[] defaultBurgerList;
     private int ingredientNum = 0;
     private PattyState pattyState;
+    private bool isFirstExecute = true;
 
     // Start is called before the first frame update
     void Start()
@@ -47,10 +48,11 @@ public class PlaceTutorial : MonoBehaviour
                 other.GetComponent<XRGrabInteractable>().enabled = false;
                 ingredientNum++;
                 guideDialogManager.UpdateGuideDialog();
-            }
-            else if (pattyState == PattyState.Burn)
+            } 
+            else if (pattyState == PattyState.Burn && isFirstExecute)
             {
                 guideDialogManager.UpdateGuideDialog();
+                isFirstExecute = false;
             }
         }
         else {

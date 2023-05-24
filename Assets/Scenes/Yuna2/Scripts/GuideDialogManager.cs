@@ -24,7 +24,6 @@ public class GuideDialogManager : MonoBehaviour
 
     public void UpdateGuideDialog()
     {
-        Debug.Log("guideDialogNum: " + guideDialogNum);
         if (guideDialogNum < guideDialog.Length)
         {
             image.texture = images[guideDialogNum];
