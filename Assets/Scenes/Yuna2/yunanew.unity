@@ -1026,7 +1026,7 @@ GameObject:
   m_Component:
   - component: {fileID: 82170702}
   - component: {fileID: 82170704}
-  - component: {fileID: 82170703}
+  - component: {fileID: 82170705}
   m_Layer: 0
   m_Name: AttachPoint
   m_TagString: Stove
@@ -1049,18 +1049,6 @@ Transform:
   m_Father: {fileID: 32469664}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &82170703
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 82170701}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf08595bca2fa7b4896e67e9f0af99d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &82170704
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1074,6 +1062,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.0001, y: 0.0001, z: 0.0001}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &82170705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 82170701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83214fac56c99fc4e88e4741c2994e3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &84800721
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1931,55 +1931,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 128991147}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &130285462
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 130285464}
-  - component: {fileID: 130285463}
-  m_Layer: 0
-  m_Name: Patty
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &130285463
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 130285462}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a38b3074b44e504a9b023ff1f61048c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isStart: 0
-  isBaking: 0
-  RareMaterial: []
-  MediumMaterial: []
-  BurnMaterial: []
---- !u!4 &130285464
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 130285462}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.26677963, y: 3.7606153, z: 13.940952}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &137725441
 GameObject:
   m_ObjectHideFlags: 0
@@ -6422,7 +6373,7 @@ GameObject:
   m_Component:
   - component: {fileID: 513680386}
   - component: {fileID: 513680388}
-  - component: {fileID: 513680387}
+  - component: {fileID: 513680389}
   m_Layer: 0
   m_Name: AttachPoint
   m_TagString: Stove
@@ -6445,18 +6396,6 @@ Transform:
   m_Father: {fileID: 397690941}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &513680387
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 513680385}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf08595bca2fa7b4896e67e9f0af99d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &513680388
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6470,6 +6409,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.0001, y: 0.0001, z: 0.0001}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &513680389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 513680385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83214fac56c99fc4e88e4741c2994e3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &516450074
 GameObject:
   m_ObjectHideFlags: 0
@@ -6641,7 +6592,7 @@ RectTransform:
   - {fileID: 1008533224}
   - {fileID: 221518461}
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -7195,7 +7146,7 @@ PrefabInstance:
     - target: {fileID: 1844198867138095799, guid: 27e7d25e1751432438548364b2fa190f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 1844198867138095799, guid: 27e7d25e1751432438548364b2fa190f,
         type: 3}
@@ -9130,7 +9081,7 @@ GameObject:
   m_Component:
   - component: {fileID: 688284170}
   - component: {fileID: 688284172}
-  - component: {fileID: 688284171}
+  - component: {fileID: 688284173}
   m_Layer: 0
   m_Name: AttachPoint
   m_TagString: Stove
@@ -9153,18 +9104,6 @@ Transform:
   m_Father: {fileID: 1157119729}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &688284171
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 688284169}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf08595bca2fa7b4896e67e9f0af99d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &688284172
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9178,6 +9117,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.0001, y: 0.0001, z: 0.0001}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &688284173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 688284169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83214fac56c99fc4e88e4741c2994e3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &690526994 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1705129010167144, guid: bfa7e8189ab181843b9ac106678a628a,
@@ -9970,7 +9921,7 @@ GameObject:
   m_Component:
   - component: {fileID: 724153411}
   - component: {fileID: 724153413}
-  - component: {fileID: 724153412}
+  - component: {fileID: 724153414}
   m_Layer: 0
   m_Name: AttachPoint
   m_TagString: Stove
@@ -9993,18 +9944,6 @@ Transform:
   m_Father: {fileID: 518651060}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &724153412
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 724153410}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf08595bca2fa7b4896e67e9f0af99d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &724153413
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10018,6 +9957,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.0001, y: 0.0001, z: 0.0001}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &724153414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 724153410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83214fac56c99fc4e88e4741c2994e3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &725959980 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1705129010167144, guid: bfa7e8189ab181843b9ac106678a628a,
@@ -10619,7 +10570,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &784991220
 PrefabInstance:
@@ -12117,7 +12068,7 @@ RectTransform:
   - {fileID: 1238047377}
   - {fileID: 1004032910}
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -13133,7 +13084,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &947142896
 PrefabInstance:
@@ -15223,7 +15174,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1141525593
 PrefabInstance:
@@ -20638,6 +20589,10 @@ PrefabInstance:
       propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 636483021, guid: 854b54e60a0a9b447a92682d85699eea, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1641479339370652686, guid: 854b54e60a0a9b447a92682d85699eea,
         type: 3}
       propertyPath: m_Name
@@ -20703,7 +20658,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 636483021, guid: 854b54e60a0a9b447a92682d85699eea, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 854b54e60a0a9b447a92682d85699eea, type: 3}
 --- !u!4 &1522628896 stripped
 Transform:
@@ -20731,6 +20687,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   set: 0
   burgerArea: {fileID: 1816609545}
+--- !u!114 &1522628912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1522628897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c7adda474b881b4bb268bb7b012ac7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isStart: 0
+  isBaking: 0
+  RareMaterial:
+  - {fileID: 2100000, guid: 8fd3789f572fd544b8a0a3641561fff6, type: 2}
+  - {fileID: 2100000, guid: a0f8796dcc1aeaf46aef8e0c711ae703, type: 2}
+  MediumMaterial:
+  - {fileID: 2100000, guid: 8fd3789f572fd544b8a0a3641561fff6, type: 2}
+  BurnMaterial:
+  - {fileID: 2100000, guid: 8fd3789f572fd544b8a0a3641561fff6, type: 2}
+  - {fileID: 2100000, guid: d30847de6f4564045b74392724eebbc8, type: 2}
+  placeTutorial: {fileID: 1613356524}
 --- !u!1001 &1523842872
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21579,6 +21558,10 @@ PrefabInstance:
       propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 636483021, guid: 854b54e60a0a9b447a92682d85699eea, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1641479339370652686, guid: 854b54e60a0a9b447a92682d85699eea,
         type: 3}
       propertyPath: m_Name
@@ -21644,7 +21627,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 636483021, guid: 854b54e60a0a9b447a92682d85699eea, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 854b54e60a0a9b447a92682d85699eea, type: 3}
 --- !u!4 &1586880505 stripped
 Transform:
@@ -21672,6 +21656,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   set: 0
   burgerArea: {fileID: 1816609545}
+--- !u!114 &1586880521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1586880506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c7adda474b881b4bb268bb7b012ac7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isStart: 0
+  isBaking: 0
+  RareMaterial:
+  - {fileID: 2100000, guid: 8fd3789f572fd544b8a0a3641561fff6, type: 2}
+  - {fileID: 2100000, guid: a0f8796dcc1aeaf46aef8e0c711ae703, type: 2}
+  MediumMaterial:
+  - {fileID: 2100000, guid: 8fd3789f572fd544b8a0a3641561fff6, type: 2}
+  BurnMaterial:
+  - {fileID: 2100000, guid: 8fd3789f572fd544b8a0a3641561fff6, type: 2}
+  - {fileID: 2100000, guid: d30847de6f4564045b74392724eebbc8, type: 2}
+  placeTutorial: {fileID: 1613356524}
 --- !u!1001 &1596506978
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23245,6 +23252,10 @@ PrefabInstance:
       propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 636483021, guid: 854b54e60a0a9b447a92682d85699eea, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1641479339370652686, guid: 854b54e60a0a9b447a92682d85699eea,
         type: 3}
       propertyPath: m_Name
@@ -23310,7 +23321,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 636483021, guid: 854b54e60a0a9b447a92682d85699eea, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 854b54e60a0a9b447a92682d85699eea, type: 3}
 --- !u!4 &1677550190 stripped
 Transform:
@@ -23338,6 +23350,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   set: 0
   burgerArea: {fileID: 1816609545}
+--- !u!114 &1677550206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1677550191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c7adda474b881b4bb268bb7b012ac7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isStart: 0
+  isBaking: 0
+  RareMaterial:
+  - {fileID: 2100000, guid: 8fd3789f572fd544b8a0a3641561fff6, type: 2}
+  - {fileID: 2100000, guid: a0f8796dcc1aeaf46aef8e0c711ae703, type: 2}
+  MediumMaterial:
+  - {fileID: 2100000, guid: 8fd3789f572fd544b8a0a3641561fff6, type: 2}
+  BurnMaterial:
+  - {fileID: 2100000, guid: 8fd3789f572fd544b8a0a3641561fff6, type: 2}
+  - {fileID: 2100000, guid: d30847de6f4564045b74392724eebbc8, type: 2}
+  placeTutorial: {fileID: 1613356524}
 --- !u!1001 &1698948416
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24596,7 +24631,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4035636023894034, guid: 35b322112bf4afe49b416040e2ab23a8, type: 3}
       propertyPath: m_RootOrder
-      value: 18
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 4035636023894034, guid: 35b322112bf4afe49b416040e2ab23a8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -26094,7 +26129,7 @@ Transform:
   - {fileID: 1767950640}
   - {fileID: 1251930554}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: -179.797, z: 0}
 --- !u!1001 &1964797936
 PrefabInstance:
@@ -26478,6 +26513,10 @@ PrefabInstance:
       propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 636483021, guid: 854b54e60a0a9b447a92682d85699eea, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1641479339370652686, guid: 854b54e60a0a9b447a92682d85699eea,
         type: 3}
       propertyPath: m_Name
@@ -26543,7 +26582,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 636483021, guid: 854b54e60a0a9b447a92682d85699eea, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 854b54e60a0a9b447a92682d85699eea, type: 3}
 --- !u!4 &2009903324 stripped
 Transform:
@@ -26571,6 +26611,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   set: 0
   burgerArea: {fileID: 1816609545}
+--- !u!114 &2009903340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2009903325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c7adda474b881b4bb268bb7b012ac7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isStart: 0
+  isBaking: 0
+  RareMaterial:
+  - {fileID: 2100000, guid: 8fd3789f572fd544b8a0a3641561fff6, type: 2}
+  - {fileID: 2100000, guid: a0f8796dcc1aeaf46aef8e0c711ae703, type: 2}
+  MediumMaterial:
+  - {fileID: 2100000, guid: 8fd3789f572fd544b8a0a3641561fff6, type: 2}
+  BurnMaterial:
+  - {fileID: 2100000, guid: 8fd3789f572fd544b8a0a3641561fff6, type: 2}
+  - {fileID: 2100000, guid: d30847de6f4564045b74392724eebbc8, type: 2}
+  placeTutorial: {fileID: 1613356524}
 --- !u!1001 &2016074158
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28669,6 +28732,10 @@ PrefabInstance:
       propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 636483021, guid: 854b54e60a0a9b447a92682d85699eea, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1641479339370652686, guid: 854b54e60a0a9b447a92682d85699eea,
         type: 3}
       propertyPath: m_Name
@@ -28734,7 +28801,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 636483021, guid: 854b54e60a0a9b447a92682d85699eea, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 854b54e60a0a9b447a92682d85699eea, type: 3}
 --- !u!4 &2133482330 stripped
 Transform:
@@ -28762,6 +28830,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   set: 0
   burgerArea: {fileID: 1816609545}
+--- !u!114 &2133482346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2133482331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c7adda474b881b4bb268bb7b012ac7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isStart: 0
+  isBaking: 0
+  RareMaterial:
+  - {fileID: 2100000, guid: 8fd3789f572fd544b8a0a3641561fff6, type: 2}
+  - {fileID: 2100000, guid: a0f8796dcc1aeaf46aef8e0c711ae703, type: 2}
+  MediumMaterial:
+  - {fileID: 2100000, guid: 8fd3789f572fd544b8a0a3641561fff6, type: 2}
+  BurnMaterial:
+  - {fileID: 2100000, guid: 8fd3789f572fd544b8a0a3641561fff6, type: 2}
+  - {fileID: 2100000, guid: d30847de6f4564045b74392724eebbc8, type: 2}
+  placeTutorial: {fileID: 1613356524}
 --- !u!1 &2146841025
 GameObject:
   m_ObjectHideFlags: 0

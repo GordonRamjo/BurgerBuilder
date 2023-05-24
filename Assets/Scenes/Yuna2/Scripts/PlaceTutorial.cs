@@ -8,6 +8,7 @@ public class PlaceTutorial : MonoBehaviour
     public GuideDialogManager guideDialogManager;
     private LayerMask[] defaultBurgerList;
     private int ingredientNum = 0;
+    private PattyState pattyState;
 
     // Start is called before the first frame update
     void Start()
@@ -38,11 +39,22 @@ public class PlaceTutorial : MonoBehaviour
         {
             other.gameObject.GetComponent<FriesTutorial>().set = true;
         }
-        else
+        else if (other.gameObject.layer == LayerMask.NameToLayer("Patty"))
         {
+            if (pattyState == PattyState.Medium)
+            {
+                other.GetComponent<XRGrabInteractable>().enabled = false;
+                ingredientNum++;
+                guideDialogManager.UpdateGuideDialog();
+            }
+            else if (pattyState == PattyState.Burn)
+            {
+                guideDialogManager.UpdateGuideDialog();
+            }
+        }
+        else {
             if (other.gameObject.layer == defaultBurgerList[ingredientNum])
             {
-                other.gameObject.GetComponent<BurgeringTutorial>().set = true;
                 other.GetComponent<XRGrabInteractable>().enabled = false;
                 ingredientNum++;
                 guideDialogManager.UpdateGuideDialog();
@@ -64,5 +76,11 @@ public class PlaceTutorial : MonoBehaviour
         {
             other.gameObject.GetComponent<BurgeringTutorial>().set = false;
         }
+    }
+
+    public void GetPattyState(PattyState state)
+    {
+        pattyState = state;
+        Debug.Log("Patty State: " + pattyState);
     }
 }
