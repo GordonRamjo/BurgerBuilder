@@ -7,6 +7,7 @@ public class PattyTutorialController : MonoBehaviour
     public Patty patty;
     public bool isStart = false;
     public bool isBaking = false;
+    private bool isFirstExecute = true;
 
     // Patty Material
     public Material[] RareMaterial;
@@ -27,41 +28,47 @@ public class PattyTutorialController : MonoBehaviour
     {
         if (isStart && isBaking)
         {
-            if (patty.state == Patty.State.Rare)
+            if (patty.state == Patty.State.Rare && isFirstExecute)
             {
                 // 5초 뒤
-                StartCoroutine("After5Second");
+                isFirstExecute = false;
+                StartCoroutine(After5Second());
             }
-            else if (patty.state == Patty.State.Medium)
+            else if (patty.state == Patty.State.Medium && isFirstExecute)
             {
                 // 10초 뒤
-                StartCoroutine("After10Second");
+                isFirstExecute = false;
+                StartCoroutine(After10Second());
             }
         }
     }
 
     IEnumerator After5Second()
     {
-        yield return new WaitForSecondsRealtime(5.0f);
+        yield return new WaitForSeconds(5f);
         if (isBaking)
         {
             Debug.Log("After5Second");
             patty.Medium();
             gameObject.GetComponent<MeshRenderer>().materials = MediumMaterial;
             placeTutorial.GetPattyState(PattyState.Medium);
+
+            isFirstExecute = true;
         }
 
     }
 
     IEnumerator After10Second()
     {
-        yield return new WaitForSecondsRealtime(5.0f);
+        yield return new WaitForSeconds(5f);
         if (isBaking)
         {
             Debug.Log("After10Second");
             patty.Burned();
             gameObject.GetComponent<MeshRenderer>().materials = BurnMaterial;
             placeTutorial.GetPattyState(PattyState.Burn);
+
+            isFirstExecute = true;
         }
     }
 

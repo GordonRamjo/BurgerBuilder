@@ -41,8 +41,9 @@ public class PlaceTutorial : MonoBehaviour
         }
         else if (other.gameObject.layer == LayerMask.NameToLayer("Patty"))
         {
-            if (pattyState == PattyState.Medium)
+            if (pattyState == PattyState.Medium && other.gameObject.layer == defaultBurgerList[ingredientNum])
             {
+                other.gameObject.GetComponent<BurgeringTutorial>().set = true;
                 other.GetComponent<XRGrabInteractable>().enabled = false;
                 ingredientNum++;
                 guideDialogManager.UpdateGuideDialog();
@@ -55,6 +56,7 @@ public class PlaceTutorial : MonoBehaviour
         else {
             if (other.gameObject.layer == defaultBurgerList[ingredientNum])
             {
+                other.gameObject.GetComponent<BurgeringTutorial>().set = true;
                 other.GetComponent<XRGrabInteractable>().enabled = false;
                 ingredientNum++;
                 guideDialogManager.UpdateGuideDialog();
