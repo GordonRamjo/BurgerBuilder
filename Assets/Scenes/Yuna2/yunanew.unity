@@ -20607,6 +20607,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 8fd3789f572fd544b8a0a3641561fff6, type: 2}
   - {fileID: 2100000, guid: d30847de6f4564045b74392724eebbc8, type: 2}
   placeTutorial: {fileID: 1613356524}
+  guideDialogManager: {fileID: 764575326}
 --- !u!1001 &1523842872
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21576,6 +21577,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 8fd3789f572fd544b8a0a3641561fff6, type: 2}
   - {fileID: 2100000, guid: d30847de6f4564045b74392724eebbc8, type: 2}
   placeTutorial: {fileID: 1613356524}
+  guideDialogManager: {fileID: 764575326}
 --- !u!1001 &1596506978
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23270,6 +23272,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 8fd3789f572fd544b8a0a3641561fff6, type: 2}
   - {fileID: 2100000, guid: d30847de6f4564045b74392724eebbc8, type: 2}
   placeTutorial: {fileID: 1613356524}
+  guideDialogManager: {fileID: 764575326}
 --- !u!1001 &1698948416
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26531,6 +26534,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 8fd3789f572fd544b8a0a3641561fff6, type: 2}
   - {fileID: 2100000, guid: d30847de6f4564045b74392724eebbc8, type: 2}
   placeTutorial: {fileID: 1613356524}
+  guideDialogManager: {fileID: 764575326}
 --- !u!1001 &2016074158
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28656,17 +28660,17 @@ PrefabInstance:
     - target: {fileID: 2129187154895896244, guid: 854b54e60a0a9b447a92682d85699eea,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.743
+      value: -0.74300003
       objectReference: {fileID: 0}
     - target: {fileID: 2129187154895896244, guid: 854b54e60a0a9b447a92682d85699eea,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.011
+      value: 1.0110006
       objectReference: {fileID: 0}
     - target: {fileID: 2129187154895896244, guid: 854b54e60a0a9b447a92682d85699eea,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.90686655
+      value: 0.9068666
       objectReference: {fileID: 0}
     - target: {fileID: 2129187154895896244, guid: 854b54e60a0a9b447a92682d85699eea,
         type: 3}
@@ -28750,6 +28754,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 8fd3789f572fd544b8a0a3641561fff6, type: 2}
   - {fileID: 2100000, guid: d30847de6f4564045b74392724eebbc8, type: 2}
   placeTutorial: {fileID: 1613356524}
+  guideDialogManager: {fileID: 764575326}
 --- !u!1 &2146841025
 GameObject:
   m_ObjectHideFlags: 0

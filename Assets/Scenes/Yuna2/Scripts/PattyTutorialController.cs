@@ -14,6 +14,7 @@ public class PattyTutorialController : MonoBehaviour
     public Material[] MediumMaterial;
     public Material[] BurnMaterial;
     public PlaceTutorial placeTutorial;
+    public GuideDialogManager guideDialogManager;
 
     // Start is called before the first frame update
     void Start()
@@ -67,6 +68,7 @@ public class PattyTutorialController : MonoBehaviour
             patty.Burned();
             gameObject.GetComponent<MeshRenderer>().materials = BurnMaterial;
             placeTutorial.GetPattyState(PattyState.Burn);
+            guideDialogManager.UpdateGuideDialog();
 
             isFirstExecute = true;
         }

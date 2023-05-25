@@ -52,12 +52,13 @@ public class PlaceTutorial : MonoBehaviour
                 other.gameObject.GetComponent<BurgeringTutorial>().set = true;
                 ingredientNum++;
                 guideDialogManager.UpdateGuideDialog();
-            } 
+            }
+           /* } 
             else if (pattyState == PattyState.Burn && isFirstExecute)
             {
                 guideDialogManager.UpdateGuideDialog();
                 isFirstExecute = false;
-            }
+            }*/
         }
         else {
             if (other.gameObject.layer == defaultBurgerList[ingredientNum])
