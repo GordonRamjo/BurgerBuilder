@@ -27,6 +27,9 @@ public class StageManager : MonoBehaviour
     public ParticleSystem failParticleSys2;
     public TMP_Text totalCnt;
     public TMP_Text curCnt;
+
+    public GameObject GameResultManager;
+
     void Awake()
     {
         //필요 변수 초기화
@@ -64,12 +67,15 @@ public class StageManager : MonoBehaviour
             {
                 Debug.Log("STAGE CLEAR");
                 isStageClear = true; //스테이지 클리어 여부를 참으로 설정
-                /*
+
                 DataManager.Instance.data.isUnlock[stageNumber] = true;
                 DataManager.Instance.SaveGameData();
-                */
+
+                
             }
         }
+
+        GameResultManager.GetComponent<GameResultManager>().Open(isStageClear);
     }
     void GenerateCustomer(int i) //손님을 생성하는 함수
     {
@@ -111,6 +117,5 @@ public class StageManager : MonoBehaviour
         }
         remainCustomerCnt--; //새로운 손님 응대를 시작했으니, 남아있는 손님 수 한명 감소
         Debug.Log(remainCustomerCnt);
-    }
-    
+    }  
 }
