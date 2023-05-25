@@ -45,6 +45,14 @@ public class Customer : MonoBehaviour
         speechBubbleInstance = Instantiate(speechBubble); //말풍선 생성하기
    
     }
+    void reOrder() //주문 재요구하기
+    {
+        //실패 파티클 정지하기
+        stageManager.failParticleSys1.Stop();
+        stageManager.failParticleSys2.Stop();
+        string orderMsg = gameObject.GetComponent<Order>().getOrderMsg();
+        speechBubbleInstance.GetComponent<SpeechBubbleController>().ChangeText(orderMsg);
+    }
     void Awake()
     {
         //세트,랜덤 메뉴인지 결정.
@@ -91,14 +99,23 @@ public class Customer : MonoBehaviour
             if (isSuccess)
             {
                 stageManager.successParticleSys.Play();
+                speechBubbleInstance.GetComponent<SpeechBubbleController>().ChangeText("I Love it :)");
                 isEvaluationEnd = false; //반복적으로 반응하지 않도록 false로 변경
                 Invoke("disappear", 2f);
+                //응대한 손님 수 추가
+                stageManager.completeCustomerCnt = stageManager.completeCustomerCnt + 1;
+                //UI 업데이트하기
+                stageManager.curCnt.text = string.Format("{0}", stageManager.completeCustomerCnt);
 
             }
             else //올바르지 않은 음식이 전달 된 경우
             {
-                stageManager.failParticleSys.Play();
+                //실패 파티클 실행하기
+                stageManager.failParticleSys1.Play();
+                stageManager.failParticleSys2.Play();
                 isEvaluationEnd = false; //반복적으로 반응하지 않도록 false로 변경
+                speechBubbleInstance.GetComponent<SpeechBubbleController>().ChangeText("It's not the food I ordered. Please make it again.");
+                Invoke("reOrder", 4f);
                 Debug.Log("음식이 이상해");
             }
         }
