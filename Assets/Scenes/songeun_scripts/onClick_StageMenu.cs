@@ -116,11 +116,14 @@ namespace Assets.Scripts
         void Start()
         {
             DataManager.Instance.LoadGameData();
+            DataManager.Instance.data.isUnlock[1] = true;
+
 
             if (!DataManager.Instance.data.isUnlock[1])
-            stage1_btn.transform.GetChild(1).GetComponent<RawImage>().color = Color.gray;
-            stage1_btn.transform.GetChild(2).gameObject.SetActive(true);
-
+            {
+                stage1_btn.transform.GetChild(1).GetComponent<RawImage>().color = Color.gray;
+                stage1_btn.transform.GetChild(2).gameObject.SetActive(true);
+            }
             if (!DataManager.Instance.data.isUnlock[2])
             {
                 stage2_btn.transform.GetChild(1).GetComponent<RawImage>().color = Color.gray;

@@ -64,6 +64,10 @@ public class StageManager : MonoBehaviour
             {
                 Debug.Log("STAGE CLEAR");
                 isStageClear = true; //스테이지 클리어 여부를 참으로 설정
+                /*
+                DataManager.Instance.data.isUnlock[stageNumber] = true;
+                DataManager.Instance.SaveGameData();
+                */
             }
         }
     }
