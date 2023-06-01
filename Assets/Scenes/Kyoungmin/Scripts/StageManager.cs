@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Assets.Scripts;
+using UnityEngine.SceneManagement;
 
 public class StageManager : MonoBehaviour
 {
@@ -27,6 +29,9 @@ public class StageManager : MonoBehaviour
     public ParticleSystem failParticleSys2;
     public TMP_Text totalCnt;
     public TMP_Text curCnt;
+
+    //public GameObject StageMenuPanel;
+
     void Awake()
     {
         //필요 변수 초기화
@@ -64,8 +69,22 @@ public class StageManager : MonoBehaviour
             {
                 Debug.Log("STAGE CLEAR");
                 isStageClear = true; //스테이지 클리어 여부를 참으로 설정
+
+                DataManager.Instance.data.isUnlock[stageNumber] = true;
+                DataManager.Instance.SaveGameData();
+
+                backtoStageMenu(stageNumber);
             }
         }
+        else {
+            backtoStageMenu(3);
+        }
+
+    }
+    void backtoStageMenu(int resultNum)
+    {
+        
+        SceneManager.LoadScene("Lobby");
     }
     void GenerateCustomer(int i) //손님을 생성하는 함수
     {
@@ -107,6 +126,5 @@ public class StageManager : MonoBehaviour
         }
         remainCustomerCnt--; //새로운 손님 응대를 시작했으니, 남아있는 손님 수 한명 감소
         Debug.Log(remainCustomerCnt);
-    }
-    
+    }  
 }
