@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Assets.Scripts
 {
-    public class onClick_StartMenu : MonoBehaviour
+    public class StartMenuPanel : MonoBehaviour
     {
         //Lobby Scene Panel Object들
         public GameObject StartMenu;  //현재 화면

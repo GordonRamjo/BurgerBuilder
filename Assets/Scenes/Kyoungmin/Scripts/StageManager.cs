@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Assets.Scripts;
+using UnityEngine.SceneManagement;
 
 public class StageManager : MonoBehaviour
 {
@@ -28,7 +30,7 @@ public class StageManager : MonoBehaviour
     public TMP_Text totalCnt;
     public TMP_Text curCnt;
 
-    public GameObject GameResultManager;
+    //public GameObject StageMenuPanel;
 
     void Awake()
     {
@@ -71,13 +73,18 @@ public class StageManager : MonoBehaviour
                 DataManager.Instance.data.isUnlock[stageNumber] = true;
                 DataManager.Instance.SaveGameData();
 
-                GameResultManager.GetComponent<GameResultManager>().Open(stageNumber, isStageClear);
+                backtoStageMenu(stageNumber);
             }
         }
         else {
-            GameResultManager.GetComponent<GameResultManager>().Open(stageNumber, isStageClear);
+            backtoStageMenu(3);
         }
 
+    }
+    void backtoStageMenu(int resultNum)
+    {
+        
+        SceneManager.LoadScene("Lobby");
     }
     void GenerateCustomer(int i) //손님을 생성하는 함수
     {

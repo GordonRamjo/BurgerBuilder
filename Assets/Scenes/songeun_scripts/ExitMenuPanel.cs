@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Assets.Scripts
 {
-    public class onClick_ExitMenu : MonoBehaviour
+    public class ExitMenuPanel : MonoBehaviour
     {
         public GameObject StartMenu;  //현재 화면
         public GameObject ExitMenu;   //Exit 버튼으로 접근
