@@ -13,6 +13,9 @@ public class Customer : MonoBehaviour
     public StageManager stageManager;
     public GameObject speechBubble; //말풍선 오브젝트
     private GameObject speechBubbleInstance;
+    public int eval;
+    public Stack<int> orderH;
+    public bool isSet;
 
     Customer()
     {
@@ -42,8 +45,17 @@ public class Customer : MonoBehaviour
     {
         //해당 손님 오브젝트에 Order 컴포넌트 추가
         gameObject.AddComponent<Order>();
+
         speechBubbleInstance = Instantiate(speechBubble); //말풍선 생성하기
-   
+
+    }
+    void reOrder() //주문 재요구하기
+    {
+        //실패 파티클 정지하기
+        stageManager.failParticleSys1.Stop();
+        stageManager.failParticleSys2.Stop();
+        string orderMsg = gameObject.GetComponent<Order>().getOrderMsg();
+        speechBubbleInstance.GetComponent<SpeechBubbleController>().ChangeText(orderMsg);
     }
     void Awake()
     {
@@ -56,11 +68,59 @@ public class Customer : MonoBehaviour
     }
     void evaluate() //손님이 음식 평가하는 함수
     {
+        int count = this.gameObject.GetComponent<Order>().hamburger.Count;
+        eval = 1;
+        Debug.Log("eval");
+
+        Debug.Log("Order count : " + count);
+        Debug.Log("Plate count : " + PlateCont.hamburger.hamburger.Count);
+        
+        if (isSetMenu == PlateCont.cola && isSetMenu == PlateCont.frenchFried && PlateCont.pattyState)
+        {
+            if (count == PlateCont.hamburger.hamburger.Count)
+            {
+                Debug.Log("비교시작");
+                for (int i = 0; i < count; i++)
+                {
+                    if (this.gameObject.GetComponent<Order>().hamburger.Peek() == PlateCont.hamburger.hamburger.Peek())
+                    {
+                        Debug.Log("order" + this.gameObject.GetComponent<Order>().hamburger.Peek());
+                        Debug.Log("plate" + PlateCont.hamburger.hamburger.Peek());
+                        //Debug.Log("basic" + BasicMenu.BasicBurger.Peek());
+                        this.gameObject.GetComponent<Order>().hamburger.Pop();
+                        PlateCont.hamburger.hamburger.Pop();
+                    }
+
+                    else
+                    {
+                        eval = 0;
+                        break;
+                    }
+                }
+
+                if (eval == 1)
+                {
+                    isSuccess = true;
+                }
+            }
+            else
+            {
+                eval = 0;
+            }
+        }
+        else
+        {
+            eval = 0;
+        }
+
+        /*
         //평가에 대한 코드..
         //평가가 성공적인 경우, 해당 손님의 isSuccess 변수를 true로 변경
         isSuccess = true;
         stageManager.successParticleSys.Play();
         //성공했을 때의 파티클 반응과 같은 추가적인 코드..
+        */
+
         isEvaluationEnd = true;
     }
     void disappear()
@@ -76,33 +136,44 @@ public class Customer : MonoBehaviour
     {
         move();
         //손님이 도착(주문)지점에 도착하면
-        if(transform.position == destination.transform.position && !customerAnimator.GetBool("isStop"))
+        if (transform.position == destination.transform.position && !customerAnimator.GetBool("isStop"))
         {
             //걷기 -> 정지 애니메이션으로 변경
             customerAnimator.SetBool("isStop", true);
             //주문하기
             makeOrder();
+            Debug.Log(this.gameObject.GetComponent<Order>().hamburger.Count);
+            Invoke("evaluate", 20.0f);
         }
-        
-        
+
+
         if (isEvaluationEnd)
         {
             //손님에게 올바른 음식이 전달되었을 경우(isSuccess = true)
             if (isSuccess)
             {
                 stageManager.successParticleSys.Play();
+                speechBubbleInstance.GetComponent<SpeechBubbleController>().ChangeText("I Love it :)");
                 isEvaluationEnd = false; //반복적으로 반응하지 않도록 false로 변경
                 Invoke("disappear", 2f);
+                //응대한 손님 수 추가
+                stageManager.completeCustomerCnt = stageManager.completeCustomerCnt + 1;
+                //UI 업데이트하기
+                stageManager.curCnt.text = string.Format("{0}", stageManager.completeCustomerCnt);
 
             }
             else //올바르지 않은 음식이 전달 된 경우
             {
-                stageManager.failParticleSys.Play();
+                //실패 파티클 실행하기
+                stageManager.failParticleSys1.Play();
+                stageManager.failParticleSys2.Play();
                 isEvaluationEnd = false; //반복적으로 반응하지 않도록 false로 변경
+                speechBubbleInstance.GetComponent<SpeechBubbleController>().ChangeText("It's not the food I ordered. Please make it again.");
+                Invoke("reOrder", 4f);
                 Debug.Log("음식이 이상해");
             }
         }
-         
+
     }
 
 }
