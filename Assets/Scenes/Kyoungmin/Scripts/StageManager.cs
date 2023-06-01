@@ -39,9 +39,9 @@ public class StageManager : MonoBehaviour
             GenerateCustomer(i);
         }
         //UI 초기화
-        curCnt.text = string.Format("{0}", 0);
+        curCnt.text = string.Format("{0:D2}", 0);
         //응대해야하는 총 손님 수 초기화하기
-        totalCnt.text = string.Format("/{0}", totalCustomerCnt);
+        totalCnt.text = string.Format("/{0:D2}", totalCustomerCnt);
       
     }
     void Start()

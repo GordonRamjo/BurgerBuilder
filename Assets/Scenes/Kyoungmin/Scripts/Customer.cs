@@ -105,7 +105,7 @@ public class Customer : MonoBehaviour
                 //응대한 손님 수 추가
                 stageManager.completeCustomerCnt = stageManager.completeCustomerCnt + 1;
                 //UI 업데이트하기
-                stageManager.curCnt.text = string.Format("{0}", stageManager.completeCustomerCnt);
+                stageManager.curCnt.text = string.Format("{0:D2}", stageManager.completeCustomerCnt);
 
             }
             else //올바르지 않은 음식이 전달 된 경우
