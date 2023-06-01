@@ -71,11 +71,13 @@ public class StageManager : MonoBehaviour
                 DataManager.Instance.data.isUnlock[stageNumber] = true;
                 DataManager.Instance.SaveGameData();
 
-                
+                GameResultManager.GetComponent<GameResultManager>().Open(stageNumber, isStageClear);
             }
         }
+        else {
+            GameResultManager.GetComponent<GameResultManager>().Open(stageNumber, isStageClear);
+        }
 
-        GameResultManager.GetComponent<GameResultManager>().Open(isStageClear);
     }
     void GenerateCustomer(int i) //손님을 생성하는 함수
     {

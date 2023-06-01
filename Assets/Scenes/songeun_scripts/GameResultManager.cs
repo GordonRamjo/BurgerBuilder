@@ -8,36 +8,60 @@ using UnityEngine.UI;
 public class GameResultManager : MonoBehaviour
 {
     public GameObject GameResult;
+    public TextMeshProUGUI resultText;
     //public TextMeshProUGUI result;
-    private string Success = "Good job!\r\nYou are a Good\r\nBurger Builder!";
+    private string Success1 = "Good job!\r\nYou are a Good\r\nBurger Builder!";
+    private string Success2 = "Excellent!\r\nNow you are the\r\nBest Burger Builder!";
     private string Fail = "Oh no!\r\nYou've failed to be a\r\nBurger Builder!";
+    
+    
+    public AudioClip ClearSound;
+    public AudioClip FailSound;
+    AudioSource audioSource;
+    
     public GameObject replay_btn;
     public GameObject back2lobby_btn;
     public int stageNumber;
-    public bool isClear;
-   
+
 
     // Start is called before the first frame update
+    public void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
     public void Start()
     {
         //GameResult.transform.LeanScale
+        GameResult.SetActive(false);
     }
 
     // Update is called once per frame
-    public void Open(bool isClear)
+    public void Open(int stageNumber, bool isClear)
     {
         string result;
-        if (isClear)
+        AudioClip resultSound;
+
+        if (isClear && stageNumber == 1)
         {
-            result = Success;
+            result = Success1;
+            audioSource.clip = ClearSound;
+        }
+        else if (isClear && stageNumber == 2)
+        {
+            result = Success2;
+            audioSource.clip = ClearSound;
         }
         else
         {
             result = Fail;
+            audioSource.clip = FailSound;
         }
 
-        GameResult.GetComponent<TextMeshPro>().text = result;
+        //GameResult.GetComponent<TextMeshProUGUI>().text = result;
+        resultText.text = result;
         GameResult.SetActive(true);
+        audioSource.Play();
         LeanTween.scale(GameResult, new Vector3(0.3f, 0.3f, 0.3f), 3f).setEase(LeanTweenType.easeOutElastic);
 
     }
