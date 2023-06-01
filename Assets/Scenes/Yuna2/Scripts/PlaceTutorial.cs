@@ -6,6 +6,8 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class PlaceTutorial : MonoBehaviour
 {
     public GuideDialogManager guideDialogManager;
+    public AudioClip successClip;
+    private AudioSource successBgm;
     private LayerMask[] defaultBurgerList;
     private int ingredientNum = 0;
     private PattyState pattyState;
@@ -24,6 +26,8 @@ public class PlaceTutorial : MonoBehaviour
             LayerMask.NameToLayer("Coke"),
             LayerMask.NameToLayer("Fries")
         };
+
+        successBgm.clip = successClip;
     }
 
     // Update is called once per frame
@@ -49,20 +53,16 @@ public class PlaceTutorial : MonoBehaviour
         {
             if (pattyState == PattyState.Medium && other.gameObject.layer == defaultBurgerList[ingredientNum])
             {
+                successBgm.Play();
                 other.gameObject.GetComponent<BurgeringTutorial>().set = true;
                 ingredientNum++;
                 guideDialogManager.UpdateGuideDialog();
             }
-           /* } 
-            else if (pattyState == PattyState.Burn && isFirstExecute)
-            {
-                guideDialogManager.UpdateGuideDialog();
-                isFirstExecute = false;
-            }*/
         }
         else {
             if (other.gameObject.layer == defaultBurgerList[ingredientNum])
             {
+                successBgm.Play();
                 other.gameObject.GetComponent<BurgeringTutorial>().set = true;
                 ingredientNum++;
                 guideDialogManager.UpdateGuideDialog();
