@@ -5,68 +5,71 @@ using UnityEngine;
 public class PlateCont : MonoBehaviour
 {
     public static Hamburger hamburger = new Hamburger(); // ÇÜ¹ö°Å
-    public bool cola = false; // ÄÝ¶ó
-    public bool frenchFried = false; // °¨ÀÚÆ¢±è
-    public bool pattyState = true; // ÆÐÆ¼ ±Á±â Á¤µµ
+    public static bool cola = false; // ÄÝ¶ó
+    public static bool frenchFried = false; // °¨ÀÚÆ¢±è
+    public static bool pattyState = true; // ÆÐÆ¼ ±Á±â Á¤µµ
 
 
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log(hamburger.hamburger.Count);
+
     }
 
-    private void OnCollisionStay(Collision collision)
+
+
+    private void OnCollisionStay(Collision other)
     {
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Burger"))
+        /*
+        if (other.gameObject.layer == LayerMask.NameToLayer("Burger"))
         {
-            if (collision.gameObject.GetComponent<BurgerIng>().fix == true)
+            if (other.gameObject.GetComponent<BurgerIng>().fix == true)
             {
-                if (collision.gameObject.transform.tag == "TopBun")
+                if (other.gameObject.transform.tag == "TopBun")
                 {
                     Debug.Log("TopBunStacked");
                     AddIngredient(Hamburger.Ingredient.UpperBread);
                     Debug.Log(hamburger.hamburger.Peek());
                 }
 
-                else if (collision.gameObject.transform.tag == "Tomato")
+                else if (other.gameObject.transform.tag == "Tomato")
                 {
                     Debug.Log("TomatoStacked");
                     AddIngredient(Hamburger.Ingredient.Tomato);
                     Debug.Log(hamburger.hamburger.Peek());
                 }
 
-                else if (collision.gameObject.transform.tag == "patty")
+                else if (other.gameObject.transform.tag == "patty")
                 {
-                    AddPatty(collision.gameObject.GetComponent<PattyController>().patty);
+                    AddPatty(other.gameObject.GetComponent<PattyController>().patty);
                     //Debug.Log(collision.gameObject.GetComponent<PattyController>().patty.state);
                     AddIngredient(Hamburger.Ingredient.Patty);
                     Debug.Log("PattyStacked");
                     Debug.Log(hamburger.hamburger.Peek());
                 }
 
-                else if (collision.gameObject.transform.tag == "Onion")
+                else if (other.gameObject.transform.tag == "Onion")
                 {
                     Debug.Log("OnionStacked");
                     AddIngredient(Hamburger.Ingredient.Onion);
                     Debug.Log(hamburger.hamburger.Peek());
                 }
 
-                else if (collision.gameObject.transform.tag == "Lettuce")
+                else if (other.gameObject.transform.tag == "Lettuce")
                 {
                     Debug.Log("LettuceStacked");
                     AddIngredient(Hamburger.Ingredient.Lettuce);
                     Debug.Log(hamburger.hamburger.Peek());
                 }
 
-                else if (collision.gameObject.transform.tag == "Cheese")
+                else if (other.gameObject.transform.tag == "Cheese")
                 {
                     Debug.Log("CheeseStacked");
                     AddIngredient(Hamburger.Ingredient.Cheese);
                     Debug.Log(hamburger.hamburger.Peek());
                 }
 
-                else if (collision.gameObject.transform.tag == "BottomBun")
+                else if (other.gameObject.transform.tag == "BottomBun")
                 {
                     Debug.Log("BottomBunStacked");
                     AddIngredient(Hamburger.Ingredient.BottomBread);
@@ -75,21 +78,25 @@ public class PlateCont : MonoBehaviour
 
             }
         }
-        else if (collision.gameObject.layer == LayerMask.NameToLayer("Fries"))
+        */
+
+        if (other.gameObject.layer == LayerMask.NameToLayer("Fries"))
         {
-            if (collision.gameObject.GetComponent<Fries>().fix == true)
+            if (other.gameObject.GetComponent<Fries>().fix == true)
             {
                 AddFrenchFried();
             }
         }
-        else if (collision.gameObject.layer == LayerMask.NameToLayer("Coke"))
+        else if (other.gameObject.layer == LayerMask.NameToLayer("Coke"))
         {
-            if (collision.gameObject.GetComponent<Coke>().fix == true)
+            if (other.gameObject.GetComponent<Coke>().fix == true)
             {
                 AddCola();
             }
         }
     }
+
+
     // Update is called once per frame
     void Update()
     {
@@ -119,7 +126,7 @@ public class PlateCont : MonoBehaviour
     }
 
     // ÇÜ¹ö°Å¿¡ Àç·á Ãß°¡
-    public void AddIngredient(Hamburger.Ingredient ingredient)
+    public static void AddIngredient(Hamburger.Ingredient ingredient)
     {
         hamburger.Add(ingredient);
     }
@@ -136,7 +143,7 @@ public class PlateCont : MonoBehaviour
         frenchFried = true;
     }
 
-    public void AddPatty(Patty patty)
+    public static void AddPatty(Patty patty)
     {
         if (patty.state != Patty.State.Medium)
         {

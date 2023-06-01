@@ -29,6 +29,51 @@ public class BurgerIng : MonoBehaviour
 
 
             fix = true;
+            if (this.gameObject.tag == "TopBun")
+            {
+                PlateCont.AddIngredient(Hamburger.Ingredient.UpperBread);
+                Debug.Log(PlateCont.hamburger.hamburger.Peek());
+                Debug.Log(PlateCont.hamburger.hamburger.Count);
+            }
+            else if (this.gameObject.tag == "Tomato")
+            {
+                PlateCont.AddIngredient(Hamburger.Ingredient.Tomato);
+                Debug.Log(PlateCont.hamburger.hamburger.Peek());
+                Debug.Log(PlateCont.hamburger.hamburger.Count);
+            }
+            else if (this.gameObject.tag == "patty")
+            {
+                PlateCont.AddIngredient(Hamburger.Ingredient.Patty);
+                PlateCont.AddPatty(this.gameObject.GetComponent<PattyController>().patty);
+                Debug.Log(this.gameObject.GetComponent<PattyController>().patty.state);
+                Debug.Log(PlateCont.hamburger.hamburger.Peek());
+                Debug.Log(PlateCont.hamburger.hamburger.Count);
+            }
+            else if (this.gameObject.tag == "Onion")
+            {
+                PlateCont.AddIngredient(Hamburger.Ingredient.Onion);
+                Debug.Log(PlateCont.hamburger.hamburger.Peek());
+                Debug.Log(PlateCont.hamburger.hamburger.Count);
+            }
+            else if (this.gameObject.tag == "Lettuce")
+            {
+                PlateCont.AddIngredient(Hamburger.Ingredient.Lettuce);
+                Debug.Log(PlateCont.hamburger.hamburger.Peek());
+                Debug.Log(PlateCont.hamburger.hamburger.Count);
+            }
+            else if (this.gameObject.tag == "Cheese")
+            {
+                PlateCont.AddIngredient(Hamburger.Ingredient.Cheese);
+                Debug.Log(PlateCont.hamburger.hamburger.Peek());
+                Debug.Log(PlateCont.hamburger.hamburger.Count);
+            }
+            else if (this.gameObject.tag == "BottomBun")
+            {
+                PlateCont.AddIngredient(Hamburger.Ingredient.BottomBread);
+                Debug.Log(PlateCont.hamburger.hamburger.Peek());
+                Debug.Log(PlateCont.hamburger.hamburger.Count);
+            }
+
             this.GetComponent<XRGrabInteractable>().enabled = false;
 
         }

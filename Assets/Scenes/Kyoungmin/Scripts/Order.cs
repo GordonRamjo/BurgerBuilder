@@ -6,7 +6,7 @@ public class Order : MonoBehaviour
 {
     public bool isSetMenu; //세트 메뉴 여부
     public bool isRandomMenu; //랜덤 메뉴여부
-    public static Stack<int> hamburger; //햄버거 메뉴
+    public Stack<int> hamburger; //햄버거 메뉴
     //아래의 두 변수는 스테이지에 따라 달라짐
     int availBasicMenuCnt; //가능한 기본 메뉴 수
     int availRandomMenuCnt; //가능한 랜덤 메뉴 수
@@ -23,6 +23,7 @@ public class Order : MonoBehaviour
     //기본 메뉴들 중 선택
     Stack<int> ChooseBasicMenu(int r)
     {
+        Debug.Log(r);
         switch (r)
         {
             case 1:
@@ -72,6 +73,7 @@ public class Order : MonoBehaviour
     //랜덤 메뉴들 중 선택
     Stack<int> ChooseRandomMenu(int r)
     {
+        Debug.Log(r);
         switch (r)
         {
             case 1:
@@ -122,6 +124,9 @@ public class Order : MonoBehaviour
         basicSetMenuImgs = stageManager.basicSetMenuImgs;
         randomSetMenuImgs = stageManager.randomSetMenuImgs;
         //랜덤 여부에 따라, 햄버거 메뉴를 기본 메뉴 중 선택 or 랜덤 메뉴 중 선택
+
+        //hamburger.Clear();
+
         if (isRandomMenu)
         {
             hamburger = ChooseRandomMenu((int)Random.Range(1,availRandomMenuCnt+1));
@@ -132,7 +137,7 @@ public class Order : MonoBehaviour
             hamburger = ChooseBasicMenu((int)Random.Range(1, availBasicMenuCnt+1));
             //Debug.Log("기본햄버거");
         }
-        //Debug.Log(hamburger);
+
     }
     // Start is called before the first frame update
     void Start()
