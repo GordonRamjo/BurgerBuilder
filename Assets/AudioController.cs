@@ -4,17 +4,31 @@ using UnityEngine;
 
 public class AudioController : MonoBehaviour
 {
-    public AudioSource bgm;
+    public AudioSource bgmPlayer;
+    public AudioSource[] sfxPlayer;
+    public AudioClip[] sfxClip;
+
+    public enum Sfx { PATTY, CUSTMER_ANGRY, SIREN, GRAB, DROP, TRASH, WALKING };
 
     // Start is called before the first frame update
     void Start()
     {
-        bgm.Play();
+        // BGM
+        bgmPlayer.Play();
+
+        // SFX
+        for (int i = 0; i <= 6; i++)
+            sfxPlayer[i].clip = sfxClip[i];
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+    
+    }
+
+    public void SfxPlay(Sfx type)
+    {
+        sfxPlayer[(int) type].Play();
     }
 }
