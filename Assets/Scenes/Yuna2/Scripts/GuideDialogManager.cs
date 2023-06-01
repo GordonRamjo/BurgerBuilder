@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class GuideDialogManager : MonoBehaviour
@@ -12,6 +13,7 @@ public class GuideDialogManager : MonoBehaviour
     public Texture2D[] images;
     private int guideDialogNum = 0;
     private Canvas guideUICanvas;
+    public GameObject StageMenuPanel;
 
     void Start()
     {
@@ -33,6 +35,8 @@ public class GuideDialogManager : MonoBehaviour
         {
             guideUICanvas = GameObject.Find("GuideCanvas").GetComponent<Canvas>();
             guideUICanvas.enabled = false;
+            backtoStageMenu();
+
         }
 
         guideDialogNum++;
@@ -44,5 +48,12 @@ public class GuideDialogManager : MonoBehaviour
         image.texture = images[guideDialogNum];
         guide.text = guideDialog[guideDialogNum];
         guideDialogNum++;
+    }
+
+    void backtoStageMenu()
+    {
+        DataManager.Instance.data.isUnlock[0] = true;
+        DataManager.Instance.SaveGameData();
+        SceneManager.LoadScene("Lobby");
     }
 }
