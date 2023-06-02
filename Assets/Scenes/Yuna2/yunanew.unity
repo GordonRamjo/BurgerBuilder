@@ -3280,6 +3280,50 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &233246815 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3811015473550996117, guid: 839a8614998fc7d4491da41c0d3534f6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1251930553}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &233246819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 233246815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f656bdcca5819aa42aa6092b3c8b5a1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerAction:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Trigger
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 7860710e-dc02-4a6f-9b5b-48a4e4b1014e
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 7904272356298805229, guid: c348712bda248c246b8c49b3db54643f,
+      type: 3}
+  gripAction:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Grip
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 402131be-2d3f-49d4-9d6c-ee913f40c559
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: -1758520528963094988, guid: c348712bda248c246b8c49b3db54643f,
+      type: 3}
 --- !u!1 &236813104
 GameObject:
   m_ObjectHideFlags: 0
@@ -5489,7 +5533,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed4c735c26be3234d8c78e33324dbce3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  guideDialogManager: {fileID: 764575326}
 --- !u!1001 &459904391
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12165,7 +12208,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02139bc46db857747bfebb1d6ccad77b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  guideDialogManager: {fileID: 764575326}
 --- !u!65 &853799046
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14618,7 +14660,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed4c735c26be3234d8c78e33324dbce3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  guideDialogManager: {fileID: 764575326}
 --- !u!1001 &1041861525
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17673,6 +17714,16 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0.00000030035153
       objectReference: {fileID: 0}
+    - target: {fileID: 8793918798844185888, guid: 839a8614998fc7d4491da41c0d3534f6,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8793918799083352523, guid: 839a8614998fc7d4491da41c0d3534f6,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8793918799371835851, guid: 839a8614998fc7d4491da41c0d3534f6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -18751,6 +18802,50 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1369691417}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1381429763 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8903208274951945164, guid: 839a8614998fc7d4491da41c0d3534f6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1251930553}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1381429767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1381429763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f656bdcca5819aa42aa6092b3c8b5a1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerAction:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Trigger
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 324722eb-63ed-4bcf-bf7d-f3c2aad644eb
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: -4289430672226363583, guid: c348712bda248c246b8c49b3db54643f,
+      type: 3}
+  gripAction:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Grip
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: a943fc38-cfb7-4749-836f-c2df3164cb9e
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 6558622148059887818, guid: c348712bda248c246b8c49b3db54643f,
+      type: 3}
 --- !u!1001 &1391335618
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21415,7 +21510,6 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 8fd3789f572fd544b8a0a3641561fff6, type: 2}
   - {fileID: 2100000, guid: d30847de6f4564045b74392724eebbc8, type: 2}
   placeTutorial: {fileID: 1613356524}
-  guideDialogManager: {fileID: 764575326}
 --- !u!1001 &1523842872
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22385,7 +22479,6 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 8fd3789f572fd544b8a0a3641561fff6, type: 2}
   - {fileID: 2100000, guid: d30847de6f4564045b74392724eebbc8, type: 2}
   placeTutorial: {fileID: 1613356524}
-  guideDialogManager: {fileID: 764575326}
 --- !u!1001 &1596506978
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22785,7 +22878,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed4c735c26be3234d8c78e33324dbce3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  guideDialogManager: {fileID: 764575326}
 --- !u!1001 &1624741036
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24080,7 +24172,6 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 8fd3789f572fd544b8a0a3641561fff6, type: 2}
   - {fileID: 2100000, guid: d30847de6f4564045b74392724eebbc8, type: 2}
   placeTutorial: {fileID: 1613356524}
-  guideDialogManager: {fileID: 764575326}
 --- !u!1001 &1698948416
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25757,7 +25848,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed4c735c26be3234d8c78e33324dbce3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  guideDialogManager: {fileID: 764575326}
 --- !u!1 &1829862103
 GameObject:
   m_ObjectHideFlags: 0
@@ -27598,7 +27688,6 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 8fd3789f572fd544b8a0a3641561fff6, type: 2}
   - {fileID: 2100000, guid: d30847de6f4564045b74392724eebbc8, type: 2}
   placeTutorial: {fileID: 1613356524}
-  guideDialogManager: {fileID: 764575326}
 --- !u!1001 &2016074158
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29946,7 +30035,6 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 8fd3789f572fd544b8a0a3641561fff6, type: 2}
   - {fileID: 2100000, guid: d30847de6f4564045b74392724eebbc8, type: 2}
   placeTutorial: {fileID: 1613356524}
-  guideDialogManager: {fileID: 764575326}
 --- !u!1 &2146841025
 GameObject:
   m_ObjectHideFlags: 0
