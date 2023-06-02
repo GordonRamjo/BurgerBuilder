@@ -5490,7 +5490,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   guideDialogManager: {fileID: 764575326}
-  successClip: {fileID: 0}
 --- !u!1001 &459904391
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14620,7 +14619,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   guideDialogManager: {fileID: 764575326}
-  successClip: {fileID: 0}
 --- !u!1001 &1041861525
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22788,7 +22786,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   guideDialogManager: {fileID: 764575326}
-  successClip: {fileID: 8300000, guid: eca5a88b05501c64db3266dc02a4fcbf, type: 3}
 --- !u!1001 &1624741036
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25761,7 +25758,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   guideDialogManager: {fileID: 764575326}
-  successClip: {fileID: 0}
 --- !u!1 &1829862103
 GameObject:
   m_ObjectHideFlags: 0
