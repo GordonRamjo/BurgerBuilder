@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class WasteBinTutorial : MonoBehaviour
 {
-    public GuideDialogManager guideDialogManager;
+    GuideDialogManager guideDialogManager;
+    AudioTutorialController audioController;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        audioController = GameObject.Find("SoundCube").GetComponent<AudioTutorialController>();
+        guideDialogManager = GameObject.Find("Dialog").GetComponent<GuideDialogManager>();
     }
 
     // Update is called once per frame
@@ -20,6 +22,8 @@ public class WasteBinTutorial : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        audioController.SfxPlay(AudioTutorialController.SfxTutorial.WASTE);
+
         if (other.gameObject.layer == LayerMask.NameToLayer("Patty"))
         {
             guideDialogManager.UpdateGuideDialog();
