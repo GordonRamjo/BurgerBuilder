@@ -14,11 +14,13 @@ public class PattyTutorialController : MonoBehaviour
     public Material[] MediumMaterial;
     public Material[] BurnMaterial;
     public PlaceTutorial placeTutorial;
-    public GuideDialogManager guideDialogManager;
+    GuideDialogManager guideDialogManager;
 
     // Start is called before the first frame update
     void Start()
     {
+        guideDialogManager = GameObject.Find("Dialog").GetComponent<GuideDialogManager>();
+
         patty = new Patty();
         gameObject.GetComponent<MeshRenderer>().materials = RareMaterial;
         placeTutorial.GetPattyState(PattyState.Rare);
