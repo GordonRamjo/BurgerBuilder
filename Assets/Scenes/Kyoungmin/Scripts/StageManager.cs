@@ -27,6 +27,8 @@ public class StageManager : MonoBehaviour
     public ParticleSystem failParticleSys2;
     public TMP_Text totalCnt;
     public TMP_Text curCnt;
+    public GameObject smokeParticleSys; //연기 파티클 시스템 프리팹
+    public GameObject pattyUI; //pattyUI 프리팹
     void Awake()
     {
         //필요 변수 초기화
