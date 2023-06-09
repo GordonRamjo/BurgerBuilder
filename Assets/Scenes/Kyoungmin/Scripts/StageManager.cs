@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Assets.Scripts;
+using UnityEngine.SceneManagement;
 
 public class StageManager : MonoBehaviour
 {
@@ -66,9 +68,25 @@ public class StageManager : MonoBehaviour
             {
                 Debug.Log("STAGE CLEAR");
                 isStageClear = true; //스테이지 클리어 여부를 참으로 설정
+
+                DataManager.Instance.data.isUnlock[stageNumber] = true;
+                DataManager.Instance.SaveGameData();
+
+                backtoStageMenu(stageNumber);
             }
         }
+        else
+        {
+            backtoStageMenu(3);
+        }
+
     }
+    void backtoStageMenu(int resultNum)
+    {
+
+        SceneManager.LoadScene("Lobby");
+    }
+
     void GenerateCustomer(int i) //손님을 생성하는 함수
     {
         GameObject instance;
