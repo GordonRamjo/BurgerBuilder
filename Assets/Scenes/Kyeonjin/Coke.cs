@@ -7,18 +7,19 @@ public class Coke : MonoBehaviour
 {
 
     public bool set = false;
+    public bool fix = false;
     public GameObject cokeArea;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-       
+
     }
 
     public void CokeOnTray()
@@ -29,7 +30,7 @@ public class Coke : MonoBehaviour
             this.gameObject.transform.localEulerAngles = new Vector3(0, 0, 0);
             this.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePosition | RigidbodyConstraints.FreezeRotation;
             this.GetComponent<XRGrabInteractable>().enabled = false;
+            fix = true;
         }
     }
 }
-
