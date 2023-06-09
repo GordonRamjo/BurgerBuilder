@@ -17,6 +17,11 @@ public class SpeechBubbleController : MonoBehaviour
     {
         tmpText.text = msg;
     }
+
+    public void ChangeSize(float size) //말풍선 글씨 크기 조절하는 함수
+    {
+        tmpText.fontSize = size;
+    }
     
     private void Awake()
     {

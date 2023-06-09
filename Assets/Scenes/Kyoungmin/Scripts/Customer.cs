@@ -114,7 +114,14 @@ public class Customer : MonoBehaviour
             if (isSuccess)
             {
                 stageManager.successParticleSys.Play();
-                speechBubbleInstance.GetComponent<SpeechBubbleController>().ChangeText("I Love it :)");
+                if (isRandomMenu)
+                {
+                    speechBubbleInstance.GetComponent<SpeechBubbleController>().ChangeText("Well, you're pretty good.");
+                }
+                else
+                {
+                    speechBubbleInstance.GetComponent<SpeechBubbleController>().ChangeText("I Love it :)");
+                }
                 isEvaluationEnd = false; //반복적으로 반응하지 않도록 false로 변경
                 Invoke("disappear", 2f);
                 //응대한 손님 수 추가
@@ -129,7 +136,15 @@ public class Customer : MonoBehaviour
                 stageManager.failParticleSys1.Play();
                 stageManager.failParticleSys2.Play();
                 isEvaluationEnd = false; //반복적으로 반응하지 않도록 false로 변경
-                speechBubbleInstance.GetComponent<SpeechBubbleController>().ChangeText("It's not the food I ordered. Please make it again.");
+                if (isRandomMenu)
+                {
+                    speechBubbleInstance.GetComponent<SpeechBubbleController>().ChangeText("What are you doing?\nAre you ignoring me?");
+                }
+                else
+                {
+                    speechBubbleInstance.GetComponent<SpeechBubbleController>().ChangeText("It's not the food I ordered. Please make it again.");
+                }
+                
                 Invoke("reOrder", 4f);
                 Debug.Log("음식이 이상해");
             }
