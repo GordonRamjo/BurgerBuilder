@@ -13,6 +13,8 @@ public class Customer : MonoBehaviour
     public StageManager stageManager;
     public GameObject speechBubble; //말풍선 오브젝트
     private GameObject speechBubbleInstance;
+    Light mainLight; //조리대 조명
+    Light spotLight; //진상손님 조명
 
     Customer()
     {
@@ -61,6 +63,8 @@ public class Customer : MonoBehaviour
         destination = GameObject.Find("DestinationPoint");
         stageManager = GameObject.Find("StageManager").GetComponent<StageManager>();
         speechBubble = stageManager.speechBubble; //말풍선 접근하기
+        mainLight = GameObject.Find("조리대 조명").GetComponent<Light>();
+        spotLight = GameObject.Find("Spot Light").GetComponent<Light>();
     }
     void evaluate() //손님이 음식 평가하는 함수
     {
@@ -83,6 +87,17 @@ public class Customer : MonoBehaviour
     void Update()
     {
         move();
+        //진상 손님 도착 시, 조명을 원래대로 하고 싶으면 아래 코드에서 주석 없에기
+        if (isRandomMenu /*&& !customerAnimator.GetBool("isStop")*/)
+        {
+            mainLight.color = Color.black;
+            spotLight.intensity = 15;
+        }
+        else
+        {
+            mainLight.color = Color.white;
+            spotLight.intensity = 0;
+        }
         //손님이 도착(주문)지점에 도착하면
         if(transform.position == destination.transform.position && !customerAnimator.GetBool("isStop"))
         {
