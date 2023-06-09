@@ -38,6 +38,12 @@ public class PattyController : MonoBehaviour
                 GeneratePattyEffect(); //생성하기
                 isUI = true;
             }
+            else
+            {
+                //패티 관련 UI가 이미 생성되어 있다면 다시 활성화시키기
+                pattyUICanvas.SetActive(true);
+            }
+
             if (patty.state == Patty.State.Rare)
             {
                 this.transform.GetChild(1).GetChild(1).GetComponent<Image>().fillAmount += (Time.deltaTime * 1) / 5; //패티 타이머 채우기
@@ -51,6 +57,13 @@ public class PattyController : MonoBehaviour
                 StartCoroutine("After10Second");
             }
         }
+
+        //패티를 익히지 않고 있는 경우(손에 들고 있는 경우)에는 패티 UI가 보이지 않도록 비활성화 처리
+        if(isStart && !isBaking)
+        {
+            pattyUICanvas.SetActive(false);
+        }
+
     }
     private void Awake()
     {
