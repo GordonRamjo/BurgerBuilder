@@ -16,8 +16,6 @@ public class Customer : MonoBehaviour
     public int eval;
     public Stack<int> orderH;
     public bool isSet;
-    Light mainLight; //조리대 조명
-    Light spotLight; //진상손님 조명
 
     Customer()
     {
@@ -47,8 +45,9 @@ public class Customer : MonoBehaviour
     {
         //해당 손님 오브젝트에 Order 컴포넌트 추가
         gameObject.AddComponent<Order>();
+
         speechBubbleInstance = Instantiate(speechBubble); //말풍선 생성하기
-   
+
     }
     void reOrder() //주문 재요구하기
     {
@@ -66,8 +65,6 @@ public class Customer : MonoBehaviour
         destination = GameObject.Find("DestinationPoint");
         stageManager = GameObject.Find("StageManager").GetComponent<StageManager>();
         speechBubble = stageManager.speechBubble; //말풍선 접근하기
-        mainLight = GameObject.Find("조리대 조명").GetComponent<Light>();
-        spotLight = GameObject.Find("Spot Light").GetComponent<Light>();
     }
     void evaluate() //손님이 음식 평가하는 함수
     {
@@ -126,7 +123,6 @@ public class Customer : MonoBehaviour
 
         isEvaluationEnd = true;
     }
-
     void disappear()
     {
         Destroy(gameObject); //손님 오브젝트 삭제
@@ -139,47 +135,31 @@ public class Customer : MonoBehaviour
     void Update()
     {
         move();
-        //진상 손님 도착 시, 조명을 원래대로 하고 싶으면 아래 코드에서 주석 없에기
-        if (isRandomMenu /*&& !customerAnimator.GetBool("isStop")*/)
-        {
-            mainLight.color = Color.black;
-            spotLight.intensity = 15;
-        }
-        else
-        {
-            mainLight.color = Color.white;
-            spotLight.intensity = 0;
-        }
         //손님이 도착(주문)지점에 도착하면
-        if(transform.position == destination.transform.position && !customerAnimator.GetBool("isStop"))
+        if (transform.position == destination.transform.position && !customerAnimator.GetBool("isStop"))
         {
             //걷기 -> 정지 애니메이션으로 변경
             customerAnimator.SetBool("isStop", true);
             //주문하기
             makeOrder();
+            Debug.Log(this.gameObject.GetComponent<Order>().hamburger.Count);
+            Invoke("evaluate", 20.0f);
         }
-        
-        
+
+
         if (isEvaluationEnd)
         {
             //손님에게 올바른 음식이 전달되었을 경우(isSuccess = true)
             if (isSuccess)
             {
                 stageManager.successParticleSys.Play();
-                if (isRandomMenu)
-                {
-                    speechBubbleInstance.GetComponent<SpeechBubbleController>().ChangeText("Well, you're pretty good.");
-                }
-                else
-                {
-                    speechBubbleInstance.GetComponent<SpeechBubbleController>().ChangeText("I Love it :)");
-                }
+                speechBubbleInstance.GetComponent<SpeechBubbleController>().ChangeText("I Love it :)");
                 isEvaluationEnd = false; //반복적으로 반응하지 않도록 false로 변경
                 Invoke("disappear", 2f);
                 //응대한 손님 수 추가
                 stageManager.completeCustomerCnt = stageManager.completeCustomerCnt + 1;
                 //UI 업데이트하기
-                stageManager.curCnt.text = string.Format("{0:D2}", stageManager.completeCustomerCnt);
+                stageManager.curCnt.text = string.Format("{0}", stageManager.completeCustomerCnt);
 
             }
             else //올바르지 않은 음식이 전달 된 경우
@@ -188,20 +168,12 @@ public class Customer : MonoBehaviour
                 stageManager.failParticleSys1.Play();
                 stageManager.failParticleSys2.Play();
                 isEvaluationEnd = false; //반복적으로 반응하지 않도록 false로 변경
-                if (isRandomMenu)
-                {
-                    speechBubbleInstance.GetComponent<SpeechBubbleController>().ChangeText("What are you doing?\nAre you ignoring me?");
-                }
-                else
-                {
-                    speechBubbleInstance.GetComponent<SpeechBubbleController>().ChangeText("It's not the food I ordered. Please make it again.");
-                }
-                
+                speechBubbleInstance.GetComponent<SpeechBubbleController>().ChangeText("It's not the food I ordered. Please make it again.");
                 Invoke("reOrder", 4f);
                 Debug.Log("음식이 이상해");
             }
         }
-         
+
     }
 
 }

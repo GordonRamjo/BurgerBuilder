@@ -29,8 +29,9 @@ public class StageManager : MonoBehaviour
     public ParticleSystem failParticleSys2;
     public TMP_Text totalCnt;
     public TMP_Text curCnt;
-    public GameObject smokeParticleSys; //연기 파티클 시스템 프리팹
-    public GameObject pattyUI; //pattyUI 프리팹
+
+    //public GameObject StageMenuPanel;
+
     void Awake()
     {
         //필요 변수 초기화
@@ -38,15 +39,15 @@ public class StageManager : MonoBehaviour
         isNextCustomer = false;
         isStageClear = false;
         //스테이지 총 손님 수만큼 손님 생성 함수 호출
-        for (int i=0; i<totalCustomerCnt; i++)
+        for (int i = 0; i < totalCustomerCnt; i++)
         {
             GenerateCustomer(i);
         }
         //UI 초기화
-        curCnt.text = string.Format("{0:D2}", 0);
+        curCnt.text = string.Format("{0}", 0);
         //응대해야하는 총 손님 수 초기화하기
-        totalCnt.text = string.Format("/{0:D2}", totalCustomerCnt);
-      
+        totalCnt.text = string.Format("/{0}", totalCustomerCnt);
+
     }
     void Start()
     {
@@ -86,7 +87,6 @@ public class StageManager : MonoBehaviour
 
         SceneManager.LoadScene("Lobby");
     }
-
     void GenerateCustomer(int i) //손님을 생성하는 함수
     {
         GameObject instance;
@@ -118,7 +118,7 @@ public class StageManager : MonoBehaviour
     }
     void DequeueCustomer() //손님 대기줄 큐에서 손님을 빼기(응대 시작하기)
     {
-        if(remainCustomerCnt > 0)
+        if (remainCustomerCnt > 0)
         {
             //큐에서 손님을 빼서 현재 응대 손님 변수에 담음.
             currentCustomer = customerList.Dequeue();
@@ -128,5 +128,4 @@ public class StageManager : MonoBehaviour
         remainCustomerCnt--; //새로운 손님 응대를 시작했으니, 남아있는 손님 수 한명 감소
         Debug.Log(remainCustomerCnt);
     }
-    
 }
