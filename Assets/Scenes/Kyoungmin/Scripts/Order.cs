@@ -78,6 +78,7 @@ public class Order : MonoBehaviour
         {
             case 1:
                 hamburgerName = "BlackBurger";
+                orderMsg = "I'm just gonna say it once. Add patty, cheese, patty, cheese, onion, tomato, lettuce, patty, cheese, onion, tomato, lettuce in a buns.";
                 if (isSetMenu)
                     menuImg = randomSetMenuImgs[0];
                 else
@@ -85,6 +86,7 @@ public class Order : MonoBehaviour
                 return RandomMenu.BlackBurger;
             case 2:
                 hamburgerName = "JustPatty";
+                orderMsg = "Well, just bake me a patty. You know the right amount of grilling, right?";
                 if (isSetMenu)
                     menuImg = randomSetMenuImgs[1];
                 else
@@ -92,6 +94,7 @@ public class Order : MonoBehaviour
                 return RandomMenu.JustPatty;
             case 3:
                 hamburgerName = "JustBread";
+                orderMsg = "I heard the bread here is so good. Give it to me.";
                 if (isSetMenu)
                     menuImg = randomSetMenuImgs[2];
                 else
@@ -142,18 +145,37 @@ public class Order : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (isSetMenu)
+        SBC = GameObject.Find("SpeechBubble(Clone)").GetComponent<SpeechBubbleController>(); //말풍선 가져오기
+        if (!isRandomMenu)
         {
-            orderMsg = hamburgerName + " Please.\n" + "Also, Coke and French Fries too.";
+            if (isSetMenu)
+            {
+                orderMsg = hamburgerName + " Please.\n" + "Also, Coke and French Fries too.";
+            }
+            else
+            {
+                orderMsg = hamburgerName + " Please.";
+            }
         }
         else
         {
-            orderMsg = hamburgerName + " Please.";
+            if (isSetMenu)
+            {
+                orderMsg = orderMsg + " Also, Coke and French Fries too.";
+            }
+            if (hamburgerName == "BlackBurger")
+            {
+                //진상 버거인 경우 말풍선 글씨 크기 줄이기
+                SBC.ChangeSize(1.3f);
+            }
+            else
+            {
+                //말풍선 글씨 크기 원상복구
+                SBC.ChangeSize(1.5f);
+            }
+            
         }
-        SBC = GameObject.Find("SpeechBubble(Clone)").GetComponent<SpeechBubbleController>(); //말풍선 가져오기
-
         SBC.ChangeMenuImg(menuImg);
-        
         SBC.ChangeText(orderMsg);
         
     }
