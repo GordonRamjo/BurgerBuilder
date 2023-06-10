@@ -19,6 +19,7 @@ public class Order : MonoBehaviour
     private Sprite[] basicSetMenuImgs; //기본 세트 메뉴 스프라이트 배열
     private Sprite[] randomSetMenuImgs; //랜덤 세트 메뉴 스프라이트 배열
     private SpeechBubbleController SBC;
+    public int count;
 
     //기본 메뉴들 중 선택
     Stack<int> ChooseBasicMenu(int r)
@@ -28,6 +29,7 @@ public class Order : MonoBehaviour
         {
             case 1:
                 hamburgerName = "BasicBurger";
+                count = 5;
                 if (isSetMenu)
                     menuImg = basicSetMenuImgs[0];
                 else
@@ -35,6 +37,7 @@ public class Order : MonoBehaviour
                 return BasicMenu.BasicBurger;
             case 2:
                 hamburgerName = "DoubleCheeseBurger";
+                count = 9;
                 if (isSetMenu)
                     menuImg = basicSetMenuImgs[1];
                 else
@@ -42,6 +45,7 @@ public class Order : MonoBehaviour
                 return BasicMenu.DoubleCheeseBurger;
             case 3:
                 hamburgerName = "CheeseBurger";
+                count = 4;
                 if (isSetMenu)
                     menuImg = basicSetMenuImgs[2];
                 else
@@ -49,6 +53,7 @@ public class Order : MonoBehaviour
                 return BasicMenu.CheeseBurger;
             case 4:
                 hamburgerName = "DoublePattyBurger";
+                count = 10;
                 if (isSetMenu)
                     menuImg = basicSetMenuImgs[3];
                 else
@@ -56,6 +61,7 @@ public class Order : MonoBehaviour
                 return BasicMenu.DoublePattyBurger;
             case 5:
                 hamburgerName = "VeggieBurger";
+                count = 7;
                 if (isSetMenu)
                     menuImg = basicSetMenuImgs[4];
                 else
@@ -63,6 +69,7 @@ public class Order : MonoBehaviour
                 return BasicMenu.VeggieBurger;
             default:
                 hamburgerName = "Basicburger";
+                count = 5;
                 if (isSetMenu)
                     menuImg = basicSetMenuImgs[0];
                 else
@@ -78,6 +85,7 @@ public class Order : MonoBehaviour
         {
             case 1:
                 hamburgerName = "BlackBurger";
+                count = 14;
                 orderMsg = "I'm just gonna say it once. Add patty, cheese, patty, cheese, onion, tomato, lettuce, patty, cheese, onion, tomato, lettuce in a buns.";
                 if (isSetMenu)
                     menuImg = randomSetMenuImgs[0];
@@ -86,6 +94,7 @@ public class Order : MonoBehaviour
                 return RandomMenu.BlackBurger;
             case 2:
                 hamburgerName = "JustPatty";
+                count = 1;
                 orderMsg = "Well, just bake me a patty. You know the right amount of grilling, right?";
                 if (isSetMenu)
                     menuImg = randomSetMenuImgs[1];
@@ -94,6 +103,7 @@ public class Order : MonoBehaviour
                 return RandomMenu.JustPatty;
             case 3:
                 hamburgerName = "JustBread";
+                count = 2;
                 orderMsg = "I heard the bread here is so good. Give it to me.";
                 if (isSetMenu)
                     menuImg = randomSetMenuImgs[2];
@@ -102,6 +112,7 @@ public class Order : MonoBehaviour
                 return RandomMenu.JustBread;
             default:
                 hamburgerName = "BlackBurger";
+                count = 14;
                 if (isSetMenu)
                     menuImg = randomSetMenuImgs[0];
                 else
@@ -132,12 +143,12 @@ public class Order : MonoBehaviour
 
         if (isRandomMenu)
         {
-            hamburger = ChooseRandomMenu((int)Random.Range(1,availRandomMenuCnt+1));
+            hamburger = ChooseRandomMenu((int)Random.Range(1, availRandomMenuCnt + 1));
             //Debug.Log("랜덤햄버거");
         }
         else
         {
-            hamburger = ChooseBasicMenu((int)Random.Range(1, availBasicMenuCnt+1));
+            hamburger = ChooseBasicMenu((int)Random.Range(1, availBasicMenuCnt + 1));
             //Debug.Log("기본햄버거");
         }
 
@@ -173,11 +184,11 @@ public class Order : MonoBehaviour
                 //말풍선 글씨 크기 원상복구
                 SBC.ChangeSize(1.5f);
             }
-            
+
         }
         SBC.ChangeMenuImg(menuImg);
         SBC.ChangeText(orderMsg);
-        
+
     }
 
     // Update is called once per frame
