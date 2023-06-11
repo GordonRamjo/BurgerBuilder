@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8105,6 +8105,110 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 366369818}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &389363274
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1197004585335756854, guid: f9a840bc5b169a44db1b355c38307624,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: c7925a86cc402a94da40fefc34be29ae, type: 3}
+    - target: {fileID: 1197004585397013849, guid: f9a840bc5b169a44db1b355c38307624,
+        type: 3}
+      propertyPath: m_Name
+      value: SoundCube
+      objectReference: {fileID: 0}
+    - target: {fileID: 1197004585397013853, guid: f9a840bc5b169a44db1b355c38307624,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 1197004585397013853, guid: f9a840bc5b169a44db1b355c38307624,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1197004585397013853, guid: f9a840bc5b169a44db1b355c38307624,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1197004585397013853, guid: f9a840bc5b169a44db1b355c38307624,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 12.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1197004585397013853, guid: f9a840bc5b169a44db1b355c38307624,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1197004585397013853, guid: f9a840bc5b169a44db1b355c38307624,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1197004585397013853, guid: f9a840bc5b169a44db1b355c38307624,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1197004585397013853, guid: f9a840bc5b169a44db1b355c38307624,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1197004585397013853, guid: f9a840bc5b169a44db1b355c38307624,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1197004585397013853, guid: f9a840bc5b169a44db1b355c38307624,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1197004585397013853, guid: f9a840bc5b169a44db1b355c38307624,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1197004585604487480, guid: f9a840bc5b169a44db1b355c38307624,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: ebd606f6b98c50d4e9b7b257f515bd49, type: 3}
+    - target: {fileID: 1197004585735929640, guid: f9a840bc5b169a44db1b355c38307624,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: c56e489fe96a7df439cbcc2a4e3ed729, type: 3}
+    - target: {fileID: 1197004585780127218, guid: f9a840bc5b169a44db1b355c38307624,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: a26055ca31d339142aac40c686bb9b3c, type: 3}
+    - target: {fileID: 1197004585982167759, guid: f9a840bc5b169a44db1b355c38307624,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 893b2ee8defb03b46b5b4e5cb73fc226, type: 3}
+    - target: {fileID: 1197004587045423680, guid: f9a840bc5b169a44db1b355c38307624,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: e8d6a1a363f062b4980a1405d9c61a9c, type: 3}
+    - target: {fileID: 1197004587194939795, guid: f9a840bc5b169a44db1b355c38307624,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: aa7a107bae54b1940af79893df402915, type: 3}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f9a840bc5b169a44db1b355c38307624, type: 3}
 --- !u!1 &400216730
 GameObject:
   m_ObjectHideFlags: 0
@@ -11781,6 +11885,7 @@ MonoBehaviour:
   smokeParticleSys: {fileID: 8485507540601551229, guid: e9047b4538b75e24e8ff7071a6f88925,
     type: 3}
   pattyUI: {fileID: 205813256037519693, guid: 7a8ae9570da72f946b714bdf3536f673, type: 3}
+  gameData: {fileID: 0}
 --- !u!4 &731399444
 Transform:
   m_ObjectHideFlags: 0
