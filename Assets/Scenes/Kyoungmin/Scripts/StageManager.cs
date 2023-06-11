@@ -31,6 +31,9 @@ public class StageManager : MonoBehaviour
     public TMP_Text curCnt;
     public GameObject smokeParticleSys; //연기 파티클 시스템 프리팹
     public GameObject pattyUI; //pattyUI 프리팹
+
+    public GameData gameData;
+
     void Awake()
     {
         //필요 변수 초기화
@@ -69,20 +72,24 @@ public class StageManager : MonoBehaviour
                 Debug.Log("STAGE CLEAR");
                 isStageClear = true; //스테이지 클리어 여부를 참으로 설정
 
-                DataManager.Instance.data.isCleared[stageNumber] = true;
-                DataManager.Instance.SaveGameData();
+                //DataManager.Instance.data.isCleared[stageNumber] = true;
+                //DataManager.Instance.SaveGameData();
 
-                backtoStageMenu(stageNumber);
+                backtoStageMenu(true);
             }
         }
         else
         {
-            backtoStageMenu(3);
+            //backtoStageMenu(3);
+            backtoStageMenu(false);
         }
 
     }
-    void backtoStageMenu(int resultNum)
+    void backtoStageMenu(bool result)
     {
+        gameData.playedStageNum = stageNumber;
+        gameData.playedResult = result;
+        if (result) gameData.isCleared[stageNumber] = true;
 
         SceneManager.LoadScene("Lobby");
     }

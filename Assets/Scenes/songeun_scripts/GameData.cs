@@ -1,9 +1,20 @@
-﻿using System;
+using UnityEngine;
 
-[Serializable] // 직렬화
-
-public class Data
+public class GameData : MonoBehaviour
 {
-    // 각 스테이지 해금 여부를 저장하는 배열
     public bool[] isCleared = new bool[3];
+
+    public int playedStageNum;
+    public bool playedResult;
+
+    void Start()
+    {
+        playedStageNum = -1;
+        playedResult = false;
+    }
+
+    void Update()
+    {
+        
+    }
 }

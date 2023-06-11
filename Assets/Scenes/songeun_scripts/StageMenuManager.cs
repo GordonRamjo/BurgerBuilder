@@ -35,6 +35,8 @@ namespace Assets.Scripts
 
         public int selectedStageNum;
 
+        public GameData gameData;
+
         public void stageButton_selected() {
             GameObject selected = EventSystem.current.currentSelectedGameObject;
             Debug.Log("clicked " + selected);
@@ -49,7 +51,8 @@ namespace Assets.Scripts
             if (selected == stageButton[1])
             {
                 //stage 0 클리어 안 됐으면 pop up 
-                if (!DataManager.Instance.data.isCleared[0])
+                if //(!DataManager.Instance.data.isCleared[0])
+                    (!gameData.isCleared[1])
                 {
                     Debug.Log("Clear stage 0 first!");
                 }
@@ -63,7 +66,8 @@ namespace Assets.Scripts
             if (selected == stageButton[2])
             {
                 //stage 1 클리어 안 됐으면 pop up 
-                if (!DataManager.Instance.data.isCleared[1])
+                if //(!DataManager.Instance.data.isCleared[1])
+                    (gameData.isCleared[2])
                 {
                     Debug.Log("Clear stage 1 first!");
                 }
@@ -72,6 +76,8 @@ namespace Assets.Scripts
                     selectedStageNum = 2;
                 }
             }
+
+            Debug.Log(selectedStageNum);
 
             foreach (GameObject btn in stageButton)
             {
@@ -116,6 +122,7 @@ namespace Assets.Scripts
         }
 
         public void ShowGameResult() {
+            /*
             //최초 올클리어 시 이펙트
             if (afterStageResult == 2 && AllClear == false)
             {
@@ -128,6 +135,17 @@ namespace Assets.Scripts
             resultPopUp.SetActive(true);
             audioSource.Play();
             //LeanTween.scale(resultPopUp, new Vector3(0.3f, 0.3f, 0.3f), 3f).setEase(LeanTweenType.easeOutElastic);
+            */
+
+            if (gameData.playedResult == false)
+            {
+                resultText.text = resultDialog[3];
+            }
+            else
+            {
+                resultText.text = resultDialog[gameData.playedStageNum];
+            }
+            resultPopUp.SetActive(true);
         }
 
         // Start is called before the first frame update
@@ -144,9 +162,17 @@ namespace Assets.Scripts
             }
             */
 
+            //스테이지 플레이 후 로비에 돌아왔을 시
+            if (gameData.playedStageNum != -1)
+            {
+                ShowGameResult();
+
+            }
+
+            gameData.playedStageNum = -1;
             //게임 데이터 로딩
-            DataManager.Instance.LoadGameData();
-            DataManager.Instance.data.isCleared[0] = true;
+            //DataManager.Instance.LoadGameData();
+            //DataManager.Instance.data.isCleared[0] = true;
 
             //'선택된 스테이지 없음'로 초기화
             selectedStageNum = -1;
@@ -154,7 +180,8 @@ namespace Assets.Scripts
             for (int i = 0; i <=2 ; i++)
             {
                 //클리어 된 스테이지는 Completed 도장 띄워놓기
-                if (DataManager.Instance.data.isCleared[i])
+                if //(DataManager.Instance.data.isCleared[i])
+                    (gameData.isCleared[i])
                 {
                     stageButton[i].transform.GetChild(2).gameObject.SetActive(true);
                 }
