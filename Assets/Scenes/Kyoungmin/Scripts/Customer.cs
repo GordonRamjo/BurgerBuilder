@@ -18,6 +18,8 @@ public class Customer : MonoBehaviour
     Light mainLight; //조리대 조명
     Light spotLight; //진상손님 조명
     public Transform burger;
+    AudioController audioController; // 사운드 설정
+    private bool isAppeared = false; // 진상손님 등장
 
     Customer()
     {
@@ -69,7 +71,7 @@ public class Customer : MonoBehaviour
         mainLight = GameObject.Find("조리대 조명").GetComponent<Light>();
         spotLight = GameObject.Find("Spot Light").GetComponent<Light>();
         burger = GameObject.Find("Burger").transform;
-
+        audioController = GameObject.Find("SoundCube").GetComponent<AudioController>(); // 사운드 설정
     }
     void evaluate() //손님이 음식 평가하는 함수
     {
@@ -152,6 +154,15 @@ public class Customer : MonoBehaviour
         {
             mainLight.color = Color.black;
             spotLight.intensity = 15;
+
+            // 진상 손님 등장 사운드
+            if (audioController != null && isAppeared == false)
+            {
+                Debug.Log("진상 손님 등장");
+                isAppeared = true;
+                audioController.SIREN = true;
+            }
+                
         }
         else
         {
@@ -209,6 +220,11 @@ public class Customer : MonoBehaviour
                 {
                     speechBubbleInstance.GetComponent<SpeechBubbleController>().ChangeText("It's not the food I ordered. Please make it again.");
                 }
+
+                // 마음에 들지 않는 평가 사운드
+                Debug.Log("마음에 들지 않는 평가");
+                if (audioController != null)
+                    audioController.CUSTMER_ANGRY = true;
 
                 Invoke("reOrder", 4f);
                 Debug.Log("음식이 이상해");
