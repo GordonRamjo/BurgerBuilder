@@ -78,4 +78,16 @@ public class AudioController : MonoBehaviour
         Debug.Log("Play " + type);
         sfxPlayer[(int) type].Play();
     }
+
+    private void SfxStop(Sfx type)
+    {
+        Debug.Log("Stop " + type);
+        sfxPlayer[(int)type].Stop();
+    }
+
+    public void StopPatty()
+    {
+        SfxStop(Sfx.PATTY);
+    }
+
 }
