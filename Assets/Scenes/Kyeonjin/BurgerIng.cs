@@ -8,10 +8,17 @@ public class BurgerIng : MonoBehaviour
     public bool set = false;
     public bool fix = false;
     public GameObject burgerArea;
+    public Transform burger;
     // Start is called before the first frame update
     void Start()
     {
 
+    }
+
+    private void Awake()
+    {
+        burgerArea = GameObject.Find("BurgerArea");
+        burger = GameObject.Find("Burger").transform;
     }
 
     // Update is called once per frame
@@ -34,12 +41,14 @@ public class BurgerIng : MonoBehaviour
                 PlateCont.AddIngredient(Hamburger.Ingredient.UpperBread);
                 Debug.Log(PlateCont.hamburger.hamburger.Peek());
                 Debug.Log(PlateCont.hamburger.hamburger.Count);
+                Refill.topbun -= 1;
             }
             else if (this.gameObject.tag == "Tomato")
             {
                 PlateCont.AddIngredient(Hamburger.Ingredient.Tomato);
                 Debug.Log(PlateCont.hamburger.hamburger.Peek());
                 Debug.Log(PlateCont.hamburger.hamburger.Count);
+                Refill.tomato -= 1;
             }
             else if (this.gameObject.tag == "patty")
             {
@@ -48,34 +57,39 @@ public class BurgerIng : MonoBehaviour
                 Debug.Log(this.gameObject.GetComponent<PattyController>().patty.state);
                 Debug.Log(PlateCont.hamburger.hamburger.Peek());
                 Debug.Log(PlateCont.hamburger.hamburger.Count);
+                Refill.patty -= 1;
             }
             else if (this.gameObject.tag == "Onion")
             {
                 PlateCont.AddIngredient(Hamburger.Ingredient.Onion);
                 Debug.Log(PlateCont.hamburger.hamburger.Peek());
                 Debug.Log(PlateCont.hamburger.hamburger.Count);
+                Refill.onion -= 1;
             }
             else if (this.gameObject.tag == "Lettuce")
             {
                 PlateCont.AddIngredient(Hamburger.Ingredient.Lettuce);
                 Debug.Log(PlateCont.hamburger.hamburger.Peek());
                 Debug.Log(PlateCont.hamburger.hamburger.Count);
+                Refill.lettuce -= 1;
             }
             else if (this.gameObject.tag == "Cheese")
             {
                 PlateCont.AddIngredient(Hamburger.Ingredient.Cheese);
                 Debug.Log(PlateCont.hamburger.hamburger.Peek());
                 Debug.Log(PlateCont.hamburger.hamburger.Count);
+                Refill.cheese -= 1;
             }
             else if (this.gameObject.tag == "BottomBun")
             {
                 PlateCont.AddIngredient(Hamburger.Ingredient.BottomBread);
                 Debug.Log(PlateCont.hamburger.hamburger.Peek());
                 Debug.Log(PlateCont.hamburger.hamburger.Count);
+                Refill.bottombun -= 1;
             }
 
             this.GetComponent<XRGrabInteractable>().enabled = false;
-
+            this.gameObject.transform.SetParent(burger);
         }
     }
 }

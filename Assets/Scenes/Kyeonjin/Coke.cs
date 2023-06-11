@@ -9,6 +9,7 @@ public class Coke : MonoBehaviour
     public bool set = false;
     public bool fix = false;
     public GameObject cokeArea;
+    public Transform burger;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +23,11 @@ public class Coke : MonoBehaviour
 
     }
 
+    private void Awake()
+    {
+        burger = GameObject.Find("Burger").transform;
+    }
+
     public void CokeOnTray()
     {
         if (set)
@@ -30,6 +36,7 @@ public class Coke : MonoBehaviour
             this.gameObject.transform.localEulerAngles = new Vector3(0, 0, 0);
             this.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePosition | RigidbodyConstraints.FreezeRotation;
             this.GetComponent<XRGrabInteractable>().enabled = false;
+            this.gameObject.transform.SetParent(burger);
             fix = true;
         }
     }

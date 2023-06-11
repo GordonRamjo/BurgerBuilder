@@ -14,10 +14,10 @@ public class Customer : MonoBehaviour
     public GameObject speechBubble; //말풍선 오브젝트
     private GameObject speechBubbleInstance;
     public int eval;
-    public Stack<int> orderH;
     public bool isSet;
     Light mainLight; //조리대 조명
     Light spotLight; //진상손님 조명
+    public Transform burger;
 
     Customer()
     {
@@ -68,27 +68,28 @@ public class Customer : MonoBehaviour
         speechBubble = stageManager.speechBubble; //말풍선 접근하기
         mainLight = GameObject.Find("조리대 조명").GetComponent<Light>();
         spotLight = GameObject.Find("Spot Light").GetComponent<Light>();
+        burger = GameObject.Find("Burger").transform;
+
     }
     void evaluate() //손님이 음식 평가하는 함수
     {
-        int count = this.gameObject.GetComponent<Order>().hamburger.Count;
         eval = 1;
         Debug.Log("eval");
 
-        Debug.Log("Order count : " + count);
+        Debug.Log("Order count : " + this.GetComponent<Order>().count);
         Debug.Log("Plate count : " + PlateCont.hamburger.hamburger.Count);
 
         if (isSetMenu == PlateCont.cola && isSetMenu == PlateCont.frenchFried && PlateCont.pattyState)
         {
-            if (count == PlateCont.hamburger.hamburger.Count)
+            if (this.GetComponent<Order>().count == PlateCont.hamburger.hamburger.Count)
             {
                 Debug.Log("비교시작");
-                for (int i = 0; i < count; i++)
+                for (int i = 0; i < this.GetComponent<Order>().count; i++)
                 {
                     if (this.gameObject.GetComponent<Order>().hamburger.Peek() == PlateCont.hamburger.hamburger.Peek())
                     {
-                        Debug.Log("order" + this.gameObject.GetComponent<Order>().hamburger.Peek());
-                        Debug.Log("plate" + PlateCont.hamburger.hamburger.Peek());
+                        Debug.Log("order" + this.gameObject.GetComponent<Order>().hamburger.Peek() + " " + i);
+                        Debug.Log("plate" + PlateCont.hamburger.hamburger.Peek() + " " + i);
                         //Debug.Log("basic" + BasicMenu.BasicBurger.Peek());
                         this.gameObject.GetComponent<Order>().hamburger.Pop();
                         PlateCont.hamburger.hamburger.Pop();
@@ -125,6 +126,13 @@ public class Customer : MonoBehaviour
         */
 
         isEvaluationEnd = true;
+
+        PlateCont.Discard();
+
+        foreach (Transform child in burger)
+        {
+            Destroy(child.gameObject);
+        }
     }
 
     void disappear()
@@ -157,6 +165,11 @@ public class Customer : MonoBehaviour
             customerAnimator.SetBool("isStop", true);
             //주문하기
             makeOrder();
+        }
+        if (RingABell.ring == true && customerAnimator.GetBool("isStop"))
+        {
+            RingABell.ring = false;
+            evaluate();
         }
 
 

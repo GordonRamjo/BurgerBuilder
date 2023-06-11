@@ -8,6 +8,8 @@ public class Fries : MonoBehaviour
     public bool set = false;
     public bool fix = false;
     public GameObject friesArea;
+    public Transform burger;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +22,11 @@ public class Fries : MonoBehaviour
 
     }
 
+    private void Awake()
+    {
+        burger = GameObject.Find("Burger").transform;
+    }
+
     public void FriesOnTray()
     {
         if (set)
@@ -28,6 +35,7 @@ public class Fries : MonoBehaviour
             this.gameObject.transform.localEulerAngles = new Vector3(0, 0, 0);
             this.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePosition | RigidbodyConstraints.FreezeRotation;
             this.GetComponent<XRGrabInteractable>().enabled = false;
+            this.gameObject.transform.SetParent(burger);
             fix = true;
         }
     }
