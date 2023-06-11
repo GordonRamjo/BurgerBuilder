@@ -58,9 +58,9 @@ public class DataManager : MonoBehaviour
         
         // 올바르게 저장됐는지 확인하는 출력 코드
         print("저장 완료");
-        for (int i = 0; i < data.isUnlock.Length; i++)
+        for (int i = 0; i < data.isCleared.Length; i++)
         {
-            print($" Stage {i} 잠금 해제 여부 : " + data.isUnlock[i]);
+            print($" Stage {i} 잠금 해제 여부 : " + data.isCleared[i]);
         }
         
     }
