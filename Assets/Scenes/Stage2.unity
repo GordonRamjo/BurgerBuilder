@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -453,6 +453,7 @@ MonoBehaviour:
   set: 0
   fix: 0
   burgerArea: {fileID: 1730716923}
+  burger: {fileID: 0}
 --- !u!1 &23558324
 GameObject:
   m_ObjectHideFlags: 0
@@ -1198,6 +1199,7 @@ MonoBehaviour:
   set: 0
   fix: 0
   cokeArea: {fileID: 97765789}
+  burger: {fileID: 0}
 --- !u!54 &80339743
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1856,6 +1858,7 @@ MonoBehaviour:
   set: 0
   fix: 0
   burgerArea: {fileID: 1730716923}
+  burger: {fileID: 0}
 --- !u!65 &125114850
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2118,6 +2121,7 @@ MonoBehaviour:
   set: 0
   fix: 0
   burgerArea: {fileID: 1730716923}
+  burger: {fileID: 0}
 --- !u!65 &127319220
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2258,6 +2262,7 @@ MonoBehaviour:
   set: 0
   fix: 0
   burgerArea: {fileID: 1730716923}
+  burger: {fileID: 0}
 --- !u!114 &158028513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3144,6 +3149,7 @@ MonoBehaviour:
   set: 0
   fix: 0
   burgerArea: {fileID: 1730716923}
+  burger: {fileID: 0}
 --- !u!1 &281548650
 GameObject:
   m_ObjectHideFlags: 0
@@ -4047,6 +4053,7 @@ MonoBehaviour:
   set: 0
   fix: 0
   burgerArea: {fileID: 1730716923}
+  burger: {fileID: 0}
 --- !u!114 &391559967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4420,6 +4427,7 @@ MonoBehaviour:
   smokeParticleSys: {fileID: 8485507540601551229, guid: e9047b4538b75e24e8ff7071a6f88925,
     type: 3}
   pattyUI: {fileID: 205813256037519693, guid: 7a8ae9570da72f946b714bdf3536f673, type: 3}
+  gameData: {fileID: 0}
 --- !u!4 &396562572
 Transform:
   m_ObjectHideFlags: 0
@@ -4865,6 +4873,7 @@ MonoBehaviour:
   set: 0
   fix: 0
   cokeArea: {fileID: 97765789}
+  burger: {fileID: 0}
 --- !u!54 &434878727
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9836,6 +9845,7 @@ MonoBehaviour:
   set: 0
   fix: 0
   burgerArea: {fileID: 1730716923}
+  burger: {fileID: 0}
 --- !u!114 &446737719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10254,6 +10264,7 @@ MonoBehaviour:
   set: 0
   fix: 0
   burgerArea: {fileID: 1730716923}
+  burger: {fileID: 0}
 --- !u!65 &452019639
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10689,6 +10700,7 @@ MonoBehaviour:
   set: 0
   fix: 0
   burgerArea: {fileID: 1730716923}
+  burger: {fileID: 0}
 --- !u!114 &512026809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11284,6 +11296,7 @@ MonoBehaviour:
   set: 0
   fix: 0
   friesArea: {fileID: 976552758}
+  burger: {fileID: 0}
 --- !u!65 &515368684
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11584,6 +11597,7 @@ MonoBehaviour:
   set: 0
   fix: 0
   cokeArea: {fileID: 97765789}
+  burger: {fileID: 0}
 --- !u!114 &526682042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12148,6 +12162,7 @@ MonoBehaviour:
   set: 0
   fix: 0
   burgerArea: {fileID: 1730716923}
+  burger: {fileID: 0}
 --- !u!114 &580459972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12520,6 +12535,7 @@ MonoBehaviour:
   set: 0
   fix: 0
   cokeArea: {fileID: 97765789}
+  burger: {fileID: 0}
 --- !u!54 &582309381
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -12795,6 +12811,7 @@ MonoBehaviour:
   set: 0
   fix: 0
   burgerArea: {fileID: 1730716923}
+  burger: {fileID: 0}
 --- !u!114 &605259983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13276,6 +13293,7 @@ MonoBehaviour:
   set: 0
   fix: 0
   burgerArea: {fileID: 1730716923}
+  burger: {fileID: 0}
 --- !u!1 &659477848
 GameObject:
   m_ObjectHideFlags: 0
@@ -13496,6 +13514,7 @@ MonoBehaviour:
   set: 0
   fix: 0
   burgerArea: {fileID: 1730716923}
+  burger: {fileID: 0}
 --- !u!114 &666123176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19228,6 +19247,7 @@ MonoBehaviour:
   set: 0
   fix: 0
   cokeArea: {fileID: 97765789}
+  burger: {fileID: 0}
 --- !u!54 &703085311
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -19494,6 +19514,7 @@ MonoBehaviour:
   set: 0
   fix: 0
   cokeArea: {fileID: 97765789}
+  burger: {fileID: 0}
 --- !u!54 &747660375
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -20437,6 +20458,7 @@ MonoBehaviour:
   set: 0
   fix: 0
   friesArea: {fileID: 976552758}
+  burger: {fileID: 0}
 --- !u!65 &885951749
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20837,6 +20859,7 @@ MonoBehaviour:
   set: 0
   fix: 0
   burgerArea: {fileID: 1730716923}
+  burger: {fileID: 0}
 --- !u!65 &901031941
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21512,6 +21535,7 @@ MonoBehaviour:
   set: 0
   fix: 0
   cokeArea: {fileID: 97765789}
+  burger: {fileID: 0}
 --- !u!54 &954436675
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -21832,6 +21856,7 @@ MonoBehaviour:
   set: 0
   fix: 0
   friesArea: {fileID: 976552758}
+  burger: {fileID: 0}
 --- !u!65 &965938660
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22152,6 +22177,7 @@ MonoBehaviour:
   set: 0
   fix: 0
   friesArea: {fileID: 976552758}
+  burger: {fileID: 0}
 --- !u!65 &980148222
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22468,6 +22494,7 @@ MonoBehaviour:
   set: 0
   fix: 0
   cokeArea: {fileID: 97765789}
+  burger: {fileID: 0}
 --- !u!54 &988220463
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -22595,6 +22622,7 @@ MonoBehaviour:
   set: 0
   fix: 0
   burgerArea: {fileID: 1730716923}
+  burger: {fileID: 0}
 --- !u!114 &992129877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23196,6 +23224,7 @@ MonoBehaviour:
   set: 0
   fix: 0
   cokeArea: {fileID: 97765789}
+  burger: {fileID: 0}
 --- !u!54 &1017757066
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -23408,6 +23437,7 @@ MonoBehaviour:
   set: 0
   fix: 0
   burgerArea: {fileID: 1730716923}
+  burger: {fileID: 0}
 --- !u!114 &1029617855
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23873,6 +23903,7 @@ MonoBehaviour:
   set: 0
   fix: 0
   friesArea: {fileID: 976552758}
+  burger: {fileID: 0}
 --- !u!65 &1064037664
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24325,6 +24356,7 @@ MonoBehaviour:
   set: 0
   fix: 0
   cokeArea: {fileID: 97765789}
+  burger: {fileID: 0}
 --- !u!54 &1086448456
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -29665,6 +29697,7 @@ MonoBehaviour:
   set: 0
   fix: 0
   cokeArea: {fileID: 97765789}
+  burger: {fileID: 0}
 --- !u!54 &1162443873
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -29957,6 +29990,7 @@ MonoBehaviour:
   set: 0
   fix: 0
   burgerArea: {fileID: 1730716923}
+  burger: {fileID: 0}
 --- !u!65 &1171246837
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30111,6 +30145,7 @@ MonoBehaviour:
   set: 0
   fix: 0
   burgerArea: {fileID: 1730716923}
+  burger: {fileID: 0}
 --- !u!114 &1173764671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30886,6 +30921,7 @@ MonoBehaviour:
   set: 0
   fix: 0
   cokeArea: {fileID: 97765789}
+  burger: {fileID: 0}
 --- !u!54 &1221376018
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -31135,6 +31171,7 @@ MonoBehaviour:
   set: 0
   fix: 0
   friesArea: {fileID: 976552758}
+  burger: {fileID: 0}
 --- !u!65 &1223739139
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31757,6 +31794,7 @@ MonoBehaviour:
   set: 0
   fix: 0
   friesArea: {fileID: 976552758}
+  burger: {fileID: 0}
 --- !u!65 &1330222682
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32385,6 +32423,7 @@ MonoBehaviour:
   set: 0
   fix: 0
   cokeArea: {fileID: 97765789}
+  burger: {fileID: 0}
 --- !u!54 &1425964805
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -33097,6 +33136,7 @@ MonoBehaviour:
   set: 0
   fix: 0
   burgerArea: {fileID: 1730716923}
+  burger: {fileID: 0}
 --- !u!114 &1514260643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34018,6 +34058,7 @@ MonoBehaviour:
   set: 0
   fix: 0
   cokeArea: {fileID: 97765789}
+  burger: {fileID: 0}
 --- !u!54 &1616859759
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -34338,6 +34379,7 @@ MonoBehaviour:
   set: 0
   fix: 0
   burgerArea: {fileID: 1730716923}
+  burger: {fileID: 0}
 --- !u!65 &1632464409
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34671,6 +34713,7 @@ MonoBehaviour:
   set: 0
   fix: 0
   friesArea: {fileID: 976552758}
+  burger: {fileID: 0}
 --- !u!65 &1638037861
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35101,6 +35144,7 @@ MonoBehaviour:
   set: 0
   fix: 0
   friesArea: {fileID: 976552758}
+  burger: {fileID: 0}
 --- !u!65 &1701648303
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35346,6 +35390,7 @@ MonoBehaviour:
   set: 0
   fix: 0
   cokeArea: {fileID: 97765789}
+  burger: {fileID: 0}
 --- !u!54 &1719408274
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -35925,6 +35970,7 @@ MonoBehaviour:
   set: 0
   fix: 0
   cokeArea: {fileID: 97765789}
+  burger: {fileID: 0}
 --- !u!54 &1761076204
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -36047,6 +36093,7 @@ MonoBehaviour:
   set: 0
   fix: 0
   burgerArea: {fileID: 1730716923}
+  burger: {fileID: 0}
 --- !u!114 &1763161950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36239,6 +36286,75 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1780728434
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1197004585397013849, guid: f9a840bc5b169a44db1b355c38307624,
+        type: 3}
+      propertyPath: m_Name
+      value: SoundCube
+      objectReference: {fileID: 0}
+    - target: {fileID: 1197004585397013853, guid: f9a840bc5b169a44db1b355c38307624,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 29
+      objectReference: {fileID: 0}
+    - target: {fileID: 1197004585397013853, guid: f9a840bc5b169a44db1b355c38307624,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1197004585397013853, guid: f9a840bc5b169a44db1b355c38307624,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1197004585397013853, guid: f9a840bc5b169a44db1b355c38307624,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 12.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1197004585397013853, guid: f9a840bc5b169a44db1b355c38307624,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1197004585397013853, guid: f9a840bc5b169a44db1b355c38307624,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1197004585397013853, guid: f9a840bc5b169a44db1b355c38307624,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1197004585397013853, guid: f9a840bc5b169a44db1b355c38307624,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1197004585397013853, guid: f9a840bc5b169a44db1b355c38307624,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1197004585397013853, guid: f9a840bc5b169a44db1b355c38307624,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1197004585397013853, guid: f9a840bc5b169a44db1b355c38307624,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f9a840bc5b169a44db1b355c38307624, type: 3}
 --- !u!1001 &1784835419
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36827,6 +36943,7 @@ MonoBehaviour:
   set: 0
   fix: 0
   friesArea: {fileID: 976552758}
+  burger: {fileID: 0}
 --- !u!65 &1809374473
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -37219,6 +37336,7 @@ MonoBehaviour:
   set: 0
   fix: 0
   cokeArea: {fileID: 97765789}
+  burger: {fileID: 0}
 --- !u!54 &1818906459
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -37364,6 +37482,7 @@ MonoBehaviour:
   set: 0
   fix: 0
   burgerArea: {fileID: 1730716923}
+  burger: {fileID: 0}
 --- !u!1001 &1854719387
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37772,6 +37891,7 @@ MonoBehaviour:
   set: 0
   fix: 0
   cokeArea: {fileID: 97765789}
+  burger: {fileID: 0}
 --- !u!54 &1876736035
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -38021,6 +38141,7 @@ MonoBehaviour:
   set: 0
   fix: 0
   burgerArea: {fileID: 1730716923}
+  burger: {fileID: 0}
 --- !u!65 &1882309492
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38161,6 +38282,7 @@ MonoBehaviour:
   set: 0
   fix: 0
   burgerArea: {fileID: 1730716923}
+  burger: {fileID: 0}
 --- !u!114 &1889198372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38438,6 +38560,7 @@ MonoBehaviour:
   set: 0
   fix: 0
   burgerArea: {fileID: 1730716923}
+  burger: {fileID: 0}
 --- !u!114 &1895163723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39000,6 +39123,7 @@ MonoBehaviour:
   set: 0
   fix: 0
   burgerArea: {fileID: 1730716923}
+  burger: {fileID: 0}
 --- !u!114 &1956278868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39869,6 +39993,7 @@ MonoBehaviour:
   set: 0
   fix: 0
   burgerArea: {fileID: 1730716923}
+  burger: {fileID: 0}
 --- !u!114 &2047229623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40258,6 +40383,7 @@ MonoBehaviour:
   set: 0
   fix: 0
   friesArea: {fileID: 976552758}
+  burger: {fileID: 0}
 --- !u!65 &2059893334
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40678,6 +40804,7 @@ MonoBehaviour:
   set: 0
   fix: 0
   burgerArea: {fileID: 1730716923}
+  burger: {fileID: 0}
 --- !u!65 &2072218838
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40813,6 +40940,7 @@ MonoBehaviour:
   set: 0
   fix: 0
   burgerArea: {fileID: 1730716923}
+  burger: {fileID: 0}
 --- !u!114 &2079848610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41230,6 +41358,7 @@ MonoBehaviour:
   set: 0
   fix: 0
   burgerArea: {fileID: 1730716923}
+  burger: {fileID: 0}
 --- !u!114 &2090033670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41804,6 +41933,7 @@ MonoBehaviour:
   set: 0
   fix: 0
   burgerArea: {fileID: 1730716923}
+  burger: {fileID: 0}
 --- !u!65 &2100856366
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41962,6 +42092,7 @@ MonoBehaviour:
   set: 0
   fix: 0
   burgerArea: {fileID: 1730716923}
+  burger: {fileID: 0}
 --- !u!1001 &2107790162
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42068,6 +42199,7 @@ MonoBehaviour:
   set: 0
   fix: 0
   burgerArea: {fileID: 1730716923}
+  burger: {fileID: 0}
 --- !u!114 &2107790166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42383,6 +42515,7 @@ MonoBehaviour:
   set: 0
   fix: 0
   burgerArea: {fileID: 1730716923}
+  burger: {fileID: 0}
 --- !u!114 &2116159922
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42729,6 +42862,7 @@ MonoBehaviour:
   set: 0
   fix: 0
   friesArea: {fileID: 976552758}
+  burger: {fileID: 0}
 --- !u!114 &2139996543
 MonoBehaviour:
   m_ObjectHideFlags: 0
