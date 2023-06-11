@@ -26169,6 +26169,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 746410344}
     m_Modifications:
+    - target: {fileID: 8793918798423557620, guid: 839a8614998fc7d4491da41c0d3534f6,
+        type: 3}
+      propertyPath: m_AudioClipForOnSelectExited
+      value: 
+      objectReference: {fileID: 8300000, guid: a26055ca31d339142aac40c686bb9b3c, type: 3}
+    - target: {fileID: 8793918798423557620, guid: 839a8614998fc7d4491da41c0d3534f6,
+        type: 3}
+      propertyPath: m_AudioClipForOnSelectEntered
+      value: 
+      objectReference: {fileID: 8300000, guid: ebd606f6b98c50d4e9b7b257f515bd49, type: 3}
+    - target: {fileID: 8793918798423557620, guid: 839a8614998fc7d4491da41c0d3534f6,
+        type: 3}
+      propertyPath: m_PlayAudioClipOnSelectExited
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8793918798423557620, guid: 839a8614998fc7d4491da41c0d3534f6,
+        type: 3}
+      propertyPath: m_PlayAudioClipOnSelectEntered
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8793918798443609733, guid: 839a8614998fc7d4491da41c0d3534f6,
         type: 3}
       propertyPath: m_RootOrder
