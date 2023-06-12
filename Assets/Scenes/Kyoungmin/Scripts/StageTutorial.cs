@@ -56,6 +56,18 @@ public class StageTutorial : MonoBehaviour
             bellImg.SetActive(true);
             order++;
         }
+        if(RingABell.ring && !isBellEnd && order == 3)
+        {
+            isBellEnd = true;
+            Debug.Log("Recipe" + RingABell.ring);
+            guideDialogManager.UpdateGuideDialog();
+            bellImg.SetActive(false);
+            order++;
+        }
+        if(order == 4)
+        {
+            Debug.Log("튜토리얼 완료. 이제 게임을 시작해보자");
+        }
     }
 
 }
