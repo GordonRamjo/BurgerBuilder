@@ -7,9 +7,10 @@ using TMPro;
 public class StageTutorialGuideDialogManager : MonoBehaviour
 {
     public TextMeshProUGUI guide;
-    public RawImage image;
-    private string[] guideDialog = new string[] { "Pick up a bottom bread\nthen place it on tray", "Grill a patty for 10 seconds", "It's burnt! Throw it in the trash", "Bake a patty for 5 seconds\nand place on bread", "Good job. Now put a tomato on top", "Next, put lettuce on top", "Put the bread on top", "It's a set menu.\nPlace cola.", "Last but not least,\nPlace fries at the front"};
-    public Texture2D[] images;
+    private string[] guideDialog = new string[] { "Look at the timer up there.\nWhen the timer reaches zero, the game goes over.\nSelect the timer!", 
+        "Look to the right.\nIt will show you the number of hamburgers you need to make and the number of hamburgers you currently make.\nSelect the Object!",
+        "Turn around and look at the recipe papers on the back.\nIf you're confused with the recipe, look at this paper.\nSelect the any paper!",
+        "Look at the bell on the counter.\nHit the bell when you're done cooking.\nSelect the bell!"};
     private int guideDialogNum = 0;
     private Canvas guideUICanvas;
 
@@ -26,7 +27,6 @@ public class StageTutorialGuideDialogManager : MonoBehaviour
     {
         if (guideDialogNum < guideDialog.Length)
         {
-            image.texture = images[guideDialogNum];
             guide.text = guideDialog[guideDialogNum];
         }
         else if (guideDialogNum == guideDialog.Length)
@@ -41,7 +41,6 @@ public class StageTutorialGuideDialogManager : MonoBehaviour
     IEnumerator _wait()
     {
         yield return new WaitForSeconds(4f);
-        image.texture = images[guideDialogNum];
         guide.text = guideDialog[guideDialogNum];
         guideDialogNum++;
     }

@@ -11,7 +11,7 @@ public class StageTutorialIntroDialogManager : MonoBehaviour
     private int introDialogNum = 0;
     private Canvas introUICanvas;
     private GameObject guide;
-    public GuideDialogManager guideDialogManager;
+    public StageTutorialGuideDialogManager guideDialogManager;
     private bool isFirstExecute = false;
 
     // Start is called before the first frame update
@@ -37,6 +37,9 @@ public class StageTutorialIntroDialogManager : MonoBehaviour
             {
                 introUICanvas.enabled = false;
                 guide.SetActive(true);
+                guide.transform.GetChild(2).gameObject.SetActive(false);
+                guide.transform.GetChild(3).gameObject.SetActive(false);
+                guide.transform.GetChild(4).gameObject.SetActive(false);
                 guideDialogManager.initGuideDialog();
             }
         }
