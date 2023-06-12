@@ -32,7 +32,7 @@ public class StageManager : MonoBehaviour
     public GameObject smokeParticleSys; //연기 파티클 시스템 프리팹
     public GameObject pattyUI; //pattyUI 프리팹
 
-    public GameData gameData;
+    public PlayResult gameData;
 
     void Awake()
     {
@@ -75,23 +75,24 @@ public class StageManager : MonoBehaviour
                 //DataManager.Instance.data.isClear[stageNumber] = true;
                 //DataManager.Instance.SaveGameData();
 
-                backtoStageMenu(isStageClear);
+                backtoStageMenu();
             }
         }
         else
         {
             //backtoStageMenu(3);
-            backtoStageMenu(isStageClear);
+            backtoStageMenu();
         }
 
     }
-    void backtoStageMenu(bool result)
+    void backtoStageMenu()
     {
-        GameData.playedStageNum = stageNumber;
-        GameData.playedResult = result;
-        if (result)
+        PlayResult.playedStageNum = stageNumber;
+        PlayResult.playedStageClear = isStageClear;
+        if (isStageClear)
         {
-            GameData.isClear[stageNumber] = true;
+            DataManager.Instance.data.isClear[stageNumber] = true;
+            DataManager.Instance.SaveGameData();
         }
         SceneManager.LoadScene("Lobby");
     }
