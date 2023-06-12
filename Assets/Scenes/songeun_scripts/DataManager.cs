@@ -1,5 +1,7 @@
 ﻿using System.IO;
+using UnityEditor;
 using UnityEngine;
+
 
 public class DataManager : MonoBehaviour
 {
@@ -7,7 +9,13 @@ public class DataManager : MonoBehaviour
 
     // ---싱글톤으로 선언--- //
     static DataManager instance;
-    public static DataManager Instance
+
+    /*
+    static DataManager() {
+        dataManager.LoadGameData();
+    }
+    */
+    public static DataManager dataManager
     {
         get
         {
@@ -32,7 +40,8 @@ public class DataManager : MonoBehaviour
     // 불러오기
     public void LoadGameData()
     {
-        string filePath = Application.persistentDataPath + "/" + GameDataFileName;
+        string filePath = Application.dataPath + "/" + GameDataFileName;
+        Debug.Log(filePath);
 
         // 저장된 게임이 있다면
         if (File.Exists(filePath))
@@ -50,18 +59,26 @@ public class DataManager : MonoBehaviour
     {
         // 클래스를 Json 형식으로 전환 (true : 가독성 좋게 작성)
         string ToJsonData = JsonUtility.ToJson(data, true);
-        string filePath = Application.persistentDataPath + "/" + GameDataFileName;
+        string filePath = Application.dataPath + "/" + GameDataFileName;
 
         // 이미 저장된 파일이 있다면 덮어쓰고, 없다면 새로 만들어서 저장
         File.WriteAllText(filePath, ToJsonData);
 
-        
+
         // 올바르게 저장됐는지 확인하는 출력 코드
         print("저장 완료");
-        for (int i = 0; i < data.isUnlock.Length; i++)
+        for (int i = 0; i < data.isClear.Length; i++)
         {
-            print($" Stage {i} 잠금 해제 여부 : " + data.isUnlock[i]);
+            print($" Stage {i} 잠금 해제 여부 : " + data.isClear[i]);
         }
-        
+
+    }
+
+    public void ResetGameData()
+    {
+        for (int i = 0; i < data.isClear.Length; i++)
+        {
+            data.isClear[i] = false;
+        }
     }
 }

@@ -11,7 +11,7 @@ namespace Assets.Scripts
         public void yes_btn_Clicked()
         {
             //yes -> 게임 데이터 저장 후 종료
-            DataManager.Instance.SaveGameData();
+            DataManager.dataManager.SaveGameData();
             #if UNITY_EDITOR
             UnityEditor.EditorApplication.isPlaying = false;
             #else

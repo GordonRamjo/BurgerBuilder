@@ -31,6 +31,9 @@ public class StageManager : MonoBehaviour
     public TMP_Text curCnt;
     public GameObject smokeParticleSys; //연기 파티클 시스템 프리팹
     public GameObject pattyUI; //pattyUI 프리팹
+
+    public PlayResult gameData;
+
     void Awake()
     {
         //필요 변수 초기화
@@ -46,8 +49,8 @@ public class StageManager : MonoBehaviour
         curCnt.text = string.Format("{0:D2}", 0);
         //응대해야하는 총 손님 수 초기화하기
         totalCnt.text = string.Format("/{0:D2}", totalCustomerCnt);
-
     }
+
     void Start()
     {
         //스테이지 시작 시, 큐에서 첫 손님 빼기
@@ -69,21 +72,28 @@ public class StageManager : MonoBehaviour
                 Debug.Log("STAGE CLEAR");
                 isStageClear = true; //스테이지 클리어 여부를 참으로 설정
 
-                DataManager.Instance.data.isUnlock[stageNumber] = true;
-                DataManager.Instance.SaveGameData();
+                DataManager.dataManager.data.isClear[stageNumber] = true;
+                DataManager.dataManager.SaveGameData();
 
-                backtoStageMenu(stageNumber);
+                backtoStageMenu();
             }
         }
         else
         {
-            backtoStageMenu(3);
+            //backtoStageMenu(3);
+            backtoStageMenu();
         }
 
     }
-    void backtoStageMenu(int resultNum)
+    void backtoStageMenu()
     {
-
+        PlayResult.playedStageNum = stageNumber;
+        PlayResult.playedStageClear = isStageClear;
+        if (isStageClear)
+        {
+            DataManager.dataManager.data.isClear[stageNumber] = true;
+            DataManager.dataManager.SaveGameData();
+        }
         SceneManager.LoadScene("Lobby");
     }
 
