@@ -13,6 +13,7 @@ namespace Assets.Scripts
         {
             //yes -> 게임 데이터 저장 후 종료
            DataManager.dataManager.ResetGameData();
+           DataManager.dataManager.SaveGameData();
            SceneManager.LoadScene("Lobby");
         }
         public void no_btn_Clicked()
