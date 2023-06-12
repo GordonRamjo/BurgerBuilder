@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 
 public class Fade : MonoBehaviour
-{
+{/*
     public GameObject blackPanel;
     float time = 0;
 
@@ -31,5 +31,5 @@ public class Fade : MonoBehaviour
             yield return new WaitForSeconds(0.01f);
             blackPanel.GetComponent<Image>().color = new Color(0, 0, 0, fadeCount);
         }
-    }
+    }*/
 }

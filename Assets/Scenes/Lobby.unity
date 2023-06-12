@@ -2685,6 +2685,7 @@ MonoBehaviour:
   StageMenu: {fileID: 1743178688}
   StartMenu: {fileID: 1335254624}
   OptionMenu: {fileID: 265328901}
+  blackPanel: {fileID: 625187097}
   stageButton:
   - {fileID: 749218880}
   - {fileID: 500941485}

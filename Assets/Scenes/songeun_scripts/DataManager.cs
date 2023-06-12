@@ -1,7 +1,7 @@
-﻿using System.IO;
+﻿using Newtonsoft.Json.Linq;
+using System.IO;
 using UnityEditor;
 using UnityEngine;
-
 
 public class DataManager : MonoBehaviour
 {
@@ -40,7 +40,8 @@ public class DataManager : MonoBehaviour
     // 불러오기
     public void LoadGameData()
     {
-        string filePath = Application.dataPath + "/" + GameDataFileName;
+        //string filePath = Application.dataPath + "Json/" + GameDataFileName;
+        string filePath = Application.persistentDataPath + GameDataFileName;
         Debug.Log(filePath);
 
         // 저장된 게임이 있다면
@@ -48,7 +49,9 @@ public class DataManager : MonoBehaviour
         {
             // 저장된 파일 읽어오고 Json을 클래스 형식으로 전환해서 할당
             string FromJsonData = File.ReadAllText(filePath);
+            //TextAsset FromJsonData  = Resources.Load<TextAsset>(filePath);
             data = JsonUtility.FromJson<Data>(FromJsonData);
+            //data = JsonUtility.FromJson<Data>(FromJsonData.text);
             print("불러오기 완료");
         }
     }
@@ -59,7 +62,8 @@ public class DataManager : MonoBehaviour
     {
         // 클래스를 Json 형식으로 전환 (true : 가독성 좋게 작성)
         string ToJsonData = JsonUtility.ToJson(data, true);
-        string filePath = Application.dataPath + "/" + GameDataFileName;
+        string filePath = Application.persistentDataPath + GameDataFileName;
+        //string filePath = "Json/" + GameDataFileName;
 
         // 이미 저장된 파일이 있다면 덮어쓰고, 없다면 새로 만들어서 저장
         File.WriteAllText(filePath, ToJsonData);
