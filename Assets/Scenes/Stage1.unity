@@ -21304,6 +21304,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: XR Origin
       objectReference: {fileID: 0}
+    - target: {fileID: 8793918799371835851, guid: 839a8614998fc7d4491da41c0d3534f6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 8793918799371835851, guid: 839a8614998fc7d4491da41c0d3534f6,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.172
+      objectReference: {fileID: 0}
+    - target: {fileID: 8793918799371835851, guid: 839a8614998fc7d4491da41c0d3534f6,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8793918800053854756, guid: 839a8614998fc7d4491da41c0d3534f6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.164
+      objectReference: {fileID: 0}
+    - target: {fileID: 8793918800053854756, guid: 839a8614998fc7d4491da41c0d3534f6,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.168
+      objectReference: {fileID: 0}
+    - target: {fileID: 8793918800053854756, guid: 839a8614998fc7d4491da41c0d3534f6,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.829
+      objectReference: {fileID: 0}
     - target: {fileID: 8793918800053854757, guid: 839a8614998fc7d4491da41c0d3534f6,
         type: 3}
       propertyPath: m_PositionInput.m_Action.m_Id
