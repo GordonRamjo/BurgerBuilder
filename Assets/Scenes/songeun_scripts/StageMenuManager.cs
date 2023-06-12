@@ -14,7 +14,7 @@ namespace Assets.Scripts
         public GameObject StageMenu;  //현재 화면 
         public GameObject StartMenu;  //뒤로가기 버튼으로 접근
         public GameObject OptionMenu; //옵션(톱니바퀴) 버튼으로 접근
-      //public GameObject blackPanel;
+        public GameObject blackPanel;
 
         public GameObject[] stageButton = new GameObject[3];
 
@@ -106,12 +106,19 @@ namespace Assets.Scripts
             //선택한 스테이지 로드 (각 스테이지 씬명이 "Stage+번호"라고 가정)
             else
             {
-                Fade fade = new Fade();
+                
+               // Fade fade = new Fade();
               //Fade.blackPanel = blackPanel;
-              //blackPanel.SetActive(true);
-                StartCoroutine(fade.FadeOut());
-                SceneManager.LoadScene("Stage" + selectedStageNum);
+                StartCoroutine(FadeOut());
+                //SceneManager.LoadScene("Stage" + selectedStageNum);
+                Invoke("MoveScene", 2f);
             }
+        }
+
+        public void MoveScene() 
+        {
+            Debug.Log("move scene");
+            SceneManager.LoadScene("Stage" + selectedStageNum);
         }
 
         public void back_btn_selected()
@@ -153,12 +160,25 @@ namespace Assets.Scripts
             resultPopUp.SetActive(true);
         }
 
+        public IEnumerator FadeOut()
+        {
+            Debug.Log("Fade Out");
+            blackPanel.SetActive(true);
+            float fadeCount = 0;
+            while (fadeCount < 1.0f)
+            {
+                fadeCount += 0.01f;
+                yield return new WaitForSeconds(0.01f);
+                blackPanel.GetComponent<Image>().color = new Color(0, 0, 0, fadeCount);
+            }
+        }
+    
 
         void Start()
         {
             //게임 데이터 로딩
             DataManager.dataManager.LoadGameData();
-            //DataManager.dataManager.data.isClear[0] = true;
+            DataManager.dataManager.data.isClear[0] = true;
 
             //스테이지 플레이 후 로비에 돌아왔을 시
             if (PlayResult.playedStageNum != -1)

@@ -4,6 +4,8 @@ using UnityEngine;
 using TMPro;
 using Assets.Scripts;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+
 
 public class StageManager : MonoBehaviour
 {
@@ -32,7 +34,9 @@ public class StageManager : MonoBehaviour
     public GameObject smokeParticleSys; //연기 파티클 시스템 프리팹
     public GameObject pattyUI; //pattyUI 프리팹
 
-    public PlayResult gameData;
+    //public PlayResult gameData;
+    public GameObject blackPanel;
+
 
     void Awake()
     {
@@ -49,7 +53,10 @@ public class StageManager : MonoBehaviour
         curCnt.text = string.Format("{0:D2}", 0);
         //응대해야하는 총 손님 수 초기화하기
         totalCnt.text = string.Format("/{0:D2}", totalCustomerCnt);
+
+        StartCoroutine(FadeIn());
     }
+
 
     void Start()
     {
@@ -75,27 +82,21 @@ public class StageManager : MonoBehaviour
                 DataManager.dataManager.data.isClear[stageNumber] = true;
                 DataManager.dataManager.SaveGameData();
 
+                StartCoroutine(FadeOut());
+                Invoke("back", 3f);
                 backtoStageMenu();
             }
         }
         else
         {
+            StartCoroutine(FadeOut());
+            Invoke("back", 3f);
             //backtoStageMenu(3);
             backtoStageMenu();
         }
 
     }
-    void backtoStageMenu()
-    {
-        PlayResult.playedStageNum = stageNumber;
-        PlayResult.playedStageClear = isStageClear;
-        if (isStageClear)
-        {
-            DataManager.dataManager.data.isClear[stageNumber] = true;
-            DataManager.dataManager.SaveGameData();
-        }
-        SceneManager.LoadScene("Lobby");
-    }
+
 
     void GenerateCustomer(int i) //손님을 생성하는 함수
     {
@@ -139,4 +140,43 @@ public class StageManager : MonoBehaviour
         Debug.Log(remainCustomerCnt);
     }
 
+    public IEnumerator FadeIn()
+    {
+        Debug.Log("Fade In");
+        float fadeCount = 0;
+        while (fadeCount > 0.0f)
+        {
+            fadeCount -= 0.01f;
+            yield return new WaitForSeconds(0.01f);
+            blackPanel.GetComponent<Image>().color = new Color(0, 0, 0, fadeCount);
+        }
+        blackPanel.SetActive(false);
+    }
+
+    public IEnumerator FadeOut()
+    {
+        Debug.Log("Fade Out");
+        blackPanel.SetActive(true);
+        float fadeCount = 0;
+        while (fadeCount < 1.0f)
+        {
+            fadeCount += 0.01f;
+            yield return new WaitForSeconds(0.01f);
+            blackPanel.GetComponent<Image>().color = new Color(0, 0, 0, fadeCount);
+        }
+    }
+
+
+    void backtoStageMenu()
+    {
+        PlayResult.playedStageNum = stageNumber;
+        PlayResult.playedStageClear = isStageClear;
+        if (isStageClear)
+        {
+            DataManager.dataManager.data.isClear[stageNumber] = true;
+            DataManager.dataManager.SaveGameData();
+        }
+
+        SceneManager.LoadScene("Lobby");
+    }
 }
