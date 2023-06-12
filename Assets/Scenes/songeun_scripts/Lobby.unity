@@ -2267,7 +2267,6 @@ MonoBehaviour:
   FailSound: {fileID: 0}
   AllClearSound: {fileID: 0}
   selectedStageNum: 0
-  gameData: {fileID: 1151049105}
 --- !u!114 &717666092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2697,7 +2696,7 @@ PrefabInstance:
     - target: {fileID: 8793918798423557512, guid: 839a8614998fc7d4491da41c0d3534f6,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8793918798443609733, guid: 839a8614998fc7d4491da41c0d3534f6,
         type: 3}
@@ -2762,7 +2761,7 @@ PrefabInstance:
     - target: {fileID: 8793918798777765677, guid: 839a8614998fc7d4491da41c0d3534f6,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8793918800053854756, guid: 839a8614998fc7d4491da41c0d3534f6,
         type: 3}
