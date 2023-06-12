@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class EndingDialogManager : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class EndingDialogManager : MonoBehaviour
     public Canvas endingUICanvas;
     private bool isFirstExecute = false;
     AudioTutorialController audioController;
+    public PlayResult gameData;
 
     // Start is called before the first frame update
     void Start()
@@ -37,6 +39,14 @@ public class EndingDialogManager : MonoBehaviour
             else if (endingDialogNum == endingDialog.Length)
             {
                 endingUICanvas.enabled = false;
+
+                DataManager.dataManager.data.isClear[0] = true;
+                DataManager.dataManager.SaveGameData();
+
+                PlayResult.playedStageNum = 0;
+                PlayResult.playedStageClear = true;
+
+                SceneManager.LoadScene("Lobby");
             }
         }
     }
@@ -44,7 +54,7 @@ public class EndingDialogManager : MonoBehaviour
     IEnumerator _endingTyping()
     {
         endtx.text = "";
-        Debug.Log("5");
+
         yield return new WaitForSeconds(1f);
 
         for (int i = 0; i <= endingDialog[endingDialogNum].Length; i++)
@@ -54,7 +64,9 @@ public class EndingDialogManager : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
         }
         yield return new WaitForSeconds(2f);
+
         endingDialogNum++;
+
         isFirstExecute = true;
     }
 }
