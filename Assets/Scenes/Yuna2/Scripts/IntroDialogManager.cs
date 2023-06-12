@@ -11,6 +11,7 @@ public class IntroDialogManager : MonoBehaviour
     private int introDialogNum = 0;
     private Canvas introUICanvas;
     private GameObject guide;
+    private GameObject ending;
     public GuideDialogManager guideDialogManager;
     private bool isFirstExecute = false;
 
@@ -20,6 +21,8 @@ public class IntroDialogManager : MonoBehaviour
         introUICanvas = GameObject.Find("IntroUICanvas").GetComponent<Canvas>();
         guide = GameObject.Find("GuideCanvas");
         guide.SetActive(false);
+        ending = GameObject.Find("EndingUICanvas");
+        ending.SetActive(false);
         StartCoroutine(_typing());
     }
 

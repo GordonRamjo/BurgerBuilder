@@ -11049,6 +11049,8 @@ MonoBehaviour:
   - {fileID: 2800000, guid: a5e9ff50826c97f4a8c35487940e7c61, type: 3}
   - {fileID: 2800000, guid: 64b88e3132aa2384b9eddcf5c7231bbf, type: 3}
   - {fileID: 2800000, guid: 4bad2a2d40ef82d4998b7d2c67b0875f, type: 3}
+  ending: {fileID: 1800205980}
+  endingDialogManager: {fileID: 764575329}
 --- !u!114 &764575327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11090,7 +11092,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81814267bb780df41861a698cd3dc384, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ending: {fileID: 1791875325}
+  endtx: {fileID: 1791875325}
+  endingUICanvas: {fileID: 1800205983}
 --- !u!1001 &784991220
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25838,9 +25841,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'So you wanna be
+  m_text: 'Congratulations!!
 
-    the best burger builder?'
+    You''re pretty good ^^'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 23ceed66dc4df4742abe8c33d7038658, type: 2}
   m_sharedMaterial: {fileID: -8925299800040211706, guid: 23ceed66dc4df4742abe8c33d7038658,

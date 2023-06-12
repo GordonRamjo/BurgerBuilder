@@ -6,46 +6,55 @@ using TMPro;
 
 public class EndingDialogManager : MonoBehaviour
 {
-    public TextMeshProUGUI ending;
+    public TextMeshProUGUI endtx;
     private string[] endingDialog = new string[] { "Congratulations!!\nYou're pretty good ^^", "It's the real game now!\nComplete the two missions", "Get your head in the game.\nGood luck!" };
     private int endingDialogNum = 0;
-    private Canvas endingUICanvas;
+    public Canvas endingUICanvas;
+    private bool isFirstExecute = false;
+    AudioTutorialController audioController;
 
     // Start is called before the first frame update
     void Start()
     {
-        endingUICanvas = GameObject.Find("EndingUICanvas").GetComponent<Canvas>();
-        StartCoroutine(_typing());
+        audioController = GameObject.Find("SoundCube").GetComponent<AudioTutorialController>();
     }
 
-    // Update is called once per frame
+    public void initEndingDialog()
+    {
+        audioController.SfxPlay(AudioTutorialController.SfxTutorial.GORDAN);
+        isFirstExecute = true;
+    }
+
     void Update()
     {
-        if (endingDialogNum < endingDialog.Length)
+        if (isFirstExecute)
         {
-            StartCoroutine(_typing());
-        }
-        else if (endingDialogNum == endingDialog.Length)
-        {
-            endingUICanvas.enabled = false;
+            isFirstExecute = false;
+            if (endingDialogNum < endingDialog.Length)
+            {
+                StartCoroutine(_endingTyping());
+            }
+            else if (endingDialogNum == endingDialog.Length)
+            {
+                endingUICanvas.enabled = false;
+            }
         }
     }
 
-    IEnumerator _typing()
+    IEnumerator _endingTyping()
     {
-        ending.text = "";
-
+        endtx.text = "";
+        Debug.Log("5");
         yield return new WaitForSeconds(1f);
 
         for (int i = 0; i <= endingDialog[endingDialogNum].Length; i++)
         {
-            ending.text = endingDialog[endingDialogNum].Substring(0, i);
+            endtx.text = endingDialog[endingDialogNum].Substring(0, i);
 
             yield return new WaitForSeconds(0.1f);
         }
-
         yield return new WaitForSeconds(2f);
-
         endingDialogNum++;
+        isFirstExecute = true;
     }
 }
