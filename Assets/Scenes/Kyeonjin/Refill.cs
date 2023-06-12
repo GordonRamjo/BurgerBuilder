@@ -5,8 +5,11 @@ using UnityEngine;
 public class Refill : MonoBehaviour
 {
     public static int bottombun, topbun, patty, lettuce, tomato, cheese, onion;
+    public static int cokeN, friesN;
     public GameObject bottombuns, topbuns, patties, lettuces, tomatoes, cheeses, onions;
+    public GameObject coke, fries;
     public Transform bbplate, tbplate, pplate, lplate, tplate, cplate, oplate;
+    public Transform cokepoint, friespoint;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +21,9 @@ public class Refill : MonoBehaviour
         tomato = 5;
         cheese = 5;
         onion = 5;
+
+        cokeN = 18;
+        friesN = 12;
     }
 
     // Update is called once per frame
@@ -63,6 +69,18 @@ public class Refill : MonoBehaviour
         {
             onion = 5;
             Instantiate(onions, oplate);
+        }
+
+        else if(cokeN == 0)
+        {
+            cokeN = 18;
+            Instantiate(coke, cokepoint);
+        }
+
+        else if(friesN == 0)
+        {
+            friesN = 12;
+            Instantiate(fries, friespoint);
         }
     }
 }
