@@ -23,12 +23,12 @@ namespace Assets.Scripts
         public GameObject resultPopUp;
         public int afterStageResult; //0: fail  1: Stage1 clear  2: Stage2 clear
         public TextMeshProUGUI resultText;
-        private string[] resultDialog = { "Stage 0 Clear !", 
-                                          "Stage 1 Clear !", 
+        private string[] resultDialog = { "Stage 0 Clear !",
+                                          "Stage 1 Clear !",
                                           "Stage 2 Clear !",
-                                          "Try Again!" 
+                                          "Try Again!"
                                         };
-        
+
         AudioSource audioSource;
         public AudioClip ClearSound;
         public AudioClip FailSound;
@@ -40,7 +40,7 @@ namespace Assets.Scripts
         public void stageButton_selected() {
             GameObject selected = EventSystem.current.currentSelectedGameObject;
             Debug.Log("clicked " + selected);
-           
+
             //stage 0 선택시
             if (selected == stageButton[0])
             {
@@ -52,7 +52,7 @@ namespace Assets.Scripts
             {
                 //stage 0 클리어 안 됐으면 pop up 
                 if (!DataManager.dataManager.data.isClear[0])
-                    //(!GameData.isClear[0])
+                //(!GameData.isClear[0])
                 {
                     Debug.Log("Clear stage 0 first!");
                 }
@@ -67,7 +67,7 @@ namespace Assets.Scripts
             {
                 //stage 1 클리어 안 됐으면 pop up 
                 if (!DataManager.dataManager.data.isClear[1])
-                    //(!GameData.isClear[1])
+                //(!GameData.isClear[1])
                 {
                     Debug.Log("Clear stage 1 first!");
                 }
@@ -106,16 +106,16 @@ namespace Assets.Scripts
             //선택한 스테이지 로드 (각 스테이지 씬명이 "Stage+번호"라고 가정)
             else
             {
-                
-               // Fade fade = new Fade();
-              //Fade.blackPanel = blackPanel;
+
+                // Fade fade = new Fade();
+                //Fade.blackPanel = blackPanel;
                 StartCoroutine(FadeOut());
                 //SceneManager.LoadScene("Stage" + selectedStageNum);
                 Invoke("MoveScene", 2f);
             }
         }
 
-        public void MoveScene() 
+        public void MoveScene()
         {
             Debug.Log("move scene");
             SceneManager.LoadScene("Stage" + selectedStageNum);
@@ -158,6 +158,12 @@ namespace Assets.Scripts
                 resultText.text = resultDialog[PlayResult.playedStageNum];
             }
             resultPopUp.SetActive(true);
+            Invoke("DeactivatePopUp", 2f);
+        }
+
+        public void DeactivatePopUp()
+        {
+            resultPopUp.SetActive(false);
         }
 
         public IEnumerator FadeOut()

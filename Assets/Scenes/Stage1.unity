@@ -9882,7 +9882,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stageNumber: 1
-  totalCustomerCnt: 5
+  totalCustomerCnt: 1
   completeCustomerCnt: 0
   isNextCustomer: 0
   isStageClear: 0
