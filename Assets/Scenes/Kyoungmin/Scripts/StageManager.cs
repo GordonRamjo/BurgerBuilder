@@ -29,8 +29,10 @@ public class StageManager : MonoBehaviour
     public ParticleSystem failParticleSys2;
     public TMP_Text totalCnt;
     public TMP_Text curCnt;
+    public GameObject smokeParticleSys; //연기 파티클 시스템 프리팹
+    public GameObject pattyUI; //pattyUI 프리팹
 
-    //public GameObject StageMenuPanel;
+    public PlayResult gameData;
 
     void Awake()
     {
@@ -39,16 +41,16 @@ public class StageManager : MonoBehaviour
         isNextCustomer = false;
         isStageClear = false;
         //스테이지 총 손님 수만큼 손님 생성 함수 호출
-        for (int i=0; i<totalCustomerCnt; i++)
+        for (int i = 0; i < totalCustomerCnt; i++)
         {
             GenerateCustomer(i);
         }
         //UI 초기화
-        curCnt.text = string.Format("{0}", 0);
+        curCnt.text = string.Format("{0:D2}", 0);
         //응대해야하는 총 손님 수 초기화하기
-        totalCnt.text = string.Format("/{0}", totalCustomerCnt);
-      
+        totalCnt.text = string.Format("/{0:D2}", totalCustomerCnt);
     }
+
     void Start()
     {
         //스테이지 시작 시, 큐에서 첫 손님 빼기
@@ -70,22 +72,31 @@ public class StageManager : MonoBehaviour
                 Debug.Log("STAGE CLEAR");
                 isStageClear = true; //스테이지 클리어 여부를 참으로 설정
 
-                DataManager.Instance.data.isUnlock[stageNumber] = true;
-                DataManager.Instance.SaveGameData();
+                DataManager.dataManager.data.isClear[stageNumber] = true;
+                DataManager.dataManager.SaveGameData();
 
-                backtoStageMenu(stageNumber);
+                backtoStageMenu();
             }
         }
-        else {
-            backtoStageMenu(3);
+        else
+        {
+            //backtoStageMenu(3);
+            backtoStageMenu();
         }
 
     }
-    void backtoStageMenu(int resultNum)
+    void backtoStageMenu()
     {
-        
+        PlayResult.playedStageNum = stageNumber;
+        PlayResult.playedStageClear = isStageClear;
+        if (isStageClear)
+        {
+            DataManager.dataManager.data.isClear[stageNumber] = true;
+            DataManager.dataManager.SaveGameData();
+        }
         SceneManager.LoadScene("Lobby");
     }
+
     void GenerateCustomer(int i) //손님을 생성하는 함수
     {
         GameObject instance;
@@ -117,7 +128,7 @@ public class StageManager : MonoBehaviour
     }
     void DequeueCustomer() //손님 대기줄 큐에서 손님을 빼기(응대 시작하기)
     {
-        if(remainCustomerCnt > 0)
+        if (remainCustomerCnt > 0)
         {
             //큐에서 손님을 빼서 현재 응대 손님 변수에 담음.
             currentCustomer = customerList.Dequeue();
@@ -126,5 +137,6 @@ public class StageManager : MonoBehaviour
         }
         remainCustomerCnt--; //새로운 손님 응대를 시작했으니, 남아있는 손님 수 한명 감소
         Debug.Log(remainCustomerCnt);
-    }  
+    }
+
 }

@@ -14,8 +14,12 @@ public class Customer : MonoBehaviour
     public GameObject speechBubble; //말풍선 오브젝트
     private GameObject speechBubbleInstance;
     public int eval;
-    public Stack<int> orderH;
     public bool isSet;
+    Light mainLight; //조리대 조명
+    Light spotLight; //진상손님 조명
+    public Transform burger;
+    AudioController audioController; // 사운드 설정
+    private bool isAppeared = false; // 진상손님 등장
 
     Customer()
     {
@@ -45,7 +49,6 @@ public class Customer : MonoBehaviour
     {
         //해당 손님 오브젝트에 Order 컴포넌트 추가
         gameObject.AddComponent<Order>();
-
         speechBubbleInstance = Instantiate(speechBubble); //말풍선 생성하기
 
     }
@@ -65,27 +68,30 @@ public class Customer : MonoBehaviour
         destination = GameObject.Find("DestinationPoint");
         stageManager = GameObject.Find("StageManager").GetComponent<StageManager>();
         speechBubble = stageManager.speechBubble; //말풍선 접근하기
+        mainLight = GameObject.Find("조리대 조명").GetComponent<Light>();
+        spotLight = GameObject.Find("Spot Light").GetComponent<Light>();
+        burger = GameObject.Find("Burger").transform;
+        audioController = GameObject.Find("SoundCube").GetComponent<AudioController>(); // 사운드 설정
     }
     void evaluate() //손님이 음식 평가하는 함수
     {
-        int count = this.gameObject.GetComponent<Order>().hamburger.Count;
         eval = 1;
         Debug.Log("eval");
 
-        Debug.Log("Order count : " + count);
+        Debug.Log("Order count : " + this.GetComponent<Order>().count);
         Debug.Log("Plate count : " + PlateCont.hamburger.hamburger.Count);
-        
+
         if (isSetMenu == PlateCont.cola && isSetMenu == PlateCont.frenchFried && PlateCont.pattyState)
         {
-            if (count == PlateCont.hamburger.hamburger.Count)
+            if (this.GetComponent<Order>().count == PlateCont.hamburger.hamburger.Count)
             {
                 Debug.Log("비교시작");
-                for (int i = 0; i < count; i++)
+                for (int i = 0; i < this.GetComponent<Order>().count; i++)
                 {
                     if (this.gameObject.GetComponent<Order>().hamburger.Peek() == PlateCont.hamburger.hamburger.Peek())
                     {
-                        Debug.Log("order" + this.gameObject.GetComponent<Order>().hamburger.Peek());
-                        Debug.Log("plate" + PlateCont.hamburger.hamburger.Peek());
+                        Debug.Log("order" + this.gameObject.GetComponent<Order>().hamburger.Peek() + " " + i);
+                        Debug.Log("plate" + PlateCont.hamburger.hamburger.Peek() + " " + i);
                         //Debug.Log("basic" + BasicMenu.BasicBurger.Peek());
                         this.gameObject.GetComponent<Order>().hamburger.Pop();
                         PlateCont.hamburger.hamburger.Pop();
@@ -122,7 +128,15 @@ public class Customer : MonoBehaviour
         */
 
         isEvaluationEnd = true;
+
+        PlateCont.Discard();
+
+        foreach (Transform child in burger)
+        {
+            Destroy(child.gameObject);
+        }
     }
+
     void disappear()
     {
         Destroy(gameObject); //손님 오브젝트 삭제
@@ -135,6 +149,26 @@ public class Customer : MonoBehaviour
     void Update()
     {
         move();
+        //진상 손님 도착 시, 조명을 원래대로 하고 싶으면 아래 코드에서 주석 없에기
+        if (isRandomMenu /*&& !customerAnimator.GetBool("isStop")*/)
+        {
+            mainLight.color = Color.black;
+            spotLight.intensity = 15;
+
+            // 진상 손님 등장 사운드
+            if (audioController != null && isAppeared == false)
+            {
+                Debug.Log("진상 손님 등장");
+                isAppeared = true;
+                audioController.SIREN = true;
+            }
+                
+        }
+        else
+        {
+            mainLight.color = Color.white;
+            spotLight.intensity = 0;
+        }
         //손님이 도착(주문)지점에 도착하면
         if (transform.position == destination.transform.position && !customerAnimator.GetBool("isStop"))
         {
@@ -142,8 +176,11 @@ public class Customer : MonoBehaviour
             customerAnimator.SetBool("isStop", true);
             //주문하기
             makeOrder();
-            Debug.Log(this.gameObject.GetComponent<Order>().hamburger.Count);
-            Invoke("evaluate", 20.0f);
+        }
+        if (RingABell.ring == true && customerAnimator.GetBool("isStop"))
+        {
+            RingABell.ring = false;
+            evaluate();
         }
 
 
@@ -153,13 +190,20 @@ public class Customer : MonoBehaviour
             if (isSuccess)
             {
                 stageManager.successParticleSys.Play();
-                speechBubbleInstance.GetComponent<SpeechBubbleController>().ChangeText("I Love it :)");
+                if (isRandomMenu)
+                {
+                    speechBubbleInstance.GetComponent<SpeechBubbleController>().ChangeText("Well, you're pretty good.");
+                }
+                else
+                {
+                    speechBubbleInstance.GetComponent<SpeechBubbleController>().ChangeText("I Love it :)");
+                }
                 isEvaluationEnd = false; //반복적으로 반응하지 않도록 false로 변경
                 Invoke("disappear", 2f);
                 //응대한 손님 수 추가
                 stageManager.completeCustomerCnt = stageManager.completeCustomerCnt + 1;
                 //UI 업데이트하기
-                stageManager.curCnt.text = string.Format("{0}", stageManager.completeCustomerCnt);
+                stageManager.curCnt.text = string.Format("{0:D2}", stageManager.completeCustomerCnt);
 
             }
             else //올바르지 않은 음식이 전달 된 경우
@@ -168,7 +212,20 @@ public class Customer : MonoBehaviour
                 stageManager.failParticleSys1.Play();
                 stageManager.failParticleSys2.Play();
                 isEvaluationEnd = false; //반복적으로 반응하지 않도록 false로 변경
-                speechBubbleInstance.GetComponent<SpeechBubbleController>().ChangeText("It's not the food I ordered. Please make it again.");
+                if (isRandomMenu)
+                {
+                    speechBubbleInstance.GetComponent<SpeechBubbleController>().ChangeText("What are you doing?\nAre you ignoring me?");
+                }
+                else
+                {
+                    speechBubbleInstance.GetComponent<SpeechBubbleController>().ChangeText("It's not the food I ordered. Please make it again.");
+                }
+
+                // 마음에 들지 않는 평가 사운드
+                Debug.Log("마음에 들지 않는 평가");
+                if (audioController != null)
+                    audioController.CUSTMER_ANGRY = true;
+
                 Invoke("reOrder", 4f);
                 Debug.Log("음식이 이상해");
             }

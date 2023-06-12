@@ -16,70 +16,8 @@ public class PlateCont : MonoBehaviour
 
     }
 
-
-
     private void OnCollisionStay(Collision other)
     {
-        /*
-        if (other.gameObject.layer == LayerMask.NameToLayer("Burger"))
-        {
-            if (other.gameObject.GetComponent<BurgerIng>().fix == true)
-            {
-                if (other.gameObject.transform.tag == "TopBun")
-                {
-                    Debug.Log("TopBunStacked");
-                    AddIngredient(Hamburger.Ingredient.UpperBread);
-                    Debug.Log(hamburger.hamburger.Peek());
-                }
-
-                else if (other.gameObject.transform.tag == "Tomato")
-                {
-                    Debug.Log("TomatoStacked");
-                    AddIngredient(Hamburger.Ingredient.Tomato);
-                    Debug.Log(hamburger.hamburger.Peek());
-                }
-
-                else if (other.gameObject.transform.tag == "patty")
-                {
-                    AddPatty(other.gameObject.GetComponent<PattyController>().patty);
-                    //Debug.Log(collision.gameObject.GetComponent<PattyController>().patty.state);
-                    AddIngredient(Hamburger.Ingredient.Patty);
-                    Debug.Log("PattyStacked");
-                    Debug.Log(hamburger.hamburger.Peek());
-                }
-
-                else if (other.gameObject.transform.tag == "Onion")
-                {
-                    Debug.Log("OnionStacked");
-                    AddIngredient(Hamburger.Ingredient.Onion);
-                    Debug.Log(hamburger.hamburger.Peek());
-                }
-
-                else if (other.gameObject.transform.tag == "Lettuce")
-                {
-                    Debug.Log("LettuceStacked");
-                    AddIngredient(Hamburger.Ingredient.Lettuce);
-                    Debug.Log(hamburger.hamburger.Peek());
-                }
-
-                else if (other.gameObject.transform.tag == "Cheese")
-                {
-                    Debug.Log("CheeseStacked");
-                    AddIngredient(Hamburger.Ingredient.Cheese);
-                    Debug.Log(hamburger.hamburger.Peek());
-                }
-
-                else if (other.gameObject.transform.tag == "BottomBun")
-                {
-                    Debug.Log("BottomBunStacked");
-                    AddIngredient(Hamburger.Ingredient.BottomBread);
-                    Debug.Log(hamburger.hamburger.Peek());
-                }
-
-            }
-        }
-        */
-
         if (other.gameObject.layer == LayerMask.NameToLayer("Fries"))
         {
             if (other.gameObject.GetComponent<Fries>().fix == true)
@@ -95,7 +33,6 @@ public class PlateCont : MonoBehaviour
             }
         }
     }
-
 
     // Update is called once per frame
     void Update()
@@ -152,10 +89,12 @@ public class PlateCont : MonoBehaviour
     }
 
     // 플레이트 삭제
-    public void Discard()
+    public static void Discard()
     {
         hamburger.DeleteAll();
-        Destroy(gameObject); // 현재 Plate 안 보이게 함
+        frenchFried = false;
+        cola = false;
+        //Destroy(gameObject); // 현재 Plate 안 보이게 함
     }
 
 

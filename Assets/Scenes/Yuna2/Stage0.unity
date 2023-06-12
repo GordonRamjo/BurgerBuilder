@@ -3213,8 +3213,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: First, we'll serve a basic burger set
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
-  m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 23ceed66dc4df4742abe8c33d7038658, type: 2}
+  m_sharedMaterial: {fileID: -8925299800040211706, guid: 23ceed66dc4df4742abe8c33d7038658,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -13534,6 +13535,9 @@ MonoBehaviour:
   failParticleSys2: {fileID: 0}
   totalCnt: {fileID: 0}
   curCnt: {fileID: 0}
+  smokeParticleSys: {fileID: 0}
+  pattyUI: {fileID: 0}
+  gameData: {fileID: 0}
 --- !u!4 &946874444
 Transform:
   m_ObjectHideFlags: 0
@@ -17260,6 +17264,14 @@ MonoBehaviour:
   - {fileID: 8300000, guid: a26055ca31d339142aac40c686bb9b3c, type: 3}
   - {fileID: 8300000, guid: aa7a107bae54b1940af79893df402915, type: 3}
   - {fileID: 8300000, guid: c56e489fe96a7df439cbcc2a4e3ed729, type: 3}
+  BGM: 0
+  PATTY: 0
+  CUSTMER_ANGRY: 0
+  SIREN: 0
+  GRAB: 0
+  DROP: 0
+  TRASH: 0
+  WALKING: 0
 --- !u!65 &1228363644
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24406,8 +24418,9 @@ MonoBehaviour:
 
     the best burger builder?'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
-  m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 23ceed66dc4df4742abe8c33d7038658, type: 2}
+  m_sharedMaterial: {fileID: -8925299800040211706, guid: 23ceed66dc4df4742abe8c33d7038658,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

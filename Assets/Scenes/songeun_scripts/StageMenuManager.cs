@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -13,8 +14,9 @@ namespace Assets.Scripts
         public GameObject StageMenu;  //현재 화면 
         public GameObject StartMenu;  //뒤로가기 버튼으로 접근
         public GameObject OptionMenu; //옵션(톱니바퀴) 버튼으로 접근
-        public GameObject stage1_btn;
-        public GameObject stage2_btn;
+      //public GameObject blackPanel;
+
+        public GameObject[] stageButton = new GameObject[3];
 
         public bool isAfterStage; //로비 진입 or 스테이지 종료 후 진입 여부
         public bool AllClear = false; //올클리어 최초 달성 여부
@@ -32,79 +34,70 @@ namespace Assets.Scripts
         public AudioClip FailSound;
         public AudioClip AllClearSound;
 
-        int selectedStageNum;
+        public int selectedStageNum;
 
-        //stageNum의 디폴트값 0을 stage가 선택되지 않은 상태로 처리하기 위해, 각 스테이지의 stageNum을 +1 했음.
-        //즉 stage0의 stageNum은 1, stage1의 stageNum은 2, stage2의 stageNum은 3
-        public void stage0_btn_selected()
-        {
-            //이미 선택된 스테이지 다시 선택시 취소
-            if (selectedStageNum == 1)
+
+        public void stageButton_selected() {
+            GameObject selected = EventSystem.current.currentSelectedGameObject;
+            Debug.Log("clicked " + selected);
+           
+            //stage 0 선택시
+            if (selected == stageButton[0])
             {
                 selectedStageNum = 0;
-                //버튼 비활성화 시각 피드백 코드 추가 예정
             }
 
-            //스테이지 0 선택
-            else
+            //stage 1 선택시
+            if (selected == stageButton[1])
             {
-                selectedStageNum = 1;
-                //버튼 활성화 시각 피드백 코드 추가 예정
-                //stage0_btn.GetComponent<RawImage>().color = Color.white;
+                //stage 0 클리어 안 됐으면 pop up 
+                if (!DataManager.dataManager.data.isClear[0])
+                    //(!GameData.isClear[0])
+                {
+                    Debug.Log("Clear stage 0 first!");
+                }
+                else
+                {
+                    selectedStageNum = 1;
+                }
+            }
+
+            //stage 2 선택시
+            if (selected == stageButton[2])
+            {
+                //stage 1 클리어 안 됐으면 pop up 
+                if (!DataManager.dataManager.data.isClear[1])
+                    //(!GameData.isClear[1])
+                {
+                    Debug.Log("Clear stage 1 first!");
+                }
+                else
+                {
+                    selectedStageNum = 2;
+                }
+            }
+
+            Debug.Log("selected stage " + selectedStageNum);
+
+            //현재 선택한 스테이지만 표시 띄우기
+            foreach (GameObject btn in stageButton)
+            {
+                if (btn == stageButton[selectedStageNum])
+                {
+                    btn.transform.GetChild(0).gameObject.SetActive(true);
+                }
+                else
+                {
+                    btn.transform.GetChild(0).gameObject.SetActive(false);
+                }
             }
         }
-        public void stage1_btn_selected()
-        {
-            //이미 선택된 스테이지 다시 선택시 취소
-            if (selectedStageNum == 2)
-            {
-                selectedStageNum = 0;
-                //버튼 비활성화 시각 피드백 코드 추가 예정
-            }
 
-            //스테이지0 unlock 상태이면 스테이지 1 선택
-            else if (DataManager.Instance.data.isUnlock[0])
-            {
-                selectedStageNum = 2;
-                //버튼 활성화 시각 피드백 코드 추가 예정
-            }
-
-            //아니면 셀렉 거부
-            else
-            {
-                //임시 코드 (안내창으로 변경 예정)
-                print("Clear stage 0 first!");
-            }
-
-        }
-        public void stage2_btn_selected()
-        {
-            //이미 선택된 스테이지 다시 선택시 취소
-            if (selectedStageNum == 3)
-            {
-                selectedStageNum = 0;
-                //버튼 비활성화 시각 피드백 코드 추가 예정
-            }
-
-            //스테이지0 unlock 상태이면 스테이지 1 선택
-            else if (DataManager.Instance.data.isUnlock[0])
-            {
-                selectedStageNum = 3;
-                //버튼 활성화 시각 피드백 코드 추가 예정
-            }
-
-            //아니면 셀렉 거부
-            else
-            {
-                //임시 코드 (안내창으로 변경 예정)
-                print("Clear stage 1 first!");
-            }
-        }
 
         public void enter_btn_selected()
         {
             //스테이지 선택 안한 상태일 시 거부
-            if (selectedStageNum == 0)
+            if (selectedStageNum == -1)
             {
                 //임시 코드 (안내창으로 변경 예정)
                 print("select stage!");
@@ -113,6 +106,10 @@ namespace Assets.Scripts
             //선택한 스테이지 로드 (각 스테이지 씬명이 "Stage+번호"라고 가정)
             else
             {
+                Fade fade = new Fade();
+              //Fade.blackPanel = blackPanel;
+              //blackPanel.SetActive(true);
+                StartCoroutine(fade.FadeOut());
                 SceneManager.LoadScene("Stage" + selectedStageNum);
             }
         }
@@ -130,6 +127,7 @@ namespace Assets.Scripts
         }
 
         public void ShowGameResult() {
+            /*
             //최초 올클리어 시 이펙트
             if (afterStageResult == 2 && AllClear == false)
             {
@@ -142,32 +140,64 @@ namespace Assets.Scripts
             resultPopUp.SetActive(true);
             audioSource.Play();
             //LeanTween.scale(resultPopUp, new Vector3(0.3f, 0.3f, 0.3f), 3f).setEase(LeanTweenType.easeOutElastic);
+            */
+
+            if (PlayResult.playedStageClear == false)
+            {
+                resultText.text = resultDialog[3];
+            }
+            else
+            {
+                resultText.text = resultDialog[PlayResult.playedStageNum];
+            }
+            resultPopUp.SetActive(true);
         }
 
-        // Start is called before the first frame update
+
         void Start()
         {
-            resultPopUp.SetActive(false);
-            DataManager.Instance.LoadGameData();
-            //DataManager.Instance.data.isUnlock[1] = true;
+            //게임 데이터 로딩
+            DataManager.dataManager.LoadGameData();
+            //DataManager.dataManager.data.isClear[0] = true;
 
-            //스테이지 종료 후 로딩되는 경우
-            if (isAfterStage) {
+            //스테이지 플레이 후 로비에 돌아왔을 시
+            if (PlayResult.playedStageNum != -1)
+            {
+                Debug.Log(PlayResult.playedStageNum);
+                Debug.Log(PlayResult.playedStageClear);
                 ShowGameResult();
-
-                isAfterStage = false;
+                PlayResult.playedStageNum = -1;
             }
 
-            if (!DataManager.Instance.data.isUnlock[1])
+
+            for (int i = 0; i <=2 ; i++)
             {
-                stage1_btn.transform.GetChild(1).GetComponent<RawImage>().color = Color.gray;
-                stage1_btn.transform.GetChild(2).gameObject.SetActive(true);
+                //클리어 된 스테이지는 Completed 도장 띄워놓기
+                if //(DataManager.dataManager.data.isClear[i])
+                    (DataManager.dataManager.data.isClear[i])
+                {
+                    stageButton[i].transform.GetChild(2).gameObject.SetActive(true);
+                }
+
+                //클리어 못한 스테이지 있을 시 해당되는 스테이지 lock 처리
+                else
+                {
+                    if (i <= 1)
+                    {
+                        lockStage(i + 1);
+                    }
+                }
             }
-            if (!DataManager.Instance.data.isUnlock[2])
-            {
-                stage2_btn.transform.GetChild(1).GetComponent<RawImage>().color = Color.gray;
-                stage2_btn.transform.GetChild(2).gameObject.SetActive(true);
-            }
+
+
+        }
+
+        void lockStage(int stageNum) //스테이지 잠금 함수
+        {
+            //버튼 이미지 회색 처리
+            stageButton[stageNum].GetComponent<RawImage>().color = Color.gray;
+            //자물쇠 활성화 (스테이지 버튼의 자식 obj 3번)
+            stageButton[stageNum].transform.GetChild(3).gameObject.SetActive(true);
         }
 
         // Update is called once per frame
