@@ -86,6 +86,12 @@ public class PlateCont : MonoBehaviour
         {
             pattyState = false;
         }
+
+        else if(patty.state == Patty.State.Medium)
+        {
+            pattyState = true;
+        }
+        Debug.Log(pattyState);
     }
 
     // 플레이트 삭제
@@ -94,6 +100,7 @@ public class PlateCont : MonoBehaviour
         hamburger.DeleteAll();
         frenchFried = false;
         cola = false;
+        pattyState = true;
         //Destroy(gameObject); // 현재 Plate 안 보이게 함
     }
 

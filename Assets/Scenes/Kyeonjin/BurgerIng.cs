@@ -39,15 +39,15 @@ public class BurgerIng : MonoBehaviour
             if (this.gameObject.tag == "TopBun")
             {
                 PlateCont.AddIngredient(Hamburger.Ingredient.UpperBread);
-                Debug.Log(PlateCont.hamburger.hamburger.Peek());
-                Debug.Log(PlateCont.hamburger.hamburger.Count);
+                //Debug.Log(PlateCont.hamburger.hamburger.Peek());
+                //Debug.Log(PlateCont.hamburger.hamburger.Count);
                 Refill.topbun -= 1;
             }
             else if (this.gameObject.tag == "Tomato")
             {
                 PlateCont.AddIngredient(Hamburger.Ingredient.Tomato);
-                Debug.Log(PlateCont.hamburger.hamburger.Peek());
-                Debug.Log(PlateCont.hamburger.hamburger.Count);
+                //Debug.Log(PlateCont.hamburger.hamburger.Peek());
+                //Debug.Log(PlateCont.hamburger.hamburger.Count);
                 Refill.tomato -= 1;
             }
             else if (this.gameObject.tag == "patty")
@@ -55,36 +55,37 @@ public class BurgerIng : MonoBehaviour
                 PlateCont.AddIngredient(Hamburger.Ingredient.Patty);
                 PlateCont.AddPatty(this.gameObject.GetComponent<PattyController>().patty);
                 Debug.Log(this.gameObject.GetComponent<PattyController>().patty.state);
-                Debug.Log(PlateCont.hamburger.hamburger.Peek());
-                Debug.Log(PlateCont.hamburger.hamburger.Count);
+                Debug.Log(PlateCont.pattyState);
+                //Debug.Log(PlateCont.hamburger.hamburger.Peek());
+                //Debug.Log(PlateCont.hamburger.hamburger.Count);
                 Refill.patty -= 1;
             }
             else if (this.gameObject.tag == "Onion")
             {
                 PlateCont.AddIngredient(Hamburger.Ingredient.Onion);
-                Debug.Log(PlateCont.hamburger.hamburger.Peek());
-                Debug.Log(PlateCont.hamburger.hamburger.Count);
+                //Debug.Log(PlateCont.hamburger.hamburger.Peek());
+                //Debug.Log(PlateCont.hamburger.hamburger.Count);
                 Refill.onion -= 1;
             }
             else if (this.gameObject.tag == "Lettuce")
             {
                 PlateCont.AddIngredient(Hamburger.Ingredient.Lettuce);
-                Debug.Log(PlateCont.hamburger.hamburger.Peek());
-                Debug.Log(PlateCont.hamburger.hamburger.Count);
+                //Debug.Log(PlateCont.hamburger.hamburger.Peek());
+                //Debug.Log(PlateCont.hamburger.hamburger.Count);
                 Refill.lettuce -= 1;
             }
             else if (this.gameObject.tag == "Cheese")
             {
                 PlateCont.AddIngredient(Hamburger.Ingredient.Cheese);
-                Debug.Log(PlateCont.hamburger.hamburger.Peek());
-                Debug.Log(PlateCont.hamburger.hamburger.Count);
+                //Debug.Log(PlateCont.hamburger.hamburger.Peek());
+                //Debug.Log(PlateCont.hamburger.hamburger.Count);
                 Refill.cheese -= 1;
             }
             else if (this.gameObject.tag == "BottomBun")
             {
                 PlateCont.AddIngredient(Hamburger.Ingredient.BottomBread);
-                Debug.Log(PlateCont.hamburger.hamburger.Peek());
-                Debug.Log(PlateCont.hamburger.hamburger.Count);
+                //Debug.Log(PlateCont.hamburger.hamburger.Peek());
+                //Debug.Log(PlateCont.hamburger.hamburger.Count);
                 Refill.bottombun -= 1;
             }
 

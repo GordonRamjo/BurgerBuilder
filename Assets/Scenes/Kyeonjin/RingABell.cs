@@ -16,7 +16,7 @@ public class RingABell : MonoBehaviour
     public void Ring()
     {
         ring = true;
-        Debug.Log(ring);
+        //Debug.Log(ring);
     }
 
     
