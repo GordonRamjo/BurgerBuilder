@@ -72,25 +72,27 @@ public class StageManager : MonoBehaviour
                 Debug.Log("STAGE CLEAR");
                 isStageClear = true; //스테이지 클리어 여부를 참으로 설정
 
-                //DataManager.Instance.data.isCleared[stageNumber] = true;
+                //DataManager.Instance.data.isClear[stageNumber] = true;
                 //DataManager.Instance.SaveGameData();
 
-                backtoStageMenu(true);
+                backtoStageMenu(isStageClear);
             }
         }
         else
         {
             //backtoStageMenu(3);
-            backtoStageMenu(false);
+            backtoStageMenu(isStageClear);
         }
 
     }
     void backtoStageMenu(bool result)
     {
-        gameData.playedStageNum = stageNumber;
-        gameData.playedResult = result;
-        if (result) gameData.isCleared[stageNumber] = true;
-
+        GameData.playedStageNum = stageNumber;
+        GameData.playedResult = result;
+        if (result)
+        {
+            GameData.isClear[stageNumber] = true;
+        }
         SceneManager.LoadScene("Lobby");
     }
 

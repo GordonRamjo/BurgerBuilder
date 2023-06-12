@@ -2,15 +2,14 @@ using UnityEngine;
 
 public class GameData : MonoBehaviour
 {
-    public bool[] isCleared = new bool[3];
+    public static bool[] isClear = { true, false, false };
 
-    public int playedStageNum;
-    public bool playedResult;
+    public static int playedStageNum = -1;
+    public static bool playedResult = false;
 
     void Start()
     {
-        playedStageNum = -1;
-        playedResult = false;
+
     }
 
     void Update()

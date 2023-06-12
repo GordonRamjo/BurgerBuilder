@@ -51,8 +51,8 @@ namespace Assets.Scripts
             if (selected == stageButton[1])
             {
                 //stage 0 클리어 안 됐으면 pop up 
-                if //(!DataManager.Instance.data.isCleared[0])
-                    (!gameData.isCleared[1])
+                if //(!DataManager.Instance.data.isClear[0])
+                    (!GameData.isClear[0])
                 {
                     Debug.Log("Clear stage 0 first!");
                 }
@@ -66,8 +66,8 @@ namespace Assets.Scripts
             if (selected == stageButton[2])
             {
                 //stage 1 클리어 안 됐으면 pop up 
-                if //(!DataManager.Instance.data.isCleared[1])
-                    (gameData.isCleared[2])
+                if //(!DataManager.Instance.data.isClear[1])
+                    (!GameData.isClear[1])
                 {
                     Debug.Log("Clear stage 1 first!");
                 }
@@ -77,8 +77,9 @@ namespace Assets.Scripts
                 }
             }
 
-            Debug.Log(selectedStageNum);
+            Debug.Log("selected stage " + selectedStageNum);
 
+            //현재 선택한 스테이지만 표시 띄우기
             foreach (GameObject btn in stageButton)
             {
                 if (btn == stageButton[selectedStageNum])
@@ -137,18 +138,18 @@ namespace Assets.Scripts
             //LeanTween.scale(resultPopUp, new Vector3(0.3f, 0.3f, 0.3f), 3f).setEase(LeanTweenType.easeOutElastic);
             */
 
-            if (gameData.playedResult == false)
+            if (GameData.playedResult == false)
             {
                 resultText.text = resultDialog[3];
             }
             else
             {
-                resultText.text = resultDialog[gameData.playedStageNum];
+                resultText.text = resultDialog[GameData.playedStageNum];
             }
             resultPopUp.SetActive(true);
         }
 
-        // Start is called before the first frame update
+
         void Start()
         {
             /*
@@ -163,16 +164,17 @@ namespace Assets.Scripts
             */
 
             //스테이지 플레이 후 로비에 돌아왔을 시
-            if (gameData.playedStageNum != -1)
+            if (GameData.playedStageNum != -1)
             {
+                Debug.Log(GameData.playedStageNum);
+                Debug.Log(GameData.playedResult);
                 ShowGameResult();
-
+                GameData.playedStageNum = -1;
             }
 
-            gameData.playedStageNum = -1;
             //게임 데이터 로딩
             //DataManager.Instance.LoadGameData();
-            //DataManager.Instance.data.isCleared[0] = true;
+            //DataManager.Instance.data.isClear[0] = true;
 
             //'선택된 스테이지 없음'로 초기화
             selectedStageNum = -1;
@@ -180,8 +182,8 @@ namespace Assets.Scripts
             for (int i = 0; i <=2 ; i++)
             {
                 //클리어 된 스테이지는 Completed 도장 띄워놓기
-                if //(DataManager.Instance.data.isCleared[i])
-                    (gameData.isCleared[i])
+                if //(DataManager.Instance.data.isClear[i])
+                    (GameData.isClear[i])
                 {
                     stageButton[i].transform.GetChild(2).gameObject.SetActive(true);
                 }
@@ -189,13 +191,10 @@ namespace Assets.Scripts
                 //클리어 못한 스테이지 있을 시 해당되는 스테이지 lock 처리
                 else
                 {
-                    lockStage(2);
-
-                    if (i == 0)
+                    if (i <= 1)
                     {
-                        lockStage(1);
+                        lockStage(i + 1);
                     }
-                    break;
                 }
             }
 
