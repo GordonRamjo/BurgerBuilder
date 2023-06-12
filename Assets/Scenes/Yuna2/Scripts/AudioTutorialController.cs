@@ -8,7 +8,7 @@ public class AudioTutorialController : MonoBehaviour
     public AudioSource[] sfxPlayer;
     public AudioClip[] sfxClip;
     
-    public enum SfxTutorial { PATTY, GRAB, DROP, WASTE, WALK, SUCCESS};
+    public enum SfxTutorial { PATTY, GRAB, DROP, WASTE, WALK, SUCCESS, GORDAN };
 
     // Start is called before the first frame update
     void Start()

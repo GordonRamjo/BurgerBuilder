@@ -2653,7 +2653,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 3d4e9ac26bf98cc4b94584a1d6644e40, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.8
   m_Pitch: 1
@@ -17304,6 +17304,7 @@ MonoBehaviour:
   - {fileID: 166235575}
   - {fileID: 1829862104}
   - {fileID: 1140578673}
+  - {fileID: 175757901}
   sfxClip:
   - {fileID: 8300000, guid: b70f557c552f70f48adc7684f5c2974a, type: 3}
   - {fileID: 8300000, guid: 88f37bd627df5d1419015c1bc1e67e6d, type: 3}
@@ -17311,6 +17312,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: e97483ce9c743714c91e2bc5d912d2b4, type: 3}
   - {fileID: 8300000, guid: ba200111aea4fb74ca3d1ab08901059a, type: 3}
   - {fileID: 8300000, guid: eca5a88b05501c64db3266dc02a4fcbf, type: 3}
+  - {fileID: 8300000, guid: 3d4e9ac26bf98cc4b94584a1d6644e40, type: 3}
 --- !u!114 &1228363643
 MonoBehaviour:
   m_ObjectHideFlags: 0
