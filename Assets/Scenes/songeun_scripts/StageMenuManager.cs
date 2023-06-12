@@ -150,15 +150,23 @@ namespace Assets.Scripts
             {
                 resultText.text = resultDialog[PlayResult.playedStageNum];
             }
-            resultPopUp.SetActive(true);
+
+            resultPopUp.SetActive(true); // show
+            // 3초 후 삭제
+            Invoke("DeactiveResultPopUp", 3f);
         }
 
+        public void DeactiveResultPopUp()
+        {
+            Debug.Log("Deactivate Pop Up");
+            resultPopUp.SetActive(false); // show
+        }
 
         void Start()
         {
             //게임 데이터 로딩
             DataManager.dataManager.LoadGameData();
-            //DataManager.dataManager.data.isClear[0] = true;
+            DataManager.dataManager.data.isClear[0] = true;
 
             //스테이지 플레이 후 로비에 돌아왔을 시
             if (PlayResult.playedStageNum != -1)
