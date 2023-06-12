@@ -14,6 +14,7 @@ namespace Assets.Scripts
         public GameObject StageMenu;  //현재 화면 
         public GameObject StartMenu;  //뒤로가기 버튼으로 접근
         public GameObject OptionMenu; //옵션(톱니바퀴) 버튼으로 접근
+      //public GameObject blackPanel;
 
         public GameObject[] stageButton = new GameObject[3];
 
@@ -50,7 +51,7 @@ namespace Assets.Scripts
             if (selected == stageButton[1])
             {
                 //stage 0 클리어 안 됐으면 pop up 
-                if (!DataManager.Instance.data.isClear[0])
+                if (!DataManager.dataManager.data.isClear[0])
                     //(!GameData.isClear[0])
                 {
                     Debug.Log("Clear stage 0 first!");
@@ -65,7 +66,7 @@ namespace Assets.Scripts
             if (selected == stageButton[2])
             {
                 //stage 1 클리어 안 됐으면 pop up 
-                if (!DataManager.Instance.data.isClear[1])
+                if (!DataManager.dataManager.data.isClear[1])
                     //(!GameData.isClear[1])
                 {
                     Debug.Log("Clear stage 1 first!");
@@ -105,6 +106,10 @@ namespace Assets.Scripts
             //선택한 스테이지 로드 (각 스테이지 씬명이 "Stage+번호"라고 가정)
             else
             {
+                Fade fade = new Fade();
+              //Fade.blackPanel = blackPanel;
+              //blackPanel.SetActive(true);
+                StartCoroutine(fade.FadeOut());
                 SceneManager.LoadScene("Stage" + selectedStageNum);
             }
         }
@@ -152,8 +157,8 @@ namespace Assets.Scripts
         void Start()
         {
             //게임 데이터 로딩
-            DataManager.Instance.LoadGameData();
-            //DataManager.Instance.data.isClear[0] = true;
+            DataManager.dataManager.LoadGameData();
+            //DataManager.dataManager.data.isClear[0] = true;
 
             //스테이지 플레이 후 로비에 돌아왔을 시
             if (PlayResult.playedStageNum != -1)
@@ -168,8 +173,8 @@ namespace Assets.Scripts
             for (int i = 0; i <=2 ; i++)
             {
                 //클리어 된 스테이지는 Completed 도장 띄워놓기
-                if //(DataManager.Instance.data.isClear[i])
-                    (DataManager.Instance.data.isClear[i])
+                if //(DataManager.dataManager.data.isClear[i])
+                    (DataManager.dataManager.data.isClear[i])
                 {
                     stageButton[i].transform.GetChild(2).gameObject.SetActive(true);
                 }

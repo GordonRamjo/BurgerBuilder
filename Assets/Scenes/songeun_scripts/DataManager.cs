@@ -2,7 +2,7 @@
 using UnityEditor;
 using UnityEngine;
 
-//[InitializeOnLoad]
+
 public class DataManager : MonoBehaviour
 {
     static GameObject container;
@@ -12,10 +12,10 @@ public class DataManager : MonoBehaviour
 
     /*
     static DataManager() {
-        Instance.LoadGameData();
+        dataManager.LoadGameData();
     }
     */
-    public static DataManager Instance
+    public static DataManager dataManager
     {
         get
         {
@@ -40,7 +40,8 @@ public class DataManager : MonoBehaviour
     // 불러오기
     public void LoadGameData()
     {
-        string filePath = Application.persistentDataPath + "/" + GameDataFileName;
+        string filePath = Application.dataPath + "/" + GameDataFileName;
+        Debug.Log(filePath);
 
         // 저장된 게임이 있다면
         if (File.Exists(filePath))
@@ -58,7 +59,7 @@ public class DataManager : MonoBehaviour
     {
         // 클래스를 Json 형식으로 전환 (true : 가독성 좋게 작성)
         string ToJsonData = JsonUtility.ToJson(data, true);
-        string filePath = Application.persistentDataPath + "/" + GameDataFileName;
+        string filePath = Application.dataPath + "/" + GameDataFileName;
 
         // 이미 저장된 파일이 있다면 덮어쓰고, 없다면 새로 만들어서 저장
         File.WriteAllText(filePath, ToJsonData);
