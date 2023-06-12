@@ -58,7 +58,7 @@ namespace Assets.Scripts
                 }
                 else
                 {
-                    selectedStageNum = 1;
+                    selectedStageNum = 5;
                 }
             }
 

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.SceneManagement;
 
 public class StageTutorial : MonoBehaviour
 {
@@ -67,6 +68,7 @@ public class StageTutorial : MonoBehaviour
         if(order == 4)
         {
             Debug.Log("튜토리얼 완료. 이제 게임을 시작해보자");
+            SceneManager.LoadScene("Stage1");
         }
     }
 
