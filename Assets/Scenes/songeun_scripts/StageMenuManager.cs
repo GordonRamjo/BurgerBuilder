@@ -16,7 +16,7 @@ namespace Assets.Scripts
         public GameObject OptionMenu; //옵션(톱니바퀴) 버튼으로 접근
         public GameObject blackPanel;
 
-        public GameObject[] stageButton = new GameObject[3];
+        public GameObject[] stageButton = new GameObject[6];
 
         public bool isAfterStage; //로비 진입 or 스테이지 종료 후 진입 여부
         public bool AllClear = false; //올클리어 최초 달성 여부
@@ -111,7 +111,7 @@ namespace Assets.Scripts
                 //Fade.blackPanel = blackPanel;
                 StartCoroutine(FadeOut());
                 //SceneManager.LoadScene("Stage" + selectedStageNum);
-                Invoke("MoveScene", 2f);
+                Invoke("MoveScene", 3f);
             }
         }
 
@@ -189,12 +189,15 @@ namespace Assets.Scripts
             //스테이지 플레이 후 로비에 돌아왔을 시
             if (PlayResult.playedStageNum != -1)
             {
+                StartMenu.SetActive(false );
+                StageMenu.SetActive(true);
                 Debug.Log(PlayResult.playedStageNum);
                 Debug.Log(PlayResult.playedStageClear);
                 ShowGameResult();
                 PlayResult.playedStageNum = -1;
             }
 
+            selectedStageNum = -1;
 
             for (int i = 0; i <=2 ; i++)
             {
