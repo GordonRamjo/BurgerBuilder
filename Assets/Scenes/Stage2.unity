@@ -2976,7 +2976,7 @@ MonoBehaviour:
   smokeParticleSys: {fileID: 8485507540601551229, guid: e9047b4538b75e24e8ff7071a6f88925,
     type: 3}
   pattyUI: {fileID: 205813256037519693, guid: 7a8ae9570da72f946b714bdf3536f673, type: 3}
-  gameData: {fileID: 0}
+  blackPanel: {fileID: 0}
 --- !u!4 &396562572
 Transform:
   m_ObjectHideFlags: 0
@@ -17604,6 +17604,24 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1021969651}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1021969653 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 154402, guid: 6e4ecddde9795734fad196ca9a65354b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1021969651}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1021969654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1021969653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09fd2a37c88da80478dc33d082bbc461, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1046030633
 PrefabInstance:
   m_ObjectHideFlags: 0
