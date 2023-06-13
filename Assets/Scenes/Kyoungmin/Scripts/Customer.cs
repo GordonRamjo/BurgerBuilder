@@ -43,7 +43,7 @@ public class Customer : MonoBehaviour
     }
     void move() //도착지점까지 이동
     {
-        gameObject.transform.position = Vector3.MoveTowards(transform.position, destination.transform.position, 0.005f);
+        gameObject.transform.position = Vector3.MoveTowards(transform.position, destination.transform.position, 0.025f);
     }
     void makeOrder() //주문하기
     {
