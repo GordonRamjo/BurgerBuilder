@@ -16,15 +16,16 @@ public class AudioController : MonoBehaviour
     public bool DROP = false;
     public bool TRASH = false;
     public bool WALKING = false;
+    public bool PATTY_BURNT = false;
 
-    public enum Sfx { PATTY, CUSTMER_ANGRY, SIREN, GRAB, DROP, TRASH, WALKING };
+    public enum Sfx { PATTY, CUSTMER_ANGRY, SIREN, GRAB, DROP, TRASH, WALKING, PATTY_BURNT };
 
     // Start is called before the first frame update
     void Start()
     {
         BGM = true;
         // SFX
-        for (int i = 0; i <= 6; i++)
+        for (int i = 0; i <= 7; i++)
             sfxPlayer[i].clip = sfxClip[i];
     }
 
@@ -70,6 +71,11 @@ public class AudioController : MonoBehaviour
         {
             WALKING = false;
             SfxPlay(AudioController.Sfx.WALKING);
+        }
+        if (PATTY_BURNT)
+        {
+            PATTY_BURNT = false;
+            SfxPlay(AudioController.Sfx.PATTY_BURNT);
         }
     }
 
