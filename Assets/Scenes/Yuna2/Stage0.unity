@@ -11094,6 +11094,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   endtx: {fileID: 1791875325}
   endingUICanvas: {fileID: 1800205983}
+  gameData: {fileID: 0}
 --- !u!1001 &784991220
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13586,7 +13587,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0551a09f84244184b8524ae58798965e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stageNumber: 1
+  stageNumber: 0
   totalCustomerCnt: 5
   completeCustomerCnt: 0
   isNextCustomer: 0
@@ -13628,8 +13629,9 @@ MonoBehaviour:
   failParticleSys2: {fileID: 0}
   totalCnt: {fileID: 0}
   curCnt: {fileID: 0}
-  smokeParticleSys: {fileID: 0}
-  pattyUI: {fileID: 0}
+  smokeParticleSys: {fileID: 8485507540601551229, guid: e9047b4538b75e24e8ff7071a6f88925,
+    type: 3}
+  pattyUI: {fileID: 205813256037519693, guid: 7a8ae9570da72f946b714bdf3536f673, type: 3}
   gameData: {fileID: 0}
 --- !u!4 &946874444
 Transform:
