@@ -7,7 +7,7 @@ using TMPro;
 public class StageTutorialIntroDialogManager : MonoBehaviour
 {
     public TextMeshProUGUI tx;
-    private string[] introDialog = new string[] { "Before you start the game,\nThere's something you need to know", "These will help you succeed in the game.", "From now on,\nI'll explain once,\nso listen carefully." };
+    private string[] introDialog = new string[] { "Before you start the game,\nThere's something you need to know", "These will help you succeed in the game.", "From now on,\nLook around with the guide" };
     private int introDialogNum = 0;
     private Canvas introUICanvas;
     private GameObject guide;

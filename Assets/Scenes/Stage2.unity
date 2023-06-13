@@ -15551,6 +15551,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: furniture1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1045849925365864, guid: 8ed30c52a1a5a8a498ab4a8ee44235a7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4796683882862654, guid: 8ed30c52a1a5a8a498ab4a8ee44235a7, type: 3}
       propertyPath: m_RootOrder
       value: 0

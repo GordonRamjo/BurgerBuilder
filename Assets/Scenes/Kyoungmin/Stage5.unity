@@ -302,6 +302,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoundCube
       objectReference: {fileID: 0}
+    - target: {fileID: 1197004585397013852, guid: f9a840bc5b169a44db1b355c38307624,
+        type: 3}
+      propertyPath: GRAB
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1197004585397013853, guid: f9a840bc5b169a44db1b355c38307624,
         type: 3}
       propertyPath: m_RootOrder
@@ -25666,9 +25671,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'So you wanna be
+  m_text: 'Before you start the game,
 
-    the best burger builder?'
+    There''s something you need to know'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 23ceed66dc4df4742abe8c33d7038658, type: 2}
   m_sharedMaterial: {fileID: -8925299800040211706, guid: 23ceed66dc4df4742abe8c33d7038658,
@@ -25696,8 +25701,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 34
-  m_fontSizeBase: 34
+  m_fontSize: 28
+  m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
