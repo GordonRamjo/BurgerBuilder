@@ -12,6 +12,8 @@ public class GuideDialogManager : MonoBehaviour
     public Texture2D[] images;
     private int guideDialogNum = 0;
     private Canvas guideUICanvas;
+    public GameObject ending;
+    public EndingDialogManager endingDialogManager;
 
     void Start()
     {
@@ -33,6 +35,8 @@ public class GuideDialogManager : MonoBehaviour
         {
             guideUICanvas = GameObject.Find("GuideCanvas").GetComponent<Canvas>();
             guideUICanvas.enabled = false;
+            ending.SetActive(true);
+            endingDialogManager.initEndingDialog();
         }
 
         guideDialogNum++;
