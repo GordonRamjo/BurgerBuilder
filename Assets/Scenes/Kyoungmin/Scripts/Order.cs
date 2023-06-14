@@ -53,7 +53,7 @@ public class Order : MonoBehaviour
                 return BasicMenu.CheeseBurger;
             case 4:
                 hamburgerName = "DoublePattyBurger";
-                count = 10;
+                count = 9;
                 if (isSetMenu)
                     menuImg = basicSetMenuImgs[3];
                 else
