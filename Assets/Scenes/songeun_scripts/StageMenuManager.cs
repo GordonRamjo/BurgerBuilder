@@ -25,14 +25,11 @@ namespace Assets.Scripts
         public TextMeshProUGUI resultText;
         private string[] resultDialog = { "Stage 0 Clear !",
                                           "Stage 1 Clear !",
-                                          "Stage 2 Clear !",
+                                          "Now you are the Best Burger Builder!",
                                           "Try Again!"
                                         };
 
-        AudioSource audioSource;
-        public AudioClip ClearSound;
-        public AudioClip FailSound;
-        public AudioClip AllClearSound;
+        public AudioLobbyController audioLobbyController;
 
         public int selectedStageNum;
 
@@ -44,6 +41,7 @@ namespace Assets.Scripts
             //stage 0 선택시
             if (selected == stageButton[0])
             {
+                audioLobbyController.ButtonClick = true;
                 selectedStageNum = 0;
             }
 
@@ -52,13 +50,22 @@ namespace Assets.Scripts
             {
                 //stage 0 클리어 안 됐으면 pop up 
                 if (!DataManager.dataManager.data.isClear[0])
-                //(!GameData.isClear[0])
                 {
                     Debug.Log("Clear stage 0 first!");
+                    //audioLobbyController.LockButton = true;
+                    selectedStageNum = -1;
                 }
+                //stage 1 클리어 못했으면 Stage5로 띄우기
+                else if (!DataManager.dataManager.data.isClear[1])
+                {
+                    audioLobbyController.ButtonClick = true;
+                    selectedStageNum = 5;
+                }
+                //stage 1 클리어 후 리플레이면 바로 stage 1으로
                 else
                 {
-                    selectedStageNum = 5;
+                    audioLobbyController.ButtonClick = true;
+                    selectedStageNum = 1;
                 }
             }
 
@@ -67,12 +74,14 @@ namespace Assets.Scripts
             {
                 //stage 1 클리어 안 됐으면 pop up 
                 if (!DataManager.dataManager.data.isClear[1])
-                //(!GameData.isClear[1])
                 {
                     Debug.Log("Clear stage 1 first!");
+                    //audioLobbyController.LockButton = true;
+                    selectedStageNum = -1;
                 }
                 else
                 {
+                    audioLobbyController.ButtonClick = true;
                     selectedStageNum = 2;
                 }
             }
@@ -99,6 +108,7 @@ namespace Assets.Scripts
             //스테이지 선택 안한 상태일 시 거부
             if (selectedStageNum == -1)
             {
+                audioLobbyController.LockButton = true;
                 //임시 코드 (안내창으로 변경 예정)
                 print("select stage!");
             }
@@ -109,6 +119,7 @@ namespace Assets.Scripts
 
                 // Fade fade = new Fade();
                 //Fade.blackPanel = blackPanel;
+                audioLobbyController.EnterButton = true;
                 StartCoroutine(FadeOut());
                 //SceneManager.LoadScene("Stage" + selectedStageNum);
                 Invoke("MoveScene", 3f);
@@ -123,12 +134,14 @@ namespace Assets.Scripts
 
         public void back_btn_selected()
         {
+            audioLobbyController.ButtonClick = true;
             StageMenu.SetActive(false);
             StartMenu.SetActive(true);
         }
 
         public void option_btn_selected()
         {
+            audioLobbyController.ButtonClick = true;
             StageMenu.SetActive(false);
             OptionMenu.SetActive(true);
         }
@@ -152,13 +165,27 @@ namespace Assets.Scripts
             if (PlayResult.playedStageClear == false)
             {
                 resultText.text = resultDialog[3];
+                audioLobbyController.StageFail = true;
             }
             else
             {
                 resultText.text = resultDialog[PlayResult.playedStageNum];
+                
+                if (PlayResult.playedStageNum == 2)
+                {
+                    audioLobbyController.BBB = true;
+                    resultPopUp.SetActive(true);
+                    Invoke("DeactivatePopUp", 5f);
+                    return;
+                }
+                else
+                {
+                    audioLobbyController.StageClear = true;
+                }
+
             }
             resultPopUp.SetActive(true);
-            Invoke("DeactivatePopUp", 2f);
+            Invoke("DeactivatePopUp", 3f);
         }
 
         public void DeactivatePopUp()
@@ -173,7 +200,7 @@ namespace Assets.Scripts
             float fadeCount = 0;
             while (fadeCount < 1.0f)
             {
-                fadeCount += 0.01f;
+                fadeCount += 0.02f;
                 yield return new WaitForSeconds(0.01f);
                 blackPanel.GetComponent<Image>().color = new Color(0, 0, 0, fadeCount);
             }
@@ -181,29 +208,35 @@ namespace Assets.Scripts
     
 
         void Start()
-        {
+        { 
+
             //게임 데이터 로딩
             DataManager.dataManager.LoadGameData();
-            DataManager.dataManager.data.isClear[0] = true;
+            //DataManager.dataManager.data.isClear[0] = true;
+            //audioLobbyController.StageFail = false;
 
-            //스테이지 플레이 후 로비에 돌아왔을 시
+            //스테이지 플레이 후 로비에 돌아왔을 시 게임 결과 업데이트
             if (PlayResult.playedStageNum != -1)
             {
-                StartMenu.SetActive(false );
+                StartMenu.SetActive(false);
                 StageMenu.SetActive(true);
                 Debug.Log(PlayResult.playedStageNum);
                 Debug.Log(PlayResult.playedStageClear);
+                audioLobbyController.BGM = false;
                 ShowGameResult();
                 PlayResult.playedStageNum = -1;
             }
-
+            else
+            {
+                audioLobbyController.BGM = true;
+            }
             selectedStageNum = -1;
 
+            //스테이지 해금 업데이트
             for (int i = 0; i <=2 ; i++)
             {
                 //클리어 된 스테이지는 Completed 도장 띄워놓기
-                if //(DataManager.dataManager.data.isClear[i])
-                    (DataManager.dataManager.data.isClear[i])
+                if (DataManager.dataManager.data.isClear[i])
                 {
                     stageButton[i].transform.GetChild(2).gameObject.SetActive(true);
                 }
@@ -218,7 +251,8 @@ namespace Assets.Scripts
                 }
             }
 
-
+            //사운드
+            audioLobbyController = GameObject.Find("SoundCube").GetComponent<AudioLobbyController>();
         }
 
         void lockStage(int stageNum) //스테이지 잠금 함수
