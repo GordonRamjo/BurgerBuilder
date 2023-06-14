@@ -30,8 +30,8 @@ public class BasicMenu : Menu
         // 더블치즈버거
         DoubleCheeseBurger.Push((int)Hamburger.Ingredient.BottomBread); // 빵아래
         DoubleCheeseBurger.Push((int)Hamburger.Ingredient.Patty); // 패티
-        DoubleCheeseBurger.Push((int)Hamburger.Ingredient.Cheese); // 치즈
         DoubleCheeseBurger.Push((int)Hamburger.Ingredient.Onion); // 양파 
+        DoubleCheeseBurger.Push((int)Hamburger.Ingredient.Cheese); // 치즈
         DoubleCheeseBurger.Push((int)Hamburger.Ingredient.Tomato); // 토마토
         DoubleCheeseBurger.Push((int)Hamburger.Ingredient.Lettuce); // 상추
         DoubleCheeseBurger.Push((int)Hamburger.Ingredient.Cheese); // 치즈

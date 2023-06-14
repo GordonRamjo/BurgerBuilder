@@ -22,10 +22,62 @@ public class WasteBin : MonoBehaviour
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("Burger"))
         {
-            // 해당 Ojbect 삭제
-            Debug.Log("재료 삭제하기");
-            Destroy(other.gameObject);
-            audioController.TRASH = true;
+
+            if(this.gameObject.tag == "TopBun")
+            {
+                Debug.Log("재료 삭제하기");
+                Destroy(other.gameObject);
+                Refill.topbun -= 1;
+                audioController.TRASH = true;
+            }
+
+            else if(other.gameObject.tag == "Tomato")
+            {
+                Debug.Log("재료 삭제하기");
+                Destroy(other.gameObject);
+                Refill.tomato -= 1;
+                audioController.TRASH = true;
+            }
+
+            else if(other.gameObject.tag == "patty")
+            {
+                Debug.Log("재료 삭제하기");
+                Destroy(other.gameObject);
+                Refill.patty -= 1;
+                audioController.TRASH = true;
+            }
+
+            else if(other.gameObject.tag == "Onion")
+            {
+                Debug.Log("재료 삭제하기");
+                Destroy(other.gameObject);
+                Refill.onion -= 1;
+                audioController.TRASH = true;
+            }
+
+            else if(other.gameObject.tag == "Lettuce")
+            {
+                Debug.Log("재료 삭제하기");
+                Destroy(other.gameObject);
+                Refill.lettuce -= 1;
+                audioController.TRASH = true;
+            }
+
+            else if(other.gameObject.tag == "Cheese")
+            {
+                Debug.Log("재료 삭제하기");
+                Destroy(other.gameObject);
+                Refill.cheese -= 1;
+                audioController.TRASH = true;
+            }
+
+            else if(other.gameObject.tag == "BottomBun")
+            {
+                Debug.Log("재료 삭제하기");
+                Destroy(other.gameObject);
+                Refill.bottombun -= 1;
+                audioController.TRASH = true;
+            }
         }
     }
 }

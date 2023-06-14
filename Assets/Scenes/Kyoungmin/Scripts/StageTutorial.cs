@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class StageTutorial : MonoBehaviour
 {
     StageTutorialGuideDialogManager guideDialogManager;
-    AudioTutorialController audioController;
+    AudioController audioController;
     private bool isTimerTutorialEnd;
     private bool isHamburgerUIEnd;
     private bool isRecipePaperEnd;
@@ -21,7 +21,7 @@ public class StageTutorial : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        audioController = GameObject.Find("SoundCube").GetComponent<AudioTutorialController>();
+        audioController = GameObject.Find("SoundCube").GetComponent<AudioController>();
         guideDialogManager = GameObject.Find("Dialog").GetComponent<StageTutorialGuideDialogManager>();
         order = 0;
     }
@@ -31,6 +31,7 @@ public class StageTutorial : MonoBehaviour
     {
         if (SelectTimer.selectTimer && !isTimerTutorialEnd && order == 0)
         {
+            audioController.GRAB = true;
             isTimerTutorialEnd = true;
             Debug.Log("Timer" + SelectTimer.selectTimer);
             guideDialogManager.UpdateGuideDialog();
@@ -41,6 +42,7 @@ public class StageTutorial : MonoBehaviour
         }
         if(SelectHamburgerUI.selectHamburgerUI && !isHamburgerUIEnd && order == 1)
         {
+            audioController.GRAB = true;
             isHamburgerUIEnd = true;
             Debug.Log("HamburgerUI" + SelectHamburgerUI.selectHamburgerUI);
             guideDialogManager.UpdateGuideDialog();
@@ -50,6 +52,7 @@ public class StageTutorial : MonoBehaviour
         }
         if(SelectRecipePaper.selectRecipePaper && !isRecipePaperEnd && order == 2)
         {
+            audioController.GRAB = true;
             isRecipePaperEnd = true;
             Debug.Log("Recipe" + SelectRecipePaper.selectRecipePaper);
             guideDialogManager.UpdateGuideDialog();
@@ -59,6 +62,7 @@ public class StageTutorial : MonoBehaviour
         }
         if(RingABell.ring && !isBellEnd && order == 3)
         {
+            audioController.GRAB = true;
             isBellEnd = true;
             Debug.Log("Recipe" + RingABell.ring);
             guideDialogManager.UpdateGuideDialog();
