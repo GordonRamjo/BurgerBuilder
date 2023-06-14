@@ -2932,7 +2932,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stageNumber: 2
-  totalCustomerCnt: 30
+  totalCustomerCnt: 15
   completeCustomerCnt: 0
   isNextCustomer: 0
   isStageClear: 0
