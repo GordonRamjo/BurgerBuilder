@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Hamburger
 {
-    public enum Ingredient { BottomBread, UpperBread, Lettuce, Cheese, Onion, Tomato, Patty, Pickle };
+    public enum Ingredient { BottomBread, UpperBread, Lettuce, Cheese, Onion, Tomato, Patty };
 
     public Stack<int> hamburger = new();
 
