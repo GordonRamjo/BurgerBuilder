@@ -78,19 +78,19 @@ public class StageManager : MonoBehaviour
             {
                 Debug.Log("STAGE CLEAR");
                 isStageClear = true; //스테이지 클리어 여부를 참으로 설정
-
+                Debug.Log(stageNumber);
                 DataManager.dataManager.data.isClear[stageNumber] = true;
                 DataManager.dataManager.SaveGameData();
 
-                StartCoroutine(FadeOut());
-                Invoke("back", 3f);
+                //StartCoroutine(FadeOut());
+                //Invoke("back", 3f);
                 backtoStageMenu();
             }
         }
         else
         {
-            StartCoroutine(FadeOut());
-            Invoke("back", 3f);
+            //StartCoroutine(FadeOut());
+            //Invoke("back", 3f);
             //backtoStageMenu(3);
             backtoStageMenu();
         }

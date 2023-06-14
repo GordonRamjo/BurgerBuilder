@@ -10,7 +10,7 @@ public class AudioLobbyController : MonoBehaviour
     public AudioClip[] sfxClip;
 
     public bool BGM = false;
-    public bool StageButton = false;
+    public bool ButtonClick = false;
     public bool EnterButton = false;
     public bool LockButton = false;
     public bool StageClear = false;
@@ -18,7 +18,7 @@ public class AudioLobbyController : MonoBehaviour
     public bool BBB = false;
 
 
-    public enum Sfx { StageButton, EnterButton, LockButton, StageClear, StageFail, BBB};
+    public enum Sfx { ButtonClick, EnterButton, LockButton, StageClear, StageFail, BBB};
 
     // Start is called before the first frame update
     void Start()
@@ -36,10 +36,10 @@ public class AudioLobbyController : MonoBehaviour
             BGM = false;
             bgmPlayer.Play(); // BGM
         }
-        if (StageButton)
+        if (ButtonClick)
         {
-            StageButton = false;
-            SfxPlay(Sfx.StageButton);
+            ButtonClick = false;
+            SfxPlay(Sfx.ButtonClick);
         }
         if (EnterButton)
         {

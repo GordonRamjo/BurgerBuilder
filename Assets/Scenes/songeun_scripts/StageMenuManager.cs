@@ -37,11 +37,11 @@ namespace Assets.Scripts
         public void stageButton_selected() {
             GameObject selected = EventSystem.current.currentSelectedGameObject;
             Debug.Log("clicked " + selected);
-            audioLobbyController.StageButton = true;
 
             //stage 0 선택시
             if (selected == stageButton[0])
             {
+                audioLobbyController.ButtonClick = true;
                 selectedStageNum = 0;
             }
 
@@ -50,20 +50,21 @@ namespace Assets.Scripts
             {
                 //stage 0 클리어 안 됐으면 pop up 
                 if (!DataManager.dataManager.data.isClear[0])
-                //(!GameData.isClear[0])
                 {
                     Debug.Log("Clear stage 0 first!");
-                    audioLobbyController.LockButton = true;
+                    //audioLobbyController.LockButton = true;
                     selectedStageNum = -1;
                 }
-                //stage 1 클리어 못했으면 가이드 화면 띄우기
+                //stage 1 클리어 못했으면 Stage5로 띄우기
                 else if (!DataManager.dataManager.data.isClear[1])
                 {
+                    audioLobbyController.ButtonClick = true;
                     selectedStageNum = 5;
                 }
                 //stage 1 클리어 후 리플레이면 바로 stage 1으로
                 else
                 {
+                    audioLobbyController.ButtonClick = true;
                     selectedStageNum = 1;
                 }
             }
@@ -73,14 +74,14 @@ namespace Assets.Scripts
             {
                 //stage 1 클리어 안 됐으면 pop up 
                 if (!DataManager.dataManager.data.isClear[1])
-                //(!GameData.isClear[1])
                 {
                     Debug.Log("Clear stage 1 first!");
-                    audioLobbyController.LockButton = true;
+                    //audioLobbyController.LockButton = true;
                     selectedStageNum = -1;
                 }
                 else
                 {
+                    audioLobbyController.ButtonClick = true;
                     selectedStageNum = 2;
                 }
             }
@@ -118,6 +119,7 @@ namespace Assets.Scripts
 
                 // Fade fade = new Fade();
                 //Fade.blackPanel = blackPanel;
+                audioLobbyController.EnterButton = true;
                 StartCoroutine(FadeOut());
                 //SceneManager.LoadScene("Stage" + selectedStageNum);
                 Invoke("MoveScene", 3f);
@@ -132,14 +134,14 @@ namespace Assets.Scripts
 
         public void back_btn_selected()
         {
-            audioLobbyController.StageButton = true;
+            audioLobbyController.ButtonClick = true;
             StageMenu.SetActive(false);
             StartMenu.SetActive(true);
         }
 
         public void option_btn_selected()
         {
-            audioLobbyController.StageButton = true;
+            audioLobbyController.ButtonClick = true;
             StageMenu.SetActive(false);
             OptionMenu.SetActive(true);
         }
@@ -167,14 +169,17 @@ namespace Assets.Scripts
             }
             else
             {
+                resultText.text = resultDialog[PlayResult.playedStageNum];
+                
                 if (PlayResult.playedStageNum == 2)
                 {
                     audioLobbyController.BBB = true;
-                    
+                    resultPopUp.SetActive(true);
+                    Invoke("DeactivatePopUp", 5f);
+                    return;
                 }
                 else
                 {
-                    resultText.text = resultDialog[PlayResult.playedStageNum];
                     audioLobbyController.StageClear = true;
                 }
 
