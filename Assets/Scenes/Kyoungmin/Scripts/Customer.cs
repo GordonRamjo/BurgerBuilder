@@ -81,6 +81,9 @@ public class Customer : MonoBehaviour
         Debug.Log("Order count : " + this.GetComponent<Order>().count);
         Debug.Log("Plate count : " + PlateCont.hamburger.hamburger.Count);
         Debug.Log("Patty State : " + PlateCont.pattyState);
+        Debug.Log("Cola : " + PlateCont.cola);
+        Debug.Log("Fries : " + PlateCont.frenchFried);
+        Debug.Log("is Set Menu : " + isSetMenu);
 
         if (isSetMenu == PlateCont.cola && isSetMenu == PlateCont.frenchFried && PlateCont.pattyState == true)
         {
