@@ -14,6 +14,7 @@ public class PattyController : MonoBehaviour
     private bool isUI = false; //패티 관련 UI가 생성되었는지에 대한 flag
     GameObject smokeParticleSys; //연기 파티클 시스템 객체
     GameObject pattyUICanvas; //패티 타이머 객체
+    AudioController audioController; // 사운드 설정
 
     // Patty Material
     public Material[] RareMaterial;
@@ -26,6 +27,7 @@ public class PattyController : MonoBehaviour
     {
         patty = new Patty();
         gameObject.GetComponent<MeshRenderer>().materials = RareMaterial;
+        audioController = GameObject.Find("SoundCube").GetComponent<AudioController>(); // 사운드 설정
     }
 
     // Update is called once per frame
@@ -68,7 +70,6 @@ public class PattyController : MonoBehaviour
     private void Awake()
     {
         stageManager = GameObject.Find("StageManager").GetComponent<StageManager>();
-        
     }
 
     //연기 파티클 시스템과 패티 타이머 생성하는 함수
@@ -101,6 +102,7 @@ public class PattyController : MonoBehaviour
         {
             Debug.Log("After10Second");
             this.transform.GetChild(0).GetComponent<ParticleSystem>().Play();
+            audioController.PATTY_BURNT = true; // Sound
             patty.Burned();
             gameObject.GetComponent<MeshRenderer>().materials = BurnMaterial;
             is10s = true;
