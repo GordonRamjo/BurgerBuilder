@@ -9902,8 +9902,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0551a09f84244184b8524ae58798965e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stageNumber: 1
-  totalCustomerCnt: 5
+  stageNumber: 15
+  totalCustomerCnt: 1
   completeCustomerCnt: 0
   isNextCustomer: 0
   isStageClear: 0
