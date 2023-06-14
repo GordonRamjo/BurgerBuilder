@@ -1560,6 +1560,186 @@ PrefabInstance:
       propertyPath: m_Name
       value: "\uCF5C\uB77C"
       objectReference: {fileID: 0}
+    - target: {fileID: 4199348924576064545, guid: 22c000dffada3b2438cf3b6e191b200b,
+        type: 3}
+      propertyPath: burger
+      value: 
+      objectReference: {fileID: 317915782}
+    - target: {fileID: 4199348924576064545, guid: 22c000dffada3b2438cf3b6e191b200b,
+        type: 3}
+      propertyPath: cokeArea
+      value: 
+      objectReference: {fileID: 97765789}
+    - target: {fileID: 4199348924673341423, guid: 22c000dffada3b2438cf3b6e191b200b,
+        type: 3}
+      propertyPath: burger
+      value: 
+      objectReference: {fileID: 317915782}
+    - target: {fileID: 4199348924673341423, guid: 22c000dffada3b2438cf3b6e191b200b,
+        type: 3}
+      propertyPath: cokeArea
+      value: 
+      objectReference: {fileID: 97765789}
+    - target: {fileID: 4199348924907906792, guid: 22c000dffada3b2438cf3b6e191b200b,
+        type: 3}
+      propertyPath: burger
+      value: 
+      objectReference: {fileID: 317915782}
+    - target: {fileID: 4199348924907906792, guid: 22c000dffada3b2438cf3b6e191b200b,
+        type: 3}
+      propertyPath: cokeArea
+      value: 
+      objectReference: {fileID: 97765789}
+    - target: {fileID: 4199348925044091200, guid: 22c000dffada3b2438cf3b6e191b200b,
+        type: 3}
+      propertyPath: burger
+      value: 
+      objectReference: {fileID: 317915782}
+    - target: {fileID: 4199348925044091200, guid: 22c000dffada3b2438cf3b6e191b200b,
+        type: 3}
+      propertyPath: cokeArea
+      value: 
+      objectReference: {fileID: 97765789}
+    - target: {fileID: 4199348925114174896, guid: 22c000dffada3b2438cf3b6e191b200b,
+        type: 3}
+      propertyPath: burger
+      value: 
+      objectReference: {fileID: 317915782}
+    - target: {fileID: 4199348925114174896, guid: 22c000dffada3b2438cf3b6e191b200b,
+        type: 3}
+      propertyPath: cokeArea
+      value: 
+      objectReference: {fileID: 97765789}
+    - target: {fileID: 4199348925163488503, guid: 22c000dffada3b2438cf3b6e191b200b,
+        type: 3}
+      propertyPath: burger
+      value: 
+      objectReference: {fileID: 317915782}
+    - target: {fileID: 4199348925163488503, guid: 22c000dffada3b2438cf3b6e191b200b,
+        type: 3}
+      propertyPath: cokeArea
+      value: 
+      objectReference: {fileID: 97765789}
+    - target: {fileID: 4199348925185956005, guid: 22c000dffada3b2438cf3b6e191b200b,
+        type: 3}
+      propertyPath: burger
+      value: 
+      objectReference: {fileID: 317915782}
+    - target: {fileID: 4199348925185956005, guid: 22c000dffada3b2438cf3b6e191b200b,
+        type: 3}
+      propertyPath: cokeArea
+      value: 
+      objectReference: {fileID: 97765789}
+    - target: {fileID: 4199348925221415896, guid: 22c000dffada3b2438cf3b6e191b200b,
+        type: 3}
+      propertyPath: burger
+      value: 
+      objectReference: {fileID: 317915782}
+    - target: {fileID: 4199348925221415896, guid: 22c000dffada3b2438cf3b6e191b200b,
+        type: 3}
+      propertyPath: cokeArea
+      value: 
+      objectReference: {fileID: 97765789}
+    - target: {fileID: 4199348925318406835, guid: 22c000dffada3b2438cf3b6e191b200b,
+        type: 3}
+      propertyPath: burger
+      value: 
+      objectReference: {fileID: 317915782}
+    - target: {fileID: 4199348925318406835, guid: 22c000dffada3b2438cf3b6e191b200b,
+        type: 3}
+      propertyPath: cokeArea
+      value: 
+      objectReference: {fileID: 97765789}
+    - target: {fileID: 4199348925559045328, guid: 22c000dffada3b2438cf3b6e191b200b,
+        type: 3}
+      propertyPath: burger
+      value: 
+      objectReference: {fileID: 317915782}
+    - target: {fileID: 4199348925559045328, guid: 22c000dffada3b2438cf3b6e191b200b,
+        type: 3}
+      propertyPath: cokeArea
+      value: 
+      objectReference: {fileID: 97765789}
+    - target: {fileID: 4199348925559896942, guid: 22c000dffada3b2438cf3b6e191b200b,
+        type: 3}
+      propertyPath: burger
+      value: 
+      objectReference: {fileID: 317915782}
+    - target: {fileID: 4199348925559896942, guid: 22c000dffada3b2438cf3b6e191b200b,
+        type: 3}
+      propertyPath: cokeArea
+      value: 
+      objectReference: {fileID: 97765789}
+    - target: {fileID: 4199348925609647318, guid: 22c000dffada3b2438cf3b6e191b200b,
+        type: 3}
+      propertyPath: burger
+      value: 
+      objectReference: {fileID: 317915782}
+    - target: {fileID: 4199348925609647318, guid: 22c000dffada3b2438cf3b6e191b200b,
+        type: 3}
+      propertyPath: cokeArea
+      value: 
+      objectReference: {fileID: 97765789}
+    - target: {fileID: 4199348925762580928, guid: 22c000dffada3b2438cf3b6e191b200b,
+        type: 3}
+      propertyPath: burger
+      value: 
+      objectReference: {fileID: 317915782}
+    - target: {fileID: 4199348925762580928, guid: 22c000dffada3b2438cf3b6e191b200b,
+        type: 3}
+      propertyPath: cokeArea
+      value: 
+      objectReference: {fileID: 97765789}
+    - target: {fileID: 4199348926016563290, guid: 22c000dffada3b2438cf3b6e191b200b,
+        type: 3}
+      propertyPath: burger
+      value: 
+      objectReference: {fileID: 317915782}
+    - target: {fileID: 4199348926016563290, guid: 22c000dffada3b2438cf3b6e191b200b,
+        type: 3}
+      propertyPath: cokeArea
+      value: 
+      objectReference: {fileID: 97765789}
+    - target: {fileID: 4199348926230052565, guid: 22c000dffada3b2438cf3b6e191b200b,
+        type: 3}
+      propertyPath: burger
+      value: 
+      objectReference: {fileID: 317915782}
+    - target: {fileID: 4199348926230052565, guid: 22c000dffada3b2438cf3b6e191b200b,
+        type: 3}
+      propertyPath: cokeArea
+      value: 
+      objectReference: {fileID: 97765789}
+    - target: {fileID: 4199348926351985141, guid: 22c000dffada3b2438cf3b6e191b200b,
+        type: 3}
+      propertyPath: burger
+      value: 
+      objectReference: {fileID: 317915782}
+    - target: {fileID: 4199348926351985141, guid: 22c000dffada3b2438cf3b6e191b200b,
+        type: 3}
+      propertyPath: cokeArea
+      value: 
+      objectReference: {fileID: 97765789}
+    - target: {fileID: 4199348926463405307, guid: 22c000dffada3b2438cf3b6e191b200b,
+        type: 3}
+      propertyPath: burger
+      value: 
+      objectReference: {fileID: 317915782}
+    - target: {fileID: 4199348926463405307, guid: 22c000dffada3b2438cf3b6e191b200b,
+        type: 3}
+      propertyPath: cokeArea
+      value: 
+      objectReference: {fileID: 97765789}
+    - target: {fileID: 4199348926513236082, guid: 22c000dffada3b2438cf3b6e191b200b,
+        type: 3}
+      propertyPath: burger
+      value: 
+      objectReference: {fileID: 317915782}
+    - target: {fileID: 4199348926513236082, guid: 22c000dffada3b2438cf3b6e191b200b,
+        type: 3}
+      propertyPath: cokeArea
+      value: 
+      objectReference: {fileID: 97765789}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 22c000dffada3b2438cf3b6e191b200b, type: 3}
 --- !u!4 &217106002 stripped
@@ -16463,6 +16643,126 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1966386281381868513, guid: 892d9bf805a3c714cb830cc05c354f26,
+        type: 3}
+      propertyPath: burger
+      value: 
+      objectReference: {fileID: 317915782}
+    - target: {fileID: 1966386281381868513, guid: 892d9bf805a3c714cb830cc05c354f26,
+        type: 3}
+      propertyPath: friesArea
+      value: 
+      objectReference: {fileID: 976552758}
+    - target: {fileID: 1966386281895637706, guid: 892d9bf805a3c714cb830cc05c354f26,
+        type: 3}
+      propertyPath: burger
+      value: 
+      objectReference: {fileID: 317915782}
+    - target: {fileID: 1966386281895637706, guid: 892d9bf805a3c714cb830cc05c354f26,
+        type: 3}
+      propertyPath: friesArea
+      value: 
+      objectReference: {fileID: 976552758}
+    - target: {fileID: 1966386282042688309, guid: 892d9bf805a3c714cb830cc05c354f26,
+        type: 3}
+      propertyPath: burger
+      value: 
+      objectReference: {fileID: 317915782}
+    - target: {fileID: 1966386282042688309, guid: 892d9bf805a3c714cb830cc05c354f26,
+        type: 3}
+      propertyPath: friesArea
+      value: 
+      objectReference: {fileID: 976552758}
+    - target: {fileID: 1966386282408204530, guid: 892d9bf805a3c714cb830cc05c354f26,
+        type: 3}
+      propertyPath: burger
+      value: 
+      objectReference: {fileID: 317915782}
+    - target: {fileID: 1966386282408204530, guid: 892d9bf805a3c714cb830cc05c354f26,
+        type: 3}
+      propertyPath: friesArea
+      value: 
+      objectReference: {fileID: 976552758}
+    - target: {fileID: 1966386282479627896, guid: 892d9bf805a3c714cb830cc05c354f26,
+        type: 3}
+      propertyPath: burger
+      value: 
+      objectReference: {fileID: 317915782}
+    - target: {fileID: 1966386282479627896, guid: 892d9bf805a3c714cb830cc05c354f26,
+        type: 3}
+      propertyPath: friesArea
+      value: 
+      objectReference: {fileID: 976552758}
+    - target: {fileID: 1966386282487437646, guid: 892d9bf805a3c714cb830cc05c354f26,
+        type: 3}
+      propertyPath: burger
+      value: 
+      objectReference: {fileID: 317915782}
+    - target: {fileID: 1966386282487437646, guid: 892d9bf805a3c714cb830cc05c354f26,
+        type: 3}
+      propertyPath: friesArea
+      value: 
+      objectReference: {fileID: 976552758}
+    - target: {fileID: 1966386282538151381, guid: 892d9bf805a3c714cb830cc05c354f26,
+        type: 3}
+      propertyPath: burger
+      value: 
+      objectReference: {fileID: 317915782}
+    - target: {fileID: 1966386282538151381, guid: 892d9bf805a3c714cb830cc05c354f26,
+        type: 3}
+      propertyPath: friesArea
+      value: 
+      objectReference: {fileID: 976552758}
+    - target: {fileID: 1966386282582004882, guid: 892d9bf805a3c714cb830cc05c354f26,
+        type: 3}
+      propertyPath: burger
+      value: 
+      objectReference: {fileID: 317915782}
+    - target: {fileID: 1966386282582004882, guid: 892d9bf805a3c714cb830cc05c354f26,
+        type: 3}
+      propertyPath: friesArea
+      value: 
+      objectReference: {fileID: 976552758}
+    - target: {fileID: 1966386282609722854, guid: 892d9bf805a3c714cb830cc05c354f26,
+        type: 3}
+      propertyPath: burger
+      value: 
+      objectReference: {fileID: 317915782}
+    - target: {fileID: 1966386282609722854, guid: 892d9bf805a3c714cb830cc05c354f26,
+        type: 3}
+      propertyPath: friesArea
+      value: 
+      objectReference: {fileID: 976552758}
+    - target: {fileID: 1966386282640250076, guid: 892d9bf805a3c714cb830cc05c354f26,
+        type: 3}
+      propertyPath: burger
+      value: 
+      objectReference: {fileID: 317915782}
+    - target: {fileID: 1966386282640250076, guid: 892d9bf805a3c714cb830cc05c354f26,
+        type: 3}
+      propertyPath: friesArea
+      value: 
+      objectReference: {fileID: 976552758}
+    - target: {fileID: 1966386282763615938, guid: 892d9bf805a3c714cb830cc05c354f26,
+        type: 3}
+      propertyPath: burger
+      value: 
+      objectReference: {fileID: 317915782}
+    - target: {fileID: 1966386282763615938, guid: 892d9bf805a3c714cb830cc05c354f26,
+        type: 3}
+      propertyPath: friesArea
+      value: 
+      objectReference: {fileID: 976552758}
+    - target: {fileID: 1966386283069629365, guid: 892d9bf805a3c714cb830cc05c354f26,
+        type: 3}
+      propertyPath: burger
+      value: 
+      objectReference: {fileID: 317915782}
+    - target: {fileID: 1966386283069629365, guid: 892d9bf805a3c714cb830cc05c354f26,
+        type: 3}
+      propertyPath: friesArea
+      value: 
+      objectReference: {fileID: 976552758}
     - target: {fileID: 5298082833880945180, guid: 892d9bf805a3c714cb830cc05c354f26,
         type: 3}
       propertyPath: m_Name
